@@ -1,0 +1,5 @@
+.#{settings(prefix)}-visually-hidden {
+  @include loop-mq {
+    @include visually-hidden();
+  }
+}
