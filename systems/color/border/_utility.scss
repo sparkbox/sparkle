@@ -1,0 +1,10 @@
+@each $key, $val in $colors {
+  .#{settings(prefix)}-outline-color-#{$key},
+  .#{settings(prefix)}-outline-color-#{$key}\:hover:hover,
+  .#{settings(prefix)}-outline-color-#{$key}\:active:active,
+  .#{settings(prefix)}-outline-color-#{$key}\:focus:focus {
+    @include loop-mq {
+      outline-color: $val;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@each $key, $val in $colors {
+  .#{settings(prefix)}-decoration-color-#{$key},
+  .#{settings(prefix)}-decoration-color-#{$key}\:hover:hover,
+  .#{settings(prefix)}-decoration-color-#{$key}\:active:active,
+  .#{settings(prefix)}-decoration-color-#{$key}\:focus:focus {
+    @include loop-mq {
+      text-decoration-color: $val;
+    }
+  }
+}

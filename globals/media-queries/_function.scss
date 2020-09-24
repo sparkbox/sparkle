@@ -1,0 +1,3 @@
+@function mq($key) {
+  @return map-get($media-queries, $key);
+}

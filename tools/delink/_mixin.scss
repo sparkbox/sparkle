@@ -1,0 +1,5 @@
+@mixin delink {
+  // Remove default link styles
+  color: inherit;
+  text-decoration: none;
+}

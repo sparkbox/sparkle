@@ -1,0 +1,39 @@
+// Pulls in all of the Map Settings
+
+// Globals
+// The global maps are used by various
+// systems and should always be available
+@forward "globals/media-queries/map";
+@forward "globals/sides/map";
+@forward "globals/spacing/map";
+
+// Systems
+@if settings(border) {
+  @forward "systems/border/map"
+}
+
+@if settings(color) {
+  @forward "systems/color/map"
+}
+
+@if settings(font) {
+  @forward "systems/color/map"
+}
+
+@if settings(z-index) {
+  @forward "systems/z-index/map"
+}
+
+// Utilities
+// Not every utility has a map, but some do.
+@if settings(display) {
+  @forward "utilities/display/map";
+}
+
+@if settings(position) {
+  @forward "utilities/position/map";
+}
+
+@if settings(text-align) {
+  @forward "utilities/text-align/map";
+}
