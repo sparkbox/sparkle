@@ -1,0 +1,7 @@
+@each $value in $util-text-values {
+    .#{settings(utilPrefix)}-text-#{$value} {
+      @include loop-mq {
+        text-align: $value;
+      }
+    }
+  }

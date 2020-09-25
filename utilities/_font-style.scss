@@ -1,0 +1,16 @@
+.#{settings(utilPrefix)}-font-style-italic {
+    font-style: italic;
+}
+  
+.#{settings(utilPrefix)}-link {
+    @include default-link;
+}
+
+
+.#{settings(utilPrefix)}-text-bold {
+    font-weight: bold;
+}
+  
+.#{settings(utilPrefix)}-text-italic {
+    font-style: italic;
+}

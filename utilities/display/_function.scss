@@ -1,0 +1,10 @@
+
+@if settings(displayUtil) {
+  @each $value in $util-display-values {
+    .#{settings(utilPrefix)}-display-#{$value} {
+      @include loop-mq {
+        display: $value;
+      }
+    }
+  }  
+}
