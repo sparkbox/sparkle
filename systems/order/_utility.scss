@@ -1,0 +1,22 @@
+
+  .#{settings(utilPrefix)}-order-inherit {
+    @include loop-mq {
+      order: inherit;
+    }
+  }
+  
+  .#{settings(utilPrefix)}-order-initial {
+    @include loop-mq {
+      order: initial;
+    }
+  }
+  
+  .#{settings(utilPrefix)}-order-unset {
+    @include loop-mq {
+      order: unset;
+    }
+  }
+  
+  .#{settings(utilPrefix)}-flex-direction-column {
+    flex-direction: column;
+  }

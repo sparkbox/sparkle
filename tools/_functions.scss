@@ -1,0 +1,17 @@
+// Strip Unites
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  
+@function negative($value) {
+    @return 0 - $value;
+}
+
+@function ratio($height,$width) {
+    @return ($height / $width) * 100%;
+}
+
+@function remify($value) {
+    $value: strip-units($value);
+    @return ($value / 16) * 1rem;
+}
