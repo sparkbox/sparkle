@@ -1,0 +1,26 @@
+{
+  "name": "sparkle",
+  "version": "1.0.0",
+  "description": "✨ Sparkle CSS Framework =====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkbox/sparkle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparkbox/sparkle/issues"
+  },
+  "homepage": "https://github.com/sparkbox/sparkle#readme",
+  "devDependencies": {
+    "sass": "^1.26.11",
+    "sass-true": "^6.0.0"
+  },
+  "dependencies": {
+    "mocha": "^8.1.3"
+  }
+}
