@@ -1,17 +1,24 @@
-// Strip Unites
-@function strip-units($number) {
-    @return $number / ($number * 0 + 1);
-  }
-  
-@function negative($value) {
-    @return 0 - $value;
+@if settings(strip-units) {
+    @function strip-units($number) {
+        @return $number / ($number * 0 + 1);
+    }
 }
 
-@function ratio($height,$width) {
-    @return ($height / $width) * 100%;
+@if settings(negative-func) {
+    @function negative($value) {
+        @return 0 - $value;
+    }
 }
 
-@function remify($value) {
-    $value: strip-units($value);
-    @return ($value / 16) * 1rem;
+@if settings(ratio) {
+    @function ratio($height,$width) {
+        @return ($height / $width) * 100%;
+    }
+}
+
+@if settings(remify) {
+    @function remify($value) {
+        $value: strip-units($value);
+        @return ($value / 16) * 1rem;
+    }
 }

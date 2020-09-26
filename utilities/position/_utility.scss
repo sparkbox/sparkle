@@ -1,7 +1,9 @@
-@each $value in $util-position-values {
+@if settings(position-utility) {
+  @each $value in $util-position-values {
     .#{settings(utilPrefix)}-position-#{$value} {
       @include loop-mq {
         position: $value;
       }
     }
   }
+}

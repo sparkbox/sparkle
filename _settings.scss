@@ -1,7 +1,34 @@
 $settings: (
     'utilPrefix': 'util',
+
+//System Settings
+    'margin-system': true,
+    'padding-system': true,
+
+//Mixin Settings
+    'clearfix': true,
+    'unbuttonize': true,
+    'delink': true,
+    'delist': true,
+    'visually-hidden': true,
+    'focus-styles': true,
+    'font-smooth': true,
+    'print': true,
+    'loop-mq': true
+
+//Functions Settings
+    'strip-units': true
+    'negative-func': true
+    'ratio': true
+    'remify': true
+
+//Utility Settings
     'color-utility': true,
     'display-utility': true,
-    'grid-system': true
+    'position-utility': true,
+    'text-alignment-utility': true,
+    'font-styles-utilities': true,
+    'visually-hidden-utility': true,
+
 ) !default;
 

@@ -1,5 +1,5 @@
 
-@if settings(displayUtil) {
+@if settings(display-utility) {
   @each $value in $util-display-values {
     .#{settings(utilPrefix)}-display-#{$value} {
       @include loop-mq {

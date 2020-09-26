@@ -1,6 +1,7 @@
-.#{settings(utilPrefix)}-visually-hidden,
-.#{settings(utilPrefix)}-display-visually-hidden {
-  @include loop-mq {
-    @include visually-hidden();
+@if settings(visually-hidden-utility) {
+  .#{settings(utilPrefix)}-visually-hidden {
+    @include loop-mq {
+      @include visually-hidden();
+    }
   }
 }
