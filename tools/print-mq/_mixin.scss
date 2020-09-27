@@ -1,0 +1,10 @@
+@mixin print($state:null) {
+  @media print {
+    @if $state == hide {
+      display: none !important;
+    }
+    @else {
+      @content;
+    }
+  }
+}

@@ -1,7 +1,0 @@
-@if settings(visually-hidden-utility) {
-  .#{settings(utilPrefix)}-visually-hidden {
-    @include loop-mq {
-      @include visually-hidden();
-    }
-  }
-}

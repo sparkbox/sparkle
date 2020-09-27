@@ -1,10 +1,7 @@
-
-@if settings(display-utility) {
-  @each $value in $util-display-values {
-    .#{settings(utilPrefix)}-display-#{$value} {
-      @include loop-mq {
-        display: $value;
-      }
+@each $value in $util-display-values {
+  .#{settings(prefix)}-display-#{$value} {
+    @include loop-mq {
+      display: $value;
     }
-  }  
+  }
 }

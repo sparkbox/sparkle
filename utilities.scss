@@ -1,0 +1,20 @@
+// Utilities
+@if settings(z-index) {
+  @forward "systems/z-index/utility";
+}
+
+@if settings(display) {
+  @forward "utilities/display/utility";
+}
+
+@if settings(position) {
+  @forward "utilities/position/utility";
+}
+
+@if settings(text-align) {
+  @forward "utilities/text-align/utility";
+}
+
+@if settings(visually-hidden) {
+  @forward "utilities/visually-hidden/utility";
+}

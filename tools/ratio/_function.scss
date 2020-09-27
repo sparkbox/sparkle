@@ -1,0 +1,3 @@
+@function ratio($height,$width) {
+  @return ($height / $width) * 100%;
+}

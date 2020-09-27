@@ -1,9 +1,9 @@
 $settings: (
-    'utilPrefix': 'util',
+    'prefix': 'util',
 
 //System Settings
-    'margin-system': true,
-    'padding-system': true,
+    'media-queries': true,
+    'z-index': true,
 
 //Mixin Settings
     'clearfix': true,
@@ -11,14 +11,12 @@ $settings: (
     'delink': true,
     'delist': true,
     'visually-hidden': true,
-    'focus-styles': true,
-    'font-smooth': true,
+    'antialiased': true,
     'print': true,
-    'loop-mq': true
 
 //Functions Settings
     'strip-units': true
-    'negative-func': true
+    'negative': true
     'ratio': true
     'remify': true
 
@@ -29,6 +27,4 @@ $settings: (
     'text-alignment-utility': true,
     'font-styles-utilities': true,
     'visually-hidden-utility': true,
-
 ) !default;
-

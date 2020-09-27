@@ -1,0 +1,22 @@
+// Auto-generates media queries for looping content
+@mixin loop-mq($no-print:null) {
+  @content;
+  @each $key, $val in $grid-breakpoints {
+    @if $key != print {
+      @media (min-width: #{$val}) {
+        &\@#{$key} {
+          @content;
+        }
+      }
+    }
+    @else {
+      @if $no-print != noprint {
+        @media print {
+          &\@#{$key} {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}

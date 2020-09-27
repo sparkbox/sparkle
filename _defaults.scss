@@ -1,1 +1,23 @@
 // Pulls in all of the Map Settings
+
+// Systems
+@if settings(media-queries) {
+  @forward "systems/media-queries/map"
+}
+
+@if settings(z-index) {
+  @forward "systems/z-index/map"
+}
+
+// Utilities
+@if settings(display) {
+  @forward "utilities/display/map";
+}
+
+@if settings(position) {
+  @forward "utilities/position/map";
+}
+
+@if settings(text-align) {
+  @forward "utilities/text-align/map";
+}

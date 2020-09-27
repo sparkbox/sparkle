@@ -1,0 +1,3 @@
+@function negative($value) {
+  @return 0 - $value;
+}
