@@ -1,0 +1,10 @@
+@each $key, $val in $colors {
+  .#{settings(prefix)}-bgcolor-#{$key},
+  .#{settings(prefix)}-bgcolor-#{$key}\:hover:hover,
+  .#{settings(prefix)}-bgcolor-#{$key}\:active:active,
+  .#{settings(prefix)}-bgcolor-#{$key}\:focus:focus {
+    @include loop-mq {
+      background-color: $val;
+    }
+  }
+}

@@ -1,8 +1,45 @@
-// Utilities
+// System Utilities
+@if settings(border) {
+  @forward "systems/border/utility";
+}
+
+@if settings(spacing-margin) {
+  @forward "systems/margin/utility";
+}
+
+@if settings(spacing-padding) {
+  @forward "systems/padding/utility";
+}
+
+@if settings(spacing-position) {
+  @forward "systems/position/utility";
+}
+
+@if settings(color) {
+  @forward "systems/color/foreground/utility";
+}
+
+@if settings(background-color) {
+  @forward "systems/color/background/utility";
+}
+
+@if settings(border-color) {
+  @forward "systems/color/border/utility";
+}
+
+@if settings(outline-color) {
+  @forward "systems/color/outline/utility";
+}
+
+@if settings(text-decoration-color) {
+  @forward "systems/color/text-decoration/utility";
+}
+
 @if settings(z-index) {
   @forward "systems/z-index/utility";
 }
 
+// Utilities
 @if settings(display) {
   @forward "utilities/display/utility";
 }
