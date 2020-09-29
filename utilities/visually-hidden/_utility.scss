@@ -1,5 +1,7 @@
-.#{settings(prefix)}-visually-hidden {
-  @include loop-mq {
-    @include visually-hidden();
+@if settings('utility-visually-hidden') {
+  .#{settings(prefix)}-visually-hidden {
+    @include loop-mq {
+      @include visually-hidden();
+    }
   }
 }

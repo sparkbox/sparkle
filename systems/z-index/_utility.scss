@@ -1,7 +1,9 @@
-@each $value in $z-index {
-  .#{settings(prefix)}-z-index-#{$value} {
-    @include loop-mq {
-      z-index: $value;
+@if settings('utility-z-index') {
+  @each $key, $value in $z-index {
+    .#{settings(prefix)}-z-index-#{$key} {
+      @include loop-mq {
+        z-index: $value;
+      }
     }
   }
 }
