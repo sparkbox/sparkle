@@ -1,10 +1,12 @@
-@each $key, $val in $colors {
-  .#{settings(prefix)}-color-#{$key},
-  .#{settings(prefix)}-color-#{$key}\:hover:hover,
-  .#{settings(prefix)}-color-#{$key}\:active:active,
-  .#{settings(prefix)}-color-#{$key}\:focus:focus {
-    @include loop-mq {
-      color: $val;
+@if settings('utility-outline-color') {
+  @each $key, $val in $colors {
+    .#{settings(prefix)}-outline-#{$key},
+    .#{settings(prefix)}-outline-#{$key}\:hover:hover,
+    .#{settings(prefix)}-outline-#{$key}\:active:active,
+    .#{settings(prefix)}-outline-#{$key}\:focus:focus {
+      @include loop-mq {
+        color: $val;
+      }
     }
   }
 }
