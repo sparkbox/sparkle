@@ -1,3 +1,17 @@
+/*---
+title: Remify Function
+section: Tools
+
+Converts a number to a rem value.
+
+```
+.test-class {
+  prop: remify(<number>);
+}
+```
+
+*/
+
 @function remify($value) {
   $value: strip-units($value);
   @return ($value / 16) * 1rem;

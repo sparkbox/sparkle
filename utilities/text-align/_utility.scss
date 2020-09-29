@@ -1,3 +1,12 @@
+/*---
+title: Text Alignment Utility
+section: Utilities
+
+<br/>
+
+*/
+
+
 @if settings('utility-text-align') {
   @each $value in $util-text-values {
     .#{settings(prefix)}-text-#{$value} {

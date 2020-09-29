@@ -1,4 +1,20 @@
-// Auto-generates media queries for looping content
+/*---
+title: Loop Media Query Mixin
+name: loop-mq-mixin
+section: Tools
+
+Auto-generates media queries for looping content
+
+```
+.test-class {
+  @include loop-mq {
+    prop: value;
+  }
+}
+```
+
+*/
+
 @mixin loop-mq {
   @content;
   @if settings('loop-mq') {

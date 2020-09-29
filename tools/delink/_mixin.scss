@@ -1,5 +1,16 @@
+/*---
+title: Delink Mixin
+section: Tools
+
+Remove default link styles
+
+```
+@include delink;
+```
+
+*/
+
 @mixin delink {
-  // Remove default link styles
   color: inherit;
   text-decoration: none;
 }

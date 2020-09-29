@@ -1,3 +1,17 @@
+/*---
+title: Stringify Function
+section: Tools
+
+Converts a number to a string.
+
+```
+.test-class {
+  prop: stringify(<number>);
+}
+```
+
+*/
+
 @function stringify($value) {
   @return $value + '';
 }

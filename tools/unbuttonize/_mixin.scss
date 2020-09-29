@@ -1,7 +1,17 @@
+/*---
+title: Unbuttonize Mixin
+section: Tools
+
+This removes styles added by default to button elements. For when something should semantically be a button, but isn't buttony in appearance.
+
+```
+@include unbuttonize;
+```
+
+*/
+
 @mixin unbuttonize {
-  // This removes styles added by default to button elements.
-  // For when something should semantically be a button,
-  // but isn't buttony in appearance.
+
   background-color: transparent;
   color: inherit;
   border: none;

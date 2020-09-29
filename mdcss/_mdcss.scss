@@ -1,0 +1,76 @@
+$hue: 330;
+
+main > section + section {
+  margin-top: 4rem;
+}
+
+.markdown-body {
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.masthead {
+  background-color: hsl($hue, 50%, 50%) !important;
+}
+
+.masthead-logo img {
+  display: none;
+}
+
+.docs-layout {
+  position: relative;
+  .one-fourth {
+    max-width: 20rem;
+    position: sticky;
+    top: 0rem;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    max-height: 100vh;
+  }
+}
+
+.docs-example {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+.docs-iframe {
+}
+
+.docs-example:hover .docs-iframe {
+}
+
+.docs-resize {
+  width: 100%;
+}
+
+.docs-iframe {
+  border: 0;
+  height: auto;
+  width: 100%;
+}
+
+.colors + pre {
+  display: none;
+}
+
+.swatch {
+  padding: .25em;
+  margin: 0 .3em .3em 0;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.color-property {
+  font-size: 80%;
+}

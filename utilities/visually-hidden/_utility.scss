@@ -1,3 +1,12 @@
+/*---
+title: Visually Hidden Utility
+section: Utilities
+
+<br/>
+
+*/
+
+
 @if settings('utility-visually-hidden') {
   .#{settings(prefix)}-visually-hidden {
     @include loop-mq {
