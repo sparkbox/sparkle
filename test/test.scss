@@ -1,0 +1,44 @@
+// Requirements
+@use '../node_modules/sass-true/sass/true';
+
+// TESTS
+// Functions
+@import "../tools/negative/test";
+@import "../tools/ratio/test";
+@import "../tools/remify/test";
+@import "../tools/strip-units/test";
+@import "../tools/stringify/test";
+@import "../tools/string-replace/test";
+@import "../tools/svg-encoder/test";
+
+// Mixins
+@import "../tools/loop-mq/test";
+@import "../tools/antialiased/test";
+@import "../tools/clearfix/test";
+@import "../tools/delink/test";
+@import "../tools/delist/test";
+@import "../tools/print-mq/test";
+@import "../tools/unbuttonize/test";
+@import "../tools/visually-hidden/test";
+
+// System Utilities
+@import "../systems/border/test";  
+@import "../systems/margin/test";
+@import "../systems/padding/test";
+@import "../systems/position/test";
+@import "../systems/color/foreground/test";
+@import "../systems/color/background/test";
+@import "../systems/color/border/test";
+@import "../systems/color/outline/test";
+@import "../systems/color/text-decoration/test";
+@import "../systems/z-index/test";
+
+// Utilities
+@import "../utilities/display/test";
+@import "../utilities/position/test";
+@import "../utilities/text-align/test";
+@import "../utilities/visually-hidden/test";
+
+
+// Report
+@include true.report; 
