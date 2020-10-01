@@ -73,9 +73,9 @@ From your friends at [Sparkbox](https://seesparkbox.com).
 - Grid 
 
 
-## Adding a Sass Unit Test
 
-1. Create a `_test.scss` file in the corresponding folder. 
-    *Note* Each folder with mixins, functions, and utilities should come with a corresponding `_test.scss` file. 
-2. Import True (`@import 'true'`) and sass file that would like to test at the top of this `_test.scss` file. 
-3. Ensure that this `_test.scss` file is being imported into the main `test/test.scss` file.
+| Sass Documentation                              |
+|-------------------------------------------------|
+| [File structure](docs.md#file-structure)        |
+| [Importing](docs.md#importing)                  |
+| [Testing](docs.md#adding-sass-unit-tests)       |
