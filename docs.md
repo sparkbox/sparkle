@@ -108,26 +108,26 @@ There are a few ways to go about importing.
 @import "../node_modules/sparkle/globals/spacing/map";
 
 // These files are optional
-@import "../node_modules/systems/border/utility";
-@import "../node_modules/systems/margin/utility";
-@import "../node_modules/systems/padding/utility";
-@import "../node_modules/systems/position/utility";
-@import "../node_modules/systems/color/foreground/utility";
-@import "../node_modules/systems/color/background/utility";
-@import "../node_modules/systems/color/border/utility";
-@import "../node_modules/systems/color/outline/utility";
-@import "../node_modules/systems/color/text-decoration/utility";
-@import "../node_modules/systems/z-index/utility";
-@import "../node_modules/utilities/display/utility";
-@import "../node_modules/utilities/position/utility";
-@import "../node_modules/utilities/text-align/utility";
-@import "../node_modules/utilities/visually-hidden/utility";
-@import "../node_modules/systems/border/map";
-@import "../node_modules/systems/color/map";
-@import "../node_modules/systems/z-index/map";
-@import "../node_modules/utilities/display/map";
-@import "../node_modules/utilities/position/map";
-@import "../node_modules/utilities/text-align/map";
+@import "../node_modules/sparkle/systems/border/utility";
+@import "../node_modules/sparkle/systems/margin/utility";
+@import "../node_modules/sparkle/systems/padding/utility";
+@import "../node_modules/sparkle/systems/position/utility";
+@import "../node_modules/sparkle/systems/color/foreground/utility";
+@import "../node_modules/sparkle/systems/color/background/utility";
+@import "../node_modules/sparkle/systems/color/border/utility";
+@import "../node_modules/sparkle/systems/color/outline/utility";
+@import "../node_modules/sparkle/systems/color/text-decoration/utility";
+@import "../node_modules/sparkle/systems/z-index/utility";
+@import "../node_modules/sparkle/utilities/display/utility";
+@import "../node_modules/sparkle/utilities/position/utility";
+@import "../node_modules/sparkle/utilities/text-align/utility";
+@import "../node_modules/sparkle/utilities/visually-hidden/utility";
+@import "../node_modules/sparkle/systems/border/map";
+@import "../node_modules/sparkle/systems/color/map";
+@import "../node_modules/sparkle/systems/z-index/map";
+@import "../node_modules/sparkle/utilities/display/map";
+@import "../node_modules/sparkle/utilities/position/map";
+@import "../node_modules/sparkle/utilities/text-align/map";
 ```
 
 Once this is setup, you can modify the Sass variables and maps in your own custom scss. 
