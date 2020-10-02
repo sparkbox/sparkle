@@ -1,0 +1,15 @@
+@import 'true';
+@import 'function';
+
+$settings: (
+  'prefix': 'test',
+);
+
+@include describe('The settings function') {
+    @include it('outputs the settings value.') {
+        @include assert-equal(
+            settings('prefix'), 
+            'test'
+        )
+    }
+}

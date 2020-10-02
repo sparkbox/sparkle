@@ -1,0 +1,35 @@
+@import 'true';
+@import 'mixin';
+
+$settings: (
+    'loop-mq': true
+);
+
+$media-queries: (
+  'sm': 40rem,
+);
+
+
+@include describe('The loop-mq mixin') {
+    @include it('outputs the media-query properties of loop-mq.') {
+        @include assert {
+            @include output {
+                .test {
+                    @include loop-mq() {
+                        color: red;
+                    }
+                }
+            }
+            @include expect {
+                .test {
+                    color: red;
+                }
+                @media (min-width: 40rem) {
+                    .test\@sm {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

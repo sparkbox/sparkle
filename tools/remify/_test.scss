@@ -1,0 +1,12 @@
+@import 'true';
+@import 'function';
+@import '../strip-units/function';
+
+@include describe('The remify function') {
+    @include it('outputs the remified value.') {
+        @include assert-equal(
+            remify(20), 
+            1.25rem
+        )
+    }
+}
