@@ -1,0 +1,196 @@
+@import 'true';
+@import './responsive-margin-class-mixin';
+@import './regular-margin-classes-mixin';
+@import '../../globals/spacing/function';
+
+$side: (
+  bottom,
+  all,
+  vert, 
+  horiz
+);
+
+$spacer: (
+  'sm': 0.5rem,
+  'md': 1rem,
+);
+
+$settings: (
+  'prefix': 'util'  
+);
+
+
+@include describe('The Margin Spacing System') {
+    @include it('outputs regular spacing classes.') {
+        @include assert {
+            @include output {
+                .#{settings(prefix)}-margin {
+                    @include sparkle-regular-margin-classes();
+                }
+            }
+            @include expect {
+                .util-margin-bottom-sm {
+                    margin-bottom: 0.5rem;
+                }
+                
+                .util-margin-bottom-md {
+                    margin-bottom: 1rem;
+                }
+                
+                .util-margin-all-sm {
+                    margin: 0.5rem;
+                }
+                
+                .util-margin-all-md {
+                    margin: 1rem;
+                }
+                
+                .util-margin-vert-sm {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                }
+                
+                .util-margin-vert-md {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+                
+                .util-margin-horiz-sm {
+                    margin-right: 0.5rem;
+                    margin-left: 0.5rem;
+                }
+                
+                .util-margin-horiz-md {
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+$media-queries: (
+  'sm': 40rem,
+  'md': 60rem
+);
+
+
+@include describe('The Margin Spacing System') {
+    @include it('outputs responsive spacing classes.') {
+        @include assert {
+            @include output {
+                .#{settings(prefix)}-margin {
+                    @include sparkle-responsive-margin-classes();
+                }
+            }
+            @include expect {
+            @media (min-width: 40rem) {
+                .util-margin-bottom-sm\@sm {
+                    margin-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-bottom-md\@sm {
+                    margin-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-all-sm\@sm {
+                    margin: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-all-md\@sm {
+                    margin: 1rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-vert-sm\@sm {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-vert-md\@sm {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-horiz-sm\@sm {
+                    margin-right: 0.5rem;
+                    margin-left: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-margin-horiz-md\@sm {
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-bottom-sm\@md {
+                    margin-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-bottom-md\@md {
+                    margin-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-all-sm\@md {
+                    margin: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-all-md\@md {
+                    margin: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-vert-sm\@md {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-vert-md\@md {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-horiz-sm\@md {
+                    margin-right: 0.5rem;
+                    margin-left: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-margin-horiz-md\@md {
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                }
+                }
+                
+            }
+
+        }
+    }
+}

@@ -78,4 +78,6 @@ From your friends at [Sparkbox](https://seesparkbox.com).
 |-------------------------------------------------|
 | [File structure](docs.md#file-structure)        |
 | [Importing](docs.md#importing)                  |
+| [Spacing Classes](docs.md#spacing-classes)             |
+| [Margin](docs.md#margin)                               |
 | [Testing](docs.md#adding-sass-unit-tests)       |

@@ -7,7 +7,10 @@ Our source Sass files provide mixins, utiltities, and more. Below you can find d
 | [File structure](#file-structure)               |
 | [Sparkle Settings](#sparkle-settings)           |
 | [Importing](#importing)                         |
+| [Spacing Classes](#spacing-classes)             |
+| [Margin](#margin)                               |
 | [Testing](#adding-sass-unit-tests)              |
+
 <br />
 
 ## File Structure
@@ -149,6 +152,36 @@ There are a few ways to go about importing.
 ```
 
 Once this is setup, you can modify the Sass variables and maps in your own custom scss. 
+<br />
+
+## Spacing Classes
+
+All spacing classes follow a similar format: `.[prefix]-[property]-[side]-[amount]`.
+
+| Class Section | Options                                                            | Description |
+|---------------|--------------------------------------------------------------------|-------------|
+| [property]    | `margin`                                                           | This defines which spacing property to utilize, either margin for a margin property or pad for a padding property                                                                                                                                                                                                                                              |
+| [side]        | `all`, `vert`, `horiz`, `top` ,`bottom`, `left`, `right`           | The side options are which side of the box to place the spacing amount. For a combined top and bottom value, use `vert`, for a combined right and left value use `horiz`. To apply the same value to all sides use all.                                                                                                                                            |
+| [amount]      | `none`, `sm`, `md`, `lg`, `xl`                                     | The amount of spacing is a lettered value for a multiplier of the base spacer value. By default the base spacer value is `1rem`, this is the amount use on the `xs` amount. To use a zero value spacing use the amount none.     |
+| [breakpoint]  | `@sm`, `@md`, `@lg`, `@xl`                                         | An optional section can be added to the end of the class to indicate a breakpoint value (`.util-[property]-[side]-[amount]-@[breakpoint]`). For example, if you want a div to change from having small padding to a large padding at a specific breakpoint, this class section can be used to do just that: `<div class="util-pad-all-sm util-pad-all-md@lg">` |
+
+## Margin
+| Class                      | Description                                                             |
+|----------------------------|-------------------------------------------------------------------------|
+| .`util-margin-bottom-none` | Removes margin from the bottom of an element.                           |
+| .`util-margin-bottom-xs`   | Adds an extra small amount of margin to the bottom of an element.       |
+| .`util-margin-bottom-sm`   | Adds a small amount of margin to the bottom of an element.              |
+| .`util-margin-bottom-md`   | Adds a medium amount of margin to the bottom of an element.             |
+| .`util-margin-bottom-lg`   | Adds a large amount of margin to the bottom of an element.              |
+| .`util-margin-bottom-xl`   | Adds an extra large amount of margin to the bottom of an element.       |
+| .`util-margin-bottom-xxl`  | Adds an extra extra large amount of margin to the bottom of an element. |
+| .`util-margin-top-none`    | Removes margin from the top of an element.                              |
+| .`util-margin-top-xs`      | Adds an extra small amount of margin to the top of an element.          |
+| .`util-margin-top-sm`      | Adds a small amount of margin to the top of an element.                 |
+| .`util-margin-top-md`      | Adds a medium amount of margin to the top of an element.                |
+| .`util-margin-top-lg`      | Adds a large amount of margin to the top of an element.                 |
+| .`util-margin-top-xl`      | Adds an extra large amount of margin to the top of an element.          |
+| .`util-margin-top-xxl`     | Adds an extra extra large amount of margin to the top of an element.    |
 <br />
 
 ## Adding Sass Unit Tests

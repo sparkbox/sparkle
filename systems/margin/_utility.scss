@@ -1,0 +1,16 @@
+@import 'map';
+@import '../../globals/spacing/map';
+@import '../../globals/media-queries/map';
+
+@import '../../globals/spacing/function';
+
+@import './regular-margin-classes-mixin';
+@import './responsive-margin-class-mixin';
+
+.#{settings(prefix)}-margin {
+    // This outputs regular spacing classes
+    @include sparkle-regular-margin-classes;
+    
+    // This outputs responsive spacing classes
+    @include sparkle-responsive-margin-classes;
+  }
