@@ -88,7 +88,7 @@ In your `custom.scss`, you’ll import Sparkles’s source Sass files above your
 
 There are a few ways to go about importing.
 
-#### Option A: Include all of Sparkle
+### Option A: Include all of Sparkle Settings
 ```
 // custom.scss
 //  Import all of Sparkle's Settings at the top of where you import all of your sass files.
@@ -96,7 +96,7 @@ There are a few ways to go about importing.
 @import "../node_modules/sparkle/docs";
 ```
 
-#### Option B: Include parts of Sparkle's Settings
+### Option B: Include parts of Sparkle's Settings
 
 ```
 // custom.scss
