@@ -8,7 +8,7 @@ Our source Sass files provide mixins, utiltities, and more. Below you can find d
 | [Sparkle Settings](#sparkle-settings)           |
 | [Importing](#importing)                         |
 | [Testing](#adding-sass-unit-tests)              |
-
+<br />
 
 ## File Structure
 
@@ -52,6 +52,7 @@ your-project/
     └── _utilities.scss
     └── package.json
 ```
+<br />
 
 ## Sparkle Settings
 
@@ -81,6 +82,23 @@ $settings: map-merge(
 
 ```
 
+| Setting                           | Description             |
+|-----------------------------------|-------------------------|
+| prefix                            |                         |
+| loop-mq                           |                         |
+| print-classes                     |                         |
+| utility-background-color          |                         |
+| utility-border-color              |                         |
+| utility-foreground-color          |                         |
+| utility-outline-color             |                         |
+| utility-text-decoration-color     |                         |
+| utility-z-index                   |                         |
+| utility-display                   |                         |
+| utility-position                  |                         |
+| utility-text-align                |                         |
+| utility-visually-hidden           |                         |
+
+<br />
 
 ## Importing
 
@@ -131,6 +149,7 @@ There are a few ways to go about importing.
 ```
 
 Once this is setup, you can modify the Sass variables and maps in your own custom scss. 
+<br />
 
 ## Adding Sass Unit Tests
 
