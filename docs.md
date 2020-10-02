@@ -1,5 +1,5 @@
 
-# Sass
+# Sparkle Sass
 Our source Sass files provide mixins, utiltities, and more. Below you can find details on the following:
 
 |                                                 |
