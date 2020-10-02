@@ -1,0 +1,34 @@
+@import 'true';
+@import 'mixin';
+
+@include describe('The print mixin') {
+    @include it('outputs the properties of print.') {
+        @include assert {
+            @include output {
+                @include print(){
+                    background-color: transparent;
+                };
+            }
+            @include expect {
+                @media print {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@include describe('The print mixin') {
+    @include it('outputs the properties of print when state is equal to hide.') {
+        @include assert {
+            @include output {
+                @include print($state: hide);
+            }
+            @include expect {
+                @media print {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

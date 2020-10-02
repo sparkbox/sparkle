@@ -1,0 +1,11 @@
+@import 'true';
+@import 'function';
+
+@include describe('The ratio function') {
+    @include it('outputs the ratio given height and width.') {
+        @include assert-equal(
+            ratio(12, 6), 
+            200%
+        )
+    }
+}
