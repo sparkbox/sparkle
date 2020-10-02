@@ -33,7 +33,7 @@ your-project/
         └── package.json
 ```
 
-If you want to downloaded our source files instead, you want to make sure that you keep Sparkle’s source files separate from your own.
+If you want to download our source files instead, you want to make sure that you keep Sparkle’s source files separate from your own.
 
 ```
 your-project/
