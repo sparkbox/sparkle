@@ -1,0 +1,18 @@
+@import '../../globals/spacing/function';
+
+@mixin padding-spacing ($side, $spacer-key) {
+  @if $side == "all" {
+    padding: space($spacer-key);
+  }
+  @else if $side == "vert" {
+    padding-top: space($spacer-key);
+    padding-bottom: space($spacer-key);
+  }
+  @else if $side == "horiz" {
+    padding-right: space($spacer-key);
+    padding-left: space($spacer-key);
+  }
+  @else {
+    padding-#{$side}: space($spacer-key);
+  }
+}

@@ -1,0 +1,14 @@
+@import 'padding-spacing-mixin';
+
+@mixin sparkle-regular-padding-classes {
+    // This outputs regular spacing classes
+    @each $side in $side {
+        &-#{$side} {
+          @each $spacer-key, $spacer-value in $spacer {
+            &-#{$spacer-key} {
+              @include padding-spacing($side, $spacer-key);
+            }
+          }
+        }
+    }
+}

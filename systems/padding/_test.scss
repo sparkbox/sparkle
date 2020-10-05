@@ -1,0 +1,196 @@
+@import 'true';
+@import 'regular-padding-classes-mixin';
+@import 'responsive-padding-class-mixin';
+@import '../../globals/spacing/function';
+
+$side: (
+  bottom,
+  all,
+  vert, 
+  horiz
+);
+
+$spacer: (
+  'sm': 0.5rem,
+  'md': 1rem,
+);
+
+$settings: (
+  'prefix': 'util'  
+);
+
+
+@include describe('The Padding Spacing System') {
+    @include it('outputs regular spacing classes.') {
+        @include assert {
+            @include output {
+                .#{settings(prefix)}-pad {
+                    @include sparkle-regular-padding-classes();
+                }
+            }
+            @include expect {
+                .util-pad-bottom-sm {
+                    padding-bottom: 0.5rem;
+                }
+                
+                .util-pad-bottom-md {
+                    padding-bottom: 1rem;
+                }
+                
+                .util-pad-all-sm {
+                    padding: 0.5rem;
+                }
+                
+                .util-pad-all-md {
+                    padding: 1rem;
+                }
+                
+                .util-pad-vert-sm {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+                
+                .util-pad-vert-md {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+                
+                .util-pad-horiz-sm {
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                }
+                
+                .util-pad-horiz-md {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+$media-queries: (
+  'sm': 40rem,
+  'md': 60rem
+);
+
+
+@include describe('The Padding Spacing System') {
+    @include it('outputs responsive spacing classes.') {
+        @include assert {
+            @include output {
+                .#{settings(prefix)}-pad {
+                    @include sparkle-responsive-padding-classes();
+                }
+            }
+            @include expect {
+            @media (min-width: 40rem) {
+                .util-pad-bottom-sm\@sm {
+                    padding-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-bottom-md\@sm {
+                    padding-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-all-sm\@sm {
+                    padding: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-all-md\@sm {
+                    padding: 1rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-vert-sm\@sm {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-vert-md\@sm {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-horiz-sm\@sm {
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 40rem) {
+                .util-pad-horiz-md\@sm {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-bottom-sm\@md {
+                    padding-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-bottom-md\@md {
+                    padding-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-all-sm\@md {
+                    padding: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-all-md\@md {
+                    padding: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-vert-sm\@md {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-vert-md\@md {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-horiz-sm\@md {
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                }
+                }
+                
+                @media (min-width: 60rem) {
+                .util-pad-horiz-md\@md {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+                }
+                
+            }
+
+        }
+    }
+}

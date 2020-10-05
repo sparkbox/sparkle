@@ -6,8 +6,10 @@ Our source Sass files provide mixins, utiltities, and more. Below you can find d
 |-------------------------------------------------|
 | [File structure](#file-structure)               |
 | [Sparkle Settings](#sparkle-settings)           |
-| [Importing](#importing)                         |
+| [Importing](#importing)                         |                            |
+| [Padding](#padding)                             |
 | [Testing](#adding-sass-unit-tests)              |
+
 <br />
 
 ## File Structure
@@ -150,6 +152,24 @@ There are a few ways to go about importing.
 
 Once this is setup, you can modify the Sass variables and maps in your own custom scss. 
 <br />
+
+## Padding
+| Class                   | Description                                                              |
+|-------------------------|--------------------------------------------------------------------------|
+| `.util-pad-bottom-none` | Removes padding from the bottom of an element.                           |
+| `.util-pad-bottom-xs`   | Adds an extra small amount of padding to the bottom of an element.       |
+| `.util-pad-bottom-sm`   | Adds a small amount of padding to the bottom of an element.              |
+| `.util-pad-bottom-md`   | Adds a medium amount of padding to the bottom of an element.             |
+| `.util-pad-bottom-lg`   | Adds a large amount of padding to the bottom of an element.              |
+| `.util-pad-bottom-xl`   | Adds an extra large amount of padding to the bottom of an element.       |
+| `.util-pad-bottom-xxl`  | Adds an extra extra large amount of padding to the bottom of an element. |
+| `.util-pad-top-none`    | Removes padding from the top of an element.                              |
+| `.util-pad-top-xs`      | Adds an extra small amount of padding to the top of an element.          |
+| `.util-pad-top-sm`      | Adds a small amount of padding to the top of an element.                 |
+| `.util-pad-top-md`      | Adds a medium amount of padding to the top of an element.                |
+| `.util-pad-top-lg`      | Adds a large amount of padding to the top of an element.                 |
+| `.util-pad-top-xl`      | Adds an extra large amount of padding to the top of an element.          |
+| `.util-pad-top-xxl`     | Adds an extra extra large amount of padding to the top of an element.    |
 
 ## Adding Sass Unit Tests
 
