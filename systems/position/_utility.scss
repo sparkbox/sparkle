@@ -1,0 +1,15 @@
+.#{settings(prefix)}-position-fixed {
+    position: fixed;
+}
+
+.#{settings(prefix)}-position-absolute {
+    position: absolute;
+}
+
+.#{settings(prefix)}-position-relative {
+    position: relative;
+}
+
+.#{settings(prefix)}-position-static {
+    position: static;
+}

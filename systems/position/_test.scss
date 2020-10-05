@@ -1,0 +1,73 @@
+@import 'true';
+@import './mixin';
+
+@include describe('The Position Spacing System') {
+    @include it('outputs position top is not null.') {
+        @include assert {
+            @include output {
+                .test-output {
+                    @include position($top:2rem, $right:null, $bottom:null, $left:null);
+                }
+            }
+            @include expect {
+                .test-output {
+                    top: 2rem;
+                    right: 2rem;
+                    bottom: 2rem;
+                    left: 2rem;
+                }
+            }
+        }
+    }
+    @include it('outputs position when left and bottom is null') {
+        @include assert {
+            @include output {
+                .test-output {
+                    @include position($top:2rem, $right:3rem, $bottom:null, $left:null);
+                }
+            }
+            @include expect {
+                .test-output {
+                    top: 2rem;
+                    right: 3rem;
+                    bottom: 2rem;
+                    left: 3rem;
+                }
+            }
+        }
+    }
+    @include it('outputs position when left is null') {
+        @include assert {
+            @include output {
+                .test-output {
+                    @include position($top:2rem, $right:3rem, $bottom:4rem, $left:null);
+                }
+            }
+            @include expect {
+                .test-output {
+                    top: 2rem;
+                    right: 3rem;
+                    bottom: 4rem;
+                    left: 3rem;
+                }
+            }
+        }
+    }
+    @include it('outputs position when no position is null') {
+        @include assert {
+            @include output {
+                .test-output {
+                    @include position($top:2rem, $right:3rem, $bottom:4rem, $left:5rem);
+                }
+            }
+            @include expect {
+                .test-output {
+                    top: 2rem;
+                    right: 3rem;
+                    bottom: 4rem;
+                    left: 5rem;
+                }
+            }
+        }
+    }
+}

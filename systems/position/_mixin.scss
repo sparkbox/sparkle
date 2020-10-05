@@ -1,0 +1,30 @@
+@mixin position($top:null, $right:null, $bottom:null, $left:null) {
+    @if ($top != null and $right == null and $bottom == null and $left == null) {
+      top: $top;
+      right: $top;
+      bottom: $top;
+      left: $top;
+    }
+  
+    @else if ($top != null and $right != null and $bottom == null and $left == null) {
+      top: $top;
+      right: $right;
+      bottom: $top;
+      left: $right;
+    }
+  
+    @else if ($top != null and $right != null and $bottom != null and $left == null) {
+      top: $top;
+      right: $right;
+      bottom: $bottom;
+      left: $right;
+    }
+  
+    @else if ($top != null and $right != null and $bottom != null and $left != null) {
+      top: $top;
+      right: $right;
+      bottom: $bottom;
+      left: $left;
+    }
+  }
+  

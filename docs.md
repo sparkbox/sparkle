@@ -151,6 +151,16 @@ There are a few ways to go about importing.
 Once this is setup, you can modify the Sass variables and maps in your own custom scss. 
 <br />
 
+## Positioning
+| Class                   | Description                                                              |
+|-------------------------|--------------------------------------------------------------------------|
+| `.util-position-fixed` | Sets the position of an element to be fixed.                        |
+| `.util-position-absolute`   |  Sets the position of an element to be absolute.       |
+| `.util-position-relative`   | Sets the position of an element to be relative.             |
+| `.util-position-static`   | Sets the position of an element to be static.          |
+<br />
+
+
 ## Adding Sass Unit Tests
 
 1. Create a `_test.scss` file in the corresponding folder. 
