@@ -75,3 +75,11 @@ main > section + section {
 .color-property {
   font-size: 80%;
 }
+
+main > section[id] {
+  margin-top: 8rem;
+}
+
+main > section[id] > .markdown-body > section[id] {
+  margin-top: 4rem;
+}

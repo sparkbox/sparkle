@@ -1,5 +1,5 @@
 @if settings('utility-background-color') {
-/*---
+/* ---
 section: Systems
 
 ### Background Color Utility Classes
@@ -18,7 +18,7 @@ section: Systems
 */
 
   @each $key, $val in $colors {
-/*---
+/* ---
 section: Systems
 
 <tr>
@@ -39,7 +39,7 @@ section: Systems
     }
   }
 
-/*---
+/* ---
 section: Systems
 
 </tbody>

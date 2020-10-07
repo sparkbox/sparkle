@@ -1,5 +1,5 @@
 @if settings('utility-text-decoration-color') {
-/*---
+/* ---
 section: Systems
 ---
 
@@ -19,7 +19,7 @@ section: Systems
 */
 
     @each $key, $val in $colors {
-/*---
+/* ---
 section: Systems
 ---
 
@@ -41,7 +41,7 @@ section: Systems
     }
   }
 
-/*---
+/* ---
 section: Systems
 ---
 

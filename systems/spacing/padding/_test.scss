@@ -31,7 +31,7 @@ $media-queries: (
   @include it('outputs regular spacing classes.') {
     @include assert {
       @include output {
-        @include sparkle-spacing-loop(padding);
+        @include sparkle-spacing-loop(padding, true);
       }
       @include expect {
         .true-test-pad-all-sm {

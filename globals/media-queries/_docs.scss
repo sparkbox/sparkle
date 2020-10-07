@@ -1,27 +1,51 @@
 @if settings(loop-mq) {
-  /*---
-  section: Settings
+  /* ---
+  title: Media Queries System
+  section: Systems
   ---
+
+  The media queries of this system are not intended to be the only media queries in your styles, but are meant to be the major media queries and inform the responsive suffixes that are applied to the utility classes.
+
+  ### Media Queries Function
+
+  ```scss
+  @media (min-width: mq(<key>)) {
+    ...
+  }
+  ```
+
+  ### Responsive Suffix Classes
+
+  Responsive suffix classes scope a utility class’s styles to a media query. For example a class named `.display-block` add the property and value of `display: block`, it will have a companion class called `.display-block@md` that applies `display: block` only when the screen width is at the defined size for the `md` media query key.
+
+  ### Framework Media Queries
+
+  The following table contains a list of the media query values defined in this framework.
+
   <table>
+  <title>Framework Media Queries</title>
   <thead>
   <tr>
-    <th>Name</th>
-    <th>Size</th>
+    <th>Function</th>
+    <th>Screen Width Size</th>
+    <th>Class Suffix</th>
   </tr>
   </thead>
   <tbody>
   */
   @each $key, $val in $media-queries {
-    /*---
+    /* ---
     section: Systems
     ---
     <tr>
-    <td>#{$key}</td>
+    <td>mq(#{$key})</td>
     <td>#{$val}</td>
+    <td>@#{$key}</td>
     </tr>
     */
   }
-  /*---
+
+  /* ---
   section: Systems
   ---
   </tbody>

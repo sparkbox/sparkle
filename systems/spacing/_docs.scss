@@ -24,16 +24,17 @@ Below is the spacing system value options and the spacing size.
 */
 
 @each $space-key, $space-val in $spacer {
-/*---
-section: Systems
----
-<tr>
-<td><code>space(#{$space-key})</code></td>
-<td>#{space-val}</td>
-</tr>
-*/
+  /* ---
+  section: Systems
+  ---
+  <tr>
+  <td><code>space(#{$space-key})</code></td>
+  <td><code>#{$space-val}</code></td>
+  </tr>
+  */
 }
-/*---
+
+/* ---
 section: Systems
 ---
 </tbody>

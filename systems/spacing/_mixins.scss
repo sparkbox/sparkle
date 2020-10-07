@@ -23,7 +23,7 @@
   }
 }
 
-@mixin sparkle-spacing-side-loop($type, $mq:null) {
+@mixin sparkle-spacing-side-loop($type, $mq:null, $true-test:null) {
   $type-name: $type;
   @if $mq {
     $mq: '\\@' + $mq;
@@ -33,54 +33,60 @@
   }
   @each $side-key, $side-val in $sides {
     @each $space-key, $space-val in $spacer {
-      @if $mq == null {
-        /*---
-        section: Systems
-        ---
-        <tr>
-        <td><code>#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}</code></td>
-        <td><code>#{$space-val}</td>
-        <td>#{$side-key}</td>
-        </tr>
-        */
+      @if $true-test == null {
+        @if $mq == null {
+          /* ---
+          section: Systems
+          ---
+          <tr>
+          <td><code>#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}</code></td>
+          <td><code>#{$space-val}</td>
+          <td>#{$side-key}</td>
+          </tr>
+          */
+        }
       }
+
       .#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}#{$mq} {
-        @include sparkle-spacing-sides($space-val, $side-key, $type)
+        @include sparkle-spacing-sides($space-val, $side-key, $type);
       }
     }
   }
 }
 
-@mixin sparkle-spacing-loop($type) {
-  /*---
-  section: Systems
-  ---
-  
-  <table>
-  <thead>
-  <tr>
-  <th>Class Name</th>
-  <th>Spacing Size</th>
-  <th>Sides</th>
-  </tr>
-  </thead>
-  <tbody>
-  */
-  @include sparkle-spacing-side-loop($type);
+@mixin sparkle-spacing-loop($type, $true-test:null) {
+  @if $true-test == null {
+    /* ---
+    section: Systems
+    ---
+    <table>
+    <thead>
+    <tr>
+    <th>Class Name</th>
+    <th>Spacing Size</th>
+    <th>Sides</th>
+    </tr>
+    </thead>
+    <tbody>
+    */
+  }
+  @include sparkle-spacing-side-loop($type, null, $true-test);
   @each $key, $val in $media-queries {
     @media (min-width: #{$val}) {
-      @include sparkle-spacing-side-loop($type, $key);
+      @include sparkle-spacing-side-loop($type, $key, $true-test);
     }
   }
   @if settings('print-classes') {
     @media print {
-      @include sparkle-spacing-side-loop($type, print);
+      @include sparkle-spacing-side-loop($type, print, $true-test);
     }
   }
-  /*---
-  section: Systems
-  ---
-  </tbody>
-  </table>
-  */
+  @if $true-test == null {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
 }

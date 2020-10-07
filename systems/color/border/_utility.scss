@@ -1,5 +1,5 @@
 @if settings('utility-border-color') {
-/*---
+/* ---
 section: Systems
 ---
 ### Border Color Utility Classes
@@ -18,7 +18,7 @@ section: Systems
 */
 
   @each $key, $val in $colors {
-/*---
+/* ---
 section: Systems
 ---
 
@@ -40,7 +40,7 @@ section: Systems
     }
   }
 
-/*---
+/* ---
 section: Systems
 ---
 

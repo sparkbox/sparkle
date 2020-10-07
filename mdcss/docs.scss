@@ -11,26 +11,28 @@ section: Settings
 order: -1
 ---
 
-In the ITCSS method, settings are declared first and at the top of the Sass document. These contain all variables used throughout the tools and utilities.
+In the ITCSS method, settings are declared first and at the top of the Sass document. These contain all variables used throughout the tools and utilities. The settings inform what Tools, Systems, and Utilities are available in the framework. More details about settings setup can be found on the [Sparkle repo](https://github.com/sparkbox/sparkle).
 */
 @import "../settings";
-@import "../globals/media-queries/docs";
+
 /* ---
 section: Tools
 order: -1
 ---
 
-The second declaration of the ITCSS method are the tools. Tools are the Sass mixins and functions used throughout .
+The second declaration of the ITCSS method are the tools. Tools are the Sass mixins and functions used throughout the framework.
 */
 @import "../tools";
 @import "mdcss";
 
 /* ---
 section: Systems
+order: -1
 ---
 
-The final declaration of the ITCSS method are the utilities. Any additional styles should be declared between Tools and Utilities. The utilities are classes that have distinct purposes. Some of the Utilities are part of a System. Systems contain specific mixins, functions, and utility classes around a specific aspect of the framework, for example the Color and Spacing systems.
+Systems are not on their own part of the ITCSS organization, but instead are a collection of Settings, Tools, and Utilities. Systems are the most complex and customizable part of this framework. Each System usually has at least a Sass Function and Sass Map, while some generate Utility classes as well.
 */
+@import "../globals/media-queries/docs";
 @import "../systems";
 
 /* ---
