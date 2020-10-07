@@ -1,5 +1,5 @@
 @if settings('system-color') {
-/*---
+  /* ---
 title: Color System
 section: Systems
 ---
@@ -16,8 +16,8 @@ section: Systems
 <tbody>
 */
 
-    @each $key, $val in $colors {
-/*---
+  @each $key, $val in $colors {
+    /* ---
 section: Systems
 
 <tr>
@@ -29,7 +29,7 @@ section: Systems
 */
   }
 
-/*---
+  /* ---
 section: Systems
 
 </tbody>

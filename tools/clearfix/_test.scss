@@ -2,19 +2,18 @@
 @import 'mixin';
 
 @include describe('The clearfix mixin') {
-    @include it('outputs the properties of our clearfix.') {
-        @include assert {
-            @include output {
-                @include clearfix();
-            }
-            @include expect {
-                &::after {
-                    clear: both;
-                    content: '';
-                    display: table;
-                }
-            }
+  @include it('outputs the properties of our clearfix.') {
+    @include assert {
+      @include output {
+        @include clearfix();
+      }
+      @include expect {
+        &::after {
+          clear: both;
+          content: '';
+          display: table;
         }
+      }
     }
+  }
 }
-  

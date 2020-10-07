@@ -2,16 +2,15 @@
 @import 'mixin';
 
 @include describe('The antialiased mixin') {
-    @include it('outputs the properties of antialiased.') {
-        @include assert {
-            @include output {
-                @include antialiased();
-            }
-            @include expect {
-                -moz-osx-font-smoothing: antialiased;
-                -webkit-font-smoothing: antialiased;
-            }
-        }
+  @include it('outputs the properties of antialiased.') {
+    @include assert {
+      @include output {
+        @include antialiased();
+      }
+      @include expect {
+        -moz-osx-font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+      }
     }
+  }
 }
-  

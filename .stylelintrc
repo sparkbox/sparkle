@@ -1,0 +1,9 @@
+{
+  "extends": "@sparkbox/stylelint-config-sparkbox",
+    "rules": {
+      "max-nesting-depth": [4, {
+      "ignore": ["blockless-at-rules"]
+      }],
+      "no-descending-specificity": null,
+    },
+}

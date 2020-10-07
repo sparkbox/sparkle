@@ -2,10 +2,10 @@
 @import 'function';
 
 @include describe('The strip units function') {
-    @include it('outputs value without units') {
-        @include assert-equal(
-            strip-units(30rem),
-            30
-        )
-    }
+  @include it('outputs value without units') {
+    @include assert-equal(
+      strip-units(30rem),
+      30
+    );
+  }
 }

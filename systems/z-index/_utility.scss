@@ -1,5 +1,5 @@
 @if settings('utility-z-index') {
-/*---
+  /* ---
 section: Systems
 title: Z-Index System
 ---
@@ -17,7 +17,7 @@ title: Z-Index System
 */
 
   @each $key, $value in $z-index {
-/*---
+    /* ---
 section: Systems
 ---
 
@@ -34,7 +34,7 @@ section: Systems
     }
   }
 
-  /*---
+  /* ---
 section: Systems
 
 </tbody>

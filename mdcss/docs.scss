@@ -1,4 +1,4 @@
-/*---
+/* ---
 section: Introduction
 order: -1
 ---
@@ -6,7 +6,7 @@ order: -1
 The Sparkle Utility Framework is a customizable system of Sass tools and classes that is intended to work within the Inverted Triangle CSS (ITCSS) organization method. This site is a resource of the settings, tools, and utility classes available for this website.
 */
 
-/*---
+/* ---
 section: Settings
 order: -1
 ---
@@ -14,7 +14,8 @@ order: -1
 In the ITCSS method, settings are declared first and at the top of the Sass document. These contain all variables used throughout the tools and utilities.
 */
 @import "../settings";
-/*---
+
+/* ---
 section: Tools
 order: -1
 ---
@@ -23,14 +24,16 @@ The second declaration of the ITCSS method are the tools. Tools are the Sass mix
 */
 @import "../tools";
 @import "mdcss";
-/*---
+
+/* ---
 section: Systems
 ---
 
 The final declaration of the ITCSS method are the utilities. Any additional styles should be declared between Tools and Utilities. The utilities are classes that have distinct purposes. Some of the Utilities are part of a System. Systems contain specific mixins, functions, and utility classes around a specific aspect of the framework, for example the Color and Spacing systems.
 */
 @import "../systems";
-/*---
+
+/* ---
 section: Utilities
 ---
 

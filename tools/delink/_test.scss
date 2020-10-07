@@ -2,15 +2,15 @@
 @import 'mixin';
 
 @include describe('The delink mixin') {
-    @include it('outputs the properties of delink.') {
-        @include assert {
-            @include output {
-                @include delink();
-            }
-            @include expect {
-                color: inherit;
-                text-decoration: none;
-            }
-        }
+  @include it('outputs the properties of delink.') {
+    @include assert {
+      @include output {
+        @include delink();
+      }
+      @include expect {
+        color: inherit;
+        text-decoration: none;
+      }
     }
+  }
 }

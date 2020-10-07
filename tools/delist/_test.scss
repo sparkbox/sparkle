@@ -2,16 +2,16 @@
 @import 'mixin';
 
 @include describe('The delist mixin') {
-    @include it('outputs the properties of delist.') {
-        @include assert {
-            @include output {
-                @include delist();
-            }
-            @include expect {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-        }
+  @include it('outputs the properties of delist.') {
+    @include assert {
+      @include output {
+        @include delist();
+      }
+      @include expect {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
     }
+  }
 }

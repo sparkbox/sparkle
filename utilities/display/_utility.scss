@@ -1,7 +1,7 @@
 @import "mixin";
 
 @if settings('utility-display') {
-/*---
+  /* ---
 title: Display Utility
 section: Utilities
 ---
@@ -15,9 +15,9 @@ section: Utilities
 <tbody>
 */
 
-// NOTE: This @each loop is only for document generation
-@each $value in $util-display-values {
-/*---
+  // NOTE: This @each loop is only for document generation
+  @each $value in $util-display-values {
+    /* ---
 section: Utilities
 ---
 
@@ -27,8 +27,9 @@ section: Utilities
 </tr>
 
 */
-}
-/*---
+  }
+
+  /* ---
 section: Utilities
 ---
 </tbody>

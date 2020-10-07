@@ -23,10 +23,11 @@ main > section + section {
 
 .docs-layout {
   position: relative;
+
   .one-fourth {
     max-width: 20rem;
     position: sticky;
-    top: 0rem;
+    top: 0;
     overflow: auto;
     box-sizing: border-box;
     padding-top: 1rem;
@@ -43,11 +44,11 @@ main > section + section {
   position: relative;
 }
 
-.docs-iframe {
-}
+// .docs-iframe {
+// }
 
-.docs-example:hover .docs-iframe {
-}
+// .docs-example:hover .docs-iframe {
+// }
 
 .docs-resize {
   width: 100%;
@@ -64,8 +65,8 @@ main > section + section {
 }
 
 .swatch {
-  padding: .25em;
-  margin: 0 .3em .3em 0;
+  padding: 0.25em;
+  margin: 0 0.3em 0.3em 0;
   word-break: break-all;
   word-wrap: break-word;
   overflow: hidden;

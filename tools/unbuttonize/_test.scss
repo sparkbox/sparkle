@@ -2,22 +2,22 @@
 @import 'mixin';
 
 @include describe('The unbuttonize mixin') {
-    @include it('outputs the properties of unbuttonize.') {
-        @include assert {
-            @include output {
-                @include unbuttonize();
-            }
-            @include expect {
-                background-color: transparent;
-                color: inherit;
-                border: none;
-                margin: 0;
-                padding: 0;
-                text-align: inherit;
-                font: inherit;
-                border-radius: 0;
-                appearance: none; 
-            }
-        }
+  @include it('outputs the properties of unbuttonize.') {
+    @include assert {
+      @include output {
+        @include unbuttonize();
+      }
+      @include expect {
+        background-color: transparent;
+        color: inherit;
+        border: none;
+        margin: 0;
+        padding: 0;
+        text-align: inherit;
+        font: inherit;
+        border-radius: 0;
+        appearance: none;
+      }
     }
+  }
 }
