@@ -1,0 +1,40 @@
+@import 'true';
+@import "mixin";
+
+$font-size: (
+  'sm': 0.875rem,
+  'md': 1.125rem,
+  'lg': 1.5rem
+);
+
+
+$settings: (
+  'prefix': 'true-test',
+  'system-font-size': true
+);
+
+$true-test: true;
+
+@include describe('The Font Size System') {
+  @include it('outputs font-size classes.') {
+    @include assert {
+      @include output {
+        @include sparkle-font-size($true-test);
+      }
+      
+      @include expect {
+        .true-test-size-sm {
+          font-size: 0.875rem;
+        }
+          
+        .true-test-size-md {
+          font-size: 1.125rem;
+        }
+        
+        .true-test-size-lg {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
