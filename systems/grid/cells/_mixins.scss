@@ -1,0 +1,84 @@
+@mixin sparkle-column-span($count, $span) {
+  float: left;
+  width: ($span / $count) * 100%;
+
+  @supports (display: grid) {
+    width: auto;
+    grid-column: span $span;
+  }
+}
+
+// Generates Demo HTML for Docs
+@function sparkle-grid-demo($iteration, $count, $class) {
+  $r: '';
+  $end: '';
+  $grid-set: '';
+  @for $i from 1 through floor($count/$iteration) {
+    @if $count - $iteration > 0 {
+      @if $count/2 < $iteration {
+        $grid-set: $count - $iteration;
+        $end: '<div class="#{$class}-#{$grid-set}-#{$count}"><span>#{$grid-set}-#{$count}</span></div>';
+      } @else if ($iteration * floor($count / $iteration)) < $count {
+        $grid-set: $count - ($iteration * floor($count / $iteration));
+        $end: '<div class="#{$class}-#{$grid-set}-#{$count}"><span>#{$grid-set}-#{$count}</span></div>';
+      } @else {
+        $end: '';
+      }
+    }
+    $r: $r + '<div class="#{$class}-#{$iteration}-#{$count}"><span>#{$iteration}-#{$count}</span></div>';
+  }
+  @return $r + $end;
+};
+
+@function sparkle-grid-class($iteration, $count, $class, $mq) {
+  $val: '';
+
+  @if ($iteration/$count) == (1/4) {
+    $val: ".#{$class}-quarter#{$mq}, ";
+  }
+
+  @else if ($iteration/$count) == (1/3) {
+    $val: ".#{$class}-third#{$mq}, ";
+  }
+
+  @else if ($iteration/$count) == (1/2) {
+    $val: ".#{$class}-half#{$mq}, ";
+  }
+
+  @else if ($iteration/$count) == (2/3) {
+    $val: ".#{$class}-two-third#{$mq}, .#{$class}-two-thirds#{$mq}, ";
+  }
+
+  @else if ($iteration/$count) == (3/4) {
+    $val: ".#{$class}-three-quarter#{$mq}, .#{$class}-three-quarters#{$mq}, ";
+  }
+
+  @else if $iteration == $count {
+    $val: ".#{$class}-full#{$mq}, ";
+  }
+
+  @else {
+    $val: $val;
+  }
+  
+  @return $val;
+}
+
+@mixin sparkle-grid-maker($count:12, $mq:'', $true-test:null) {
+  $class: settings(prefix) + '-grid-cell';
+  @for $i from 1 through $count {
+    #{sparkle-grid-class($i, $count, $class, $mq)}.#{$class}-#{$i}-#{$count}#{$mq} {
+      @if $true-test == null {
+        /* ---
+        section: Systems
+        name: grid-demo-#{$i}
+        ---
+        <div class="sparkle-grid-demo #{settings(prefix)}-grid-block">
+          #{sparkle-grid-demo($i, $count, $class)}
+        </div>
+        */
+      }
+      @include sparkle-column-span($count, $i);
+    }
+  }
+}

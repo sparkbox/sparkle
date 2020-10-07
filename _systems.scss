@@ -20,7 +20,9 @@
 @import "systems/font/weight/utility";
 
 // Grid System
-@import "systems/grid/utility";
+@import "systems/grid/block/utility";
+@import "systems/grid/cells/utility";
+@import "systems/grid/gap/utility";
 
 // Border Systems
 @import "systems/border/utility";

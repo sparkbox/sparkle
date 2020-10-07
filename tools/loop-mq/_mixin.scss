@@ -17,7 +17,7 @@ Auto-generates media queries for looping content
 
 @mixin loop-mq {
   @content;
-  @if settings('loop-mq') {
+  @if settings(loop-mq) {
     @each $key, $val in $media-queries {
       // Checks that the media query is a number
       @if $val != $val + "" {

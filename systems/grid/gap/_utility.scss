@@ -1,0 +1,7 @@
+@import "mixin";
+
+@if settings(system-grid) {
+  @if settings(system-spacing) {
+    @include sparkle-grid-gap;
+  }
+}
