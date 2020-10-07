@@ -4,8 +4,8 @@ section: Tools
 
 Converts a number to a rem value.
 
-```
-.test-class {
+```scss
+.my-class {
   prop: remify(<number>);
 }
 ```

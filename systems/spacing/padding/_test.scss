@@ -1,0 +1,189 @@
+@import 'true';
+
+@import "../mixins";
+
+$settings: (
+  'prefix': 'true-test',
+  'loop-mq': true,
+  'print-classes': true,
+  'system-spacing': true,
+  'utility-padding': true,
+);
+
+$sides: (
+  all: all,
+  bottom: btm,
+  x-axis: vrt,
+  y-axis: hrz
+);
+
+$spacer: (
+  sm: 0.5rem,
+  lg: 1rem
+);
+
+$media-queries: (
+  sm: 30rem,
+  lg: 60rem
+);
+
+@include describe('The Position Spacing System') {
+  @include it('outputs regular spacing classes.') {
+    @include assert {
+      @include output {
+        @include sparkle-spacing-loop(padding);
+      }
+      @include expect {
+        .true-test-pad-all-sm {
+          padding: 0.5rem;
+        }
+
+        .true-test-pad-all-lg {
+          padding: 1rem;
+        }
+
+        .true-test-pad-btm-sm {
+          padding-bottom: 0.5rem;
+        }
+
+        .true-test-pad-btm-lg {
+          padding-bottom: 1rem;
+        }
+
+        .true-test-pad-vrt-sm {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .true-test-pad-vrt-lg {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .true-test-pad-hrz-sm {
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+        }
+
+        .true-test-pad-hrz-lg {
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+
+        @media (min-width: 30rem) {
+          .true-test-pad-all-sm\@sm {
+            padding: 0.5rem;
+          }
+
+          .true-test-pad-all-lg\@sm {
+            padding: 1rem;
+          }
+
+          .true-test-pad-btm-sm\@sm {
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-btm-lg\@sm {
+            padding-bottom: 1rem;
+          }
+
+          .true-test-pad-vrt-sm\@sm {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-vrt-lg\@sm {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+
+          .true-test-pad-hrz-sm\@sm {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+          }
+
+          .true-test-pad-hrz-lg\@sm {
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+        }
+
+        @media (min-width: 60rem) {
+          .true-test-pad-all-sm\@lg {
+            padding: 0.5rem;
+          }
+
+          .true-test-pad-all-lg\@lg {
+            padding: 1rem;
+          }
+
+          .true-test-pad-btm-sm\@lg {
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-btm-lg\@lg {
+            padding-bottom: 1rem;
+          }
+
+          .true-test-pad-vrt-sm\@lg {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-vrt-lg\@lg {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+
+          .true-test-pad-hrz-sm\@lg {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+          }
+
+          .true-test-pad-hrz-lg\@lg {
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+        }
+
+        @media print {
+          .true-test-pad-all-sm\@print {
+            padding: 0.5rem;
+          }
+
+          .true-test-pad-all-lg\@print {
+            padding: 1rem;
+          }
+
+          .true-test-pad-btm-sm\@print {
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-btm-lg\@print {
+            padding-bottom: 1rem;
+          }
+
+          .true-test-pad-vrt-sm\@print {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-vrt-lg\@print {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+
+          .true-test-pad-hrz-sm\@print {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+          }
+
+          .true-test-pad-hrz-lg\@print {
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

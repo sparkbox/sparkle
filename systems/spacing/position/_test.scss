@@ -1,0 +1,213 @@
+@import 'true';
+
+@import "../mixins";
+
+$settings: (
+  'prefix': 'true-test',
+  'loop-mq': true,
+  'print-classes': true,
+  'system-spacing': true,
+  'utility-position-spacing': true,
+);
+
+$sides: (
+  all: all,
+  bottom: btm,
+  x-axis: vrt,
+  y-axis: hrz
+);
+
+$spacer: (
+  sm: 0.5rem,
+  lg: 1rem
+);
+
+$media-queries: (
+  sm: 30rem,
+  lg: 60rem
+);
+
+@include describe('The Padding Spacing System') {
+  @include it('outputs regular spacing classes.') {
+    @include assert {
+      @include output {
+        @include sparkle-spacing-loop(position);
+      }
+      @include expect {
+        .true-test-position-all-sm {
+          top: 0.5rem;
+          right: 0.5rem;
+          bottom: 0.5rem;
+          left: 0.5rem;
+        }
+
+        .true-test-position-all-lg {
+          top: 1rem;
+          right: 1rem;
+          bottom: 1rem;
+          left: 1rem;
+        }
+
+        .true-test-position-btm-sm {
+          bottom: 0.5rem;
+        }
+
+        .true-test-position-btm-lg {
+          bottom: 1rem;
+        }
+
+        .true-test-position-vrt-sm {
+          top: 0.5rem;
+          bottom: 0.5rem;
+        }
+
+        .true-test-position-vrt-lg {
+          top: 1rem;
+          bottom: 1rem;
+        }
+
+        .true-test-position-hrz-sm {
+          right: 0.5rem;
+          left: 0.5rem;
+        }
+
+        .true-test-position-hrz-lg {
+          right: 1rem;
+          left: 1rem;
+        }
+
+        @media (min-width: 30rem) {
+          .true-test-position-all-sm\@sm {
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
+          }
+
+          .true-test-position-all-lg\@sm {
+            top: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+          }
+
+          .true-test-position-btm-sm\@sm {
+            bottom: 0.5rem;
+          }
+
+          .true-test-position-btm-lg\@sm {
+            bottom: 1rem;
+          }
+
+          .true-test-position-vrt-sm\@sm {
+            top: 0.5rem;
+            bottom: 0.5rem;
+          }
+
+          .true-test-position-vrt-lg\@sm {
+            top: 1rem;
+            bottom: 1rem;
+          }
+
+          .true-test-position-hrz-sm\@sm {
+            right: 0.5rem;
+            left: 0.5rem;
+          }
+
+          .true-test-position-hrz-lg\@sm {
+            right: 1rem;
+            left: 1rem;
+          }
+        }
+
+        @media (min-width: 60rem) {
+          .true-test-position-all-sm\@lg {
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
+          }
+
+          .true-test-position-all-lg\@lg {
+            top: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+          }
+
+          .true-test-position-btm-sm\@lg {
+            bottom: 0.5rem;
+          }
+
+          .true-test-position-btm-lg\@lg {
+            bottom: 1rem;
+          }
+
+          .true-test-position-vrt-sm\@lg {
+            top: 0.5rem;
+            bottom: 0.5rem;
+          }
+
+          .true-test-position-vrt-lg\@lg {
+            top: 1rem;
+            bottom: 1rem;
+          }
+
+          .true-test-position-hrz-sm\@lg {
+            right: 0.5rem;
+            left: 0.5rem;
+          }
+
+          .true-test-position-hrz-lg\@lg {
+            right: 1rem;
+            left: 1rem;
+          }
+        }
+
+        @media print {
+          .true-test-position-all-sm\@print {
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
+          }
+
+          .true-test-position-all-lg\@print {
+            top: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+          }
+
+          .true-test-position-btm-sm\@print {
+            bottom: 0.5rem;
+          }
+
+          .true-test-position-btm-lg\@print {
+            bottom: 1rem;
+          }
+
+          .true-test-position-vrt-sm\@print {
+            top: 0.5rem;
+            bottom: 0.5rem;
+          }
+
+          .true-test-position-vrt-lg\@print {
+            top: 1rem;
+            bottom: 1rem;
+          }
+
+          .true-test-position-hrz-sm\@print {
+            right: 0.5rem;
+            left: 0.5rem;
+          }
+
+          .true-test-position-hrz-lg\@print {
+            right: 1rem;
+            left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

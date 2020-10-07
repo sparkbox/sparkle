@@ -2,8 +2,10 @@
 title: Clearfix Mixin
 section: Tools
 
-```
-@include clearfix;
+```scss
+.my-class {
+  @include clearfix;
+}
 ```
 
 */

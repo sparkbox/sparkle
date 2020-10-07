@@ -1,0 +1,30 @@
+@if settings(loop-mq) {
+  /*---
+  section: Settings
+  ---
+  <table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+  </tr>
+  </thead>
+  <tbody>
+  */
+  @each $key, $val in $media-queries {
+    /*---
+    section: Systems
+    ---
+    <tr>
+    <td>#{$key}</td>
+    <td>#{$val}</td>
+    </tr>
+    */
+  }
+  /*---
+  section: Systems
+  ---
+  </tbody>
+  </table>
+  */
+}

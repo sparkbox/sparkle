@@ -4,8 +4,10 @@ section: Tools
 
 Remove default link styles
 
-```
-@include delink;
+```scss
+.my-class {
+  @include delink;
+}
 ```
 
 */

@@ -4,8 +4,10 @@ section: Tools
 
 Adds font smoothing properties.
 
-```
-@include antialiased;
+```scss
+.my-class {
+  @include antialiased;
+}
 ```
 
 */

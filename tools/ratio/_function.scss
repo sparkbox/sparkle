@@ -4,8 +4,8 @@ section: Tools
 
 Creates a ratio percentage value when given a height value and width value.
 
-```
-.test-class {
+```scss
+.my-class {
   prop: ratio(<height>, <width>);
 }
 ```

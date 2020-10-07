@@ -4,8 +4,10 @@ section: Tools
 
 Remove default list styles
 
-```
-@include delist;
+```scss
+.my-class {
+  @include delist;
+}
 ```
 
 */

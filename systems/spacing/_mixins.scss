@@ -1,0 +1,86 @@
+@mixin sparkle-spacing-sides($space, $side, $type) {
+  $prefix: $type + '-';
+  @if $type == "position" {
+    $prefix: '';
+  }
+  @if $side == 'all' {
+    @if $type == 'position' {
+      top: $space;
+      right: $space;
+      bottom: $space;
+      left: $space;
+    } @else {
+      #{$type}: $space;
+    }
+  } @else if $side == 'x-axis' {
+    #{$prefix}top: $space;
+    #{$prefix}bottom: $space;
+  } @else if $side == 'y-axis' {
+    #{$prefix}right: $space;
+    #{$prefix}left: $space;
+  } @else {
+    #{$prefix}#{$side}: $space;
+  }
+}
+
+@mixin sparkle-spacing-side-loop($type, $mq:null) {
+  $type-name: $type;
+  @if $mq {
+    $mq: '\\@' + $mq;
+  }
+  @if $type == padding {
+    $type-name: 'pad';
+  }
+  @each $side-key, $side-val in $sides {
+    @each $space-key, $space-val in $spacer {
+      @if $mq == null {
+        /*---
+        section: Systems
+        ---
+        <tr>
+        <td><code>#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}</code></td>
+        <td><code>#{$space-val}</td>
+        <td>#{$side-key}</td>
+        </tr>
+        */
+      }
+      .#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}#{$mq} {
+        @include sparkle-spacing-sides($space-val, $side-key, $type)
+      }
+    }
+  }
+}
+
+@mixin sparkle-spacing-loop($type) {
+  /*---
+  section: Systems
+  ---
+  
+  <table>
+  <thead>
+  <tr>
+  <th>Class Name</th>
+  <th>Spacing Size</th>
+  <th>Sides</th>
+  </tr>
+  </thead>
+  <tbody>
+  */
+  @include sparkle-spacing-side-loop($type);
+  @each $key, $val in $media-queries {
+    @media (min-width: #{$val}) {
+      @include sparkle-spacing-side-loop($type, $key);
+    }
+  }
+  @if settings('print-classes') {
+    @media print {
+      @include sparkle-spacing-side-loop($type, print);
+    }
+  }
+  /*---
+  section: Systems
+  ---
+  </tbody>
+  </table>
+  */
+}

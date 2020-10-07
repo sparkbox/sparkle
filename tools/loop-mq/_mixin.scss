@@ -5,8 +5,8 @@ section: Tools
 
 Auto-generates media queries for looping content
 
-```
-.test-class {
+```scss
+.my-class {
   @include loop-mq {
     prop: value;
   }

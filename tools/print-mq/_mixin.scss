@@ -4,15 +4,19 @@ section: Tools
 
 The print mixin provides two functionalities. The first is to hide the element when printed.
 
-```
-@include print(hide);
+```scss
+.my-class {
+  @include print(hide);
+}
 ```
 
 The second functionality is to provide custom styles for when printed.
 
-```
-@include print {
-  prop: value;
+```scss
+.my-class {
+  @include print {
+    prop: value;
+  }
 }
 ```
 

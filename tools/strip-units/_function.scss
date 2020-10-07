@@ -4,8 +4,8 @@ section: Tools
 
 Removes the unit of number.
 
-```
-.test-class {
+```scss
+.my-class {
   prop: strip-units(<number>);
 }
 ```

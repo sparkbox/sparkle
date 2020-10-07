@@ -4,8 +4,10 @@ section: Tools
 
 Hides an element visually, but still accessible to screen readers.
 
-```
-@include visually-hidden;
+```scss
+.my-class {
+  @include visually-hidden;
+}
 ```
 
 */

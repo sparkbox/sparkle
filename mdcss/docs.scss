@@ -14,7 +14,7 @@ order: -1
 In the ITCSS method, settings are declared first and at the top of the Sass document. These contain all variables used throughout the tools and utilities.
 */
 @import "../settings";
-
+@import "../globals/media-queries/docs";
 /* ---
 section: Tools
 order: -1
