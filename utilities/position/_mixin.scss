@@ -1,0 +1,9 @@
+@mixin sparkle-position {
+  @each $value in $util-position-values {
+    .#{settings(prefix)}-position-#{$value} {
+      @include loop-mq {
+        position: $value;
+      }
+    }
+  }
+}

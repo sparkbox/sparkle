@@ -1,18 +1,41 @@
-/* ---
-title: Text Alignment Utility
+@import "mixin";
+
+@if settings(utility-text-align) {
+  /* ---
+title: Text-Align Utility
 section: Utilities
+---
 
-<br/>
-
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Property</th>
+</thead>
+<tbody>
 */
 
-
-@if settings('utility-text-align') {
+  // NOTE: This @each loop is only for document generation
   @each $value in $util-text-values {
-    .#{settings(prefix)}-text-#{$value} {
-      @include loop-mq {
-        text-align: $value;
-      }
-    }
+    /* ---
+section: Utilities
+---
+
+<tr>
+<td>`.#{settings(prefix)}-text-align-#{$value}`</td>
+<td>`text-align: #{$value}`</td>
+</tr>
+
+*/
   }
+
+  /* ---
+section: Utilities
+---
+</tbody>
+</table>
+*/
+
+  // Load the mixin
+  @include sparkle-text-align;
 }
