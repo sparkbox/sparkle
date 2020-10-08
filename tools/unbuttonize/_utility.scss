@@ -1,0 +1,14 @@
+/* ---
+title: Unbuttonize Utility
+section: Utilities
+
+Removes styles added by default to button elements.
+
+```scss
+.#{settings(prefix)}-unbuttonize
+```
+*/
+.#{settings(prefix)}-unbuttonize {
+  @include unbuttonize;
+}
+
