@@ -1,0 +1,78 @@
+@mixin sparkle-border-spacing-sides($space, $side) {
+  @if $side == 'all' {
+    border: $space;
+  } @else if $side == 'x-axis' {
+    border-top: $space;
+    border-bottom: $space;
+  } @else if $side == 'y-axis' {
+    border-right: $space;
+    border-left: $space;
+  } @else {
+    border-#{$side}: $space;
+  }
+}
+  
+@mixin sparkle-border-spacing-side-loop($mq:null, $true-test:null) {
+  @if $mq {
+    $mq: '\\@' + $mq;
+  }
+
+  @each $side-key, $side-val in $sides {
+    @each $border-key, $border-val in $border-width {
+      @if $true-test == null {
+        @if $mq == null {
+          /* ---
+          section: Systems
+          ---
+          <tr>
+          <td><code>#{settings(prefix)}-border-#{$side-val}-#{$border-key}</code></td>
+          <td><code>#{$border-val}</td>
+          <td>#{$side-key}</td>
+          </tr>
+          */
+        }
+      }
+
+      .#{settings(prefix)}-border-#{$side-val}-#{$border-key}#{$mq} {
+        @include sparkle-border-spacing-sides($border-val, $side-key);
+      }
+    }
+  }
+}
+
+@mixin sparkle-border-spacing-loop($true-test:null) {
+  @if $true-test == null {
+    /* ---
+    section: Systems
+    ---
+    <table>
+    <thead>
+    <tr>
+    <th>Class Name</th>
+    <th>Spacing Size</th>
+    <th>Sides</th>
+    </tr>
+    </thead>
+    <tbody>
+    */
+  }
+  @include sparkle-border-spacing-side-loop(null, $true-test);
+  @each $key, $val in $media-queries {
+    @media (min-width: #{$val}) {
+      @include sparkle-border-spacing-side-loop($key, $true-test);
+    }
+  }
+  @if settings('print-classes') {
+    @media print {
+      @include sparkle-border-spacing-side-loop(print, $true-test);
+    }
+  }
+  @if $true-test == null {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
+}

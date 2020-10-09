@@ -25,7 +25,8 @@
 @import "systems/grid/gap/utility";
 
 // Border Systems
-@import "systems/border/utility";
+@import "systems/border/position/utility";
+@import "systems/border/width/utility";
 
 // Z Index Systems
 @import "systems/z-index/utility";
