@@ -13,5 +13,6 @@ Hides an element visually, but still accessible to screen readers.
 */
 
 @mixin visually-hidden {
-  /* TODO: Visually Hidden */
+  position: fixed;
+  clip: rect(0, 0, 0, 0);
 }

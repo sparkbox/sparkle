@@ -1,16 +1,16 @@
+@import 'mixin';
+
 /* ---
 title: Visually Hidden Utility
 section: Utilities
 
-<br/>
+Use the `#{settings(prefix)}-visually-hidden` to hide content that should be hidden from the page visually, but still accessible to those using keyboard or screen reader controls.
 
+```html
+<div class="#{settings(prefix)}-visually-hidden">...</div>
+```
 */
 
-
 @if settings('utility-visually-hidden') {
-  .#{settings(prefix)}-visually-hidden {
-    @include loop-mq {
-      @include visually-hidden();
-    }
-  }
+  @include sparkle-visually-hidden;
 }
