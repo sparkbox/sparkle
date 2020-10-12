@@ -30,12 +30,12 @@ section: Systems
 <td>`.#{settings(prefix)}-border-color-#{$key}:active`</td>
 </tr>
 */
-    .#{settings(prefix)}-outline-color-#{$key},
-    .#{settings(prefix)}-outline-color-#{$key}\:hover:hover,
-    .#{settings(prefix)}-outline-color-#{$key}\:active:active,
-    .#{settings(prefix)}-outline-color-#{$key}\:focus:focus {
+    .#{settings(prefix)}-border-color-#{$key},
+    .#{settings(prefix)}-border-color-#{$key}\:hover:hover,
+    .#{settings(prefix)}-border-color-#{$key}\:active:active,
+    .#{settings(prefix)}-border-color-#{$key}\:focus:focus {
       @include loop-mq {
-        outline-color: $val;
+        border-color: $val;
       }
     }
   }
