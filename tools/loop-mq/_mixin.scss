@@ -5,12 +5,50 @@ section: Tools
 
 Auto-generates media queries for looping content.
 
+**Use**
 ```scss
 .my-class {
   @include loop-mq {
     prop: value;
   }
 }
+```
+
+**Use with a prop**
+```scss
+.my-class {
+  @include loop-mq {
+    margin: 1rem;
+  }
+}
+```
+
+**CSS Output**
+```css
+.my-class {
+  margin: 1rem;
+}
+@media (min-width: 40rem) {
+  .my-class\@sm {
+    margin: 1rem;
+  }
+}
+@media (min-width: 60rem) {
+  .my-class\@md {
+    margin: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .my-class\@lg {
+    margin: 1rem;
+  }
+}
+```
+
+**Note:** when using these classes in HTML, the `@` does not need to be escaped. Here's an example:
+
+```
+<p class="my-class@lg">No need to escape the @ symbol</p>
 ```
 
 */

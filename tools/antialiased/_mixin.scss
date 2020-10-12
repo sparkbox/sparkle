@@ -4,9 +4,18 @@ section: Tools
 
 Adds font smoothing properties.
 
+**Use**
 ```scss
 .my-class {
   @include antialiased;
+}
+```
+
+**CSS Output**
+```css
+.my-class {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 ```
 

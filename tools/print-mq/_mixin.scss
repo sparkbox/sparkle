@@ -4,18 +4,48 @@ section: Tools
 
 Provides two functionalities. The first is to hide the element when printed.
 
+**Use**
 ```scss
 .my-class {
   @include print(hide);
 }
 ```
 
+**CSS Output**
+```css
+@media (print) {
+  .my-class {
+    display: none !important;
+  }
+}
+```
+
+
 The second functionality is to provide custom styles when printed.
 
+**Use**
 ```scss
 .my-class {
   @include print {
     prop: value;
+  }
+}
+```
+
+**Use with a prop**
+```scss
+.my-class {
+  @include print {
+    background-color: black;
+  }
+}
+```
+
+**CSS Output**
+```css
+@media print {
+  .my-class {
+    background-color: black;
   }
 }
 ```

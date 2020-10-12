@@ -4,9 +4,18 @@ section: Tools
 
 Removes default link styles.
 
+**Use**
 ```scss
 .my-class {
   @include delink;
+}
+```
+
+**CSS Output**
+```css
+.my-class {
+  color: inherit;
+  text-decoration: none;
 }
 ```
 

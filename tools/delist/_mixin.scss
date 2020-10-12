@@ -4,9 +4,19 @@ section: Tools
 
 Removes default list styles.
 
+**Use**
 ```scss
 .my-class {
   @include delist;
+}
+```
+
+**CSS Output**
+```css
+.my-class {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 ```
 

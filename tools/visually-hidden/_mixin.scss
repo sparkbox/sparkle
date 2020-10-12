@@ -4,9 +4,18 @@ section: Tools
 
 Hides an element visually, but still accessible to screen readers.
 
+**Use**
 ```scss
 .my-class {
   @include visually-hidden;
+}
+```
+
+**CSS Output**
+```css
+.my-class {
+  position: fixed;
+  clip: rect(0, 0, 0, 0);
 }
 ```
 
