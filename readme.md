@@ -36,16 +36,14 @@ From your friends at [Sparkbox](https://seesparkbox.com).
 - Clearfix
 
 
-## Funcitons
+## Functions
 
 - Map Getters (A system map retreiver)
-- SVG Encoder
 - Strip-Unit
 - Negative
 - Ratio
 - Stringify
 - Remify
-- String Replace
 
 
 ## Systems
