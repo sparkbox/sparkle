@@ -2,3 +2,7 @@ node_modules
 docs.css
 docs.css.map
 styleguide
+
+# GH-Pages Artifacts
+_site
+.jekyll-cache
