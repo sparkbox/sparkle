@@ -1,0 +1,4 @@
+@function border-position($key) {
+    @return map-get($sides, $key);
+  }
+  

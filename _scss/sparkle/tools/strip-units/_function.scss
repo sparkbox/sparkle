@@ -1,0 +1,17 @@
+/* ---
+title: Strip Units Function
+section: Tools
+
+Removes the unit of number.
+
+```scss
+.my-class {
+  prop: strip-units(<number>);
+}
+```
+
+*/
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}

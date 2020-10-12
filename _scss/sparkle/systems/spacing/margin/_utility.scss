@@ -1,0 +1,12 @@
+@import "../mixins";
+@if settings(utility-margin) {
+  /* ---
+  section: Systems
+  ---
+  
+  ### Margin Utility Classes
+  
+  The margin spacing utility classes apply spacing system value size to the defined side on the outside of the container.
+  */
+  @include sparkle-spacing-loop(margin);
+}

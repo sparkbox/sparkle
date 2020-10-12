@@ -1,0 +1,8 @@
+.cmp-logo {
+  margin: 0;
+
+  &__image {
+    width: ratio(115, 336.91);
+    max-width: 20rem;
+  }
+}

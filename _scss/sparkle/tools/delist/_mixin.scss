@@ -1,0 +1,19 @@
+/* ---
+title: Delist Mixin
+section: Tools
+
+Remove default list styles
+
+```scss
+.my-class {
+  @include delist;
+}
+```
+
+*/
+
+@mixin delist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

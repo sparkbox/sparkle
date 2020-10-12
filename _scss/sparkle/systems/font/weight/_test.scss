@@ -1,0 +1,39 @@
+@import 'true';
+@import "mixin";
+
+$font-weight: (
+  'light': 200,
+  'normal': 400,
+  'bold': 700
+);
+
+$settings: (
+  'prefix': 'true-test',
+  'system-font-weight': true
+);
+
+$true-test: true;
+
+@include describe('The Font Weight System') {
+  @include it('outputs font-weight classes.') {
+    @include assert {
+      @include output {
+        @include sparkle-font-weight($true-test);
+      }
+      
+      @include expect {
+        .true-test-weight-light {
+            font-weight: 200;
+        }
+          
+        .true-test-weight-normal {
+          font-weight: 400;
+        }
+
+        .true-test-weight-bold {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/loop-mq/mixin';
+@import '../../tools/settings/function';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-display-values: (
+  none,
+);
+
+$media-queries: (
+  'sm': 40rem,
+);
+
+@include describe('The display utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-display();
+      }
+      @include expect {
+        .util-display-none {
+          display: none;
+        }
+
+        @media (min-width: 40rem) {
+          .util-display-none\@sm {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+---
+# This is the Front Matter block, because Jekyll
+---
+@charset "UTF-8";
+/*
+  What’s this? This is the CSS, it makes the website sparkle
+  by applying colors, fonts, design, and more to the page!
+ */
+// Settings
+@import "sparkle/settings"; // Sparkle Default Settings
+@import "settings/variables"; // Project Variables
+@import "settings/sparkle"; // Project Sparkle Settings
+
+// Tools
+@import "sparkle/tools"; // Sparkle Mixins and Functions
+
+// Generic
+@import "generic/normalize"; // Normalize
+
+// Elements
+
+// Object
+@import "object/layout";
+
+// Components
+@import "components/logo";
+
+// Utilities
+@import "sparkle/systems"; // Sparkle System Utility Classes
+@import "sparkle/utilities"; // Sparkle Utility Classes

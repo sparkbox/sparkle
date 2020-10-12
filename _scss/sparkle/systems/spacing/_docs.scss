@@ -1,0 +1,42 @@
+/* ---
+title: Spacing System
+section: Systems
+---
+
+### Spacing System Function
+
+The spacing system function allows you to load the determined spacing value by calling the `space()` function with the size key.
+
+```css
+.my-class {
+  margin-left: space(md);
+}
+```
+
+Below is the spacing system value options and the spacing size.
+
+<table>
+<thead>
+<th>Function</th>
+<th>Size</th>
+</thead>
+<tbody>
+*/
+
+@each $space-key, $space-val in $spacer {
+  /* ---
+  section: Systems
+  ---
+  <tr>
+  <td><code>space(#{$space-key})</code></td>
+  <td><code>#{$space-val}</code></td>
+  </tr>
+  */
+}
+
+/* ---
+section: Systems
+---
+</tbody>
+</table>
+*/

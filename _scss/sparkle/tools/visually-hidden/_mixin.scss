@@ -1,0 +1,18 @@
+/* ---
+title: Visually Hidden Mixin
+section: Tools
+
+Hides an element visually, but still accessible to screen readers.
+
+```scss
+.my-class {
+  @include visually-hidden;
+}
+```
+
+*/
+
+@mixin visually-hidden {
+  position: fixed;
+  clip: rect(0, 0, 0, 0);
+}

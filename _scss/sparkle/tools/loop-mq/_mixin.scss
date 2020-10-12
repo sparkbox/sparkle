@@ -1,0 +1,41 @@
+/* ---
+title: Loop Media Query Mixin
+name: loop-mq-mixin
+section: Tools
+
+Auto-generates media queries for looping content
+
+```scss
+.my-class {
+  @include loop-mq {
+    prop: value;
+  }
+}
+```
+
+*/
+
+@mixin loop-mq {
+  @content;
+  @if settings(loop-mq) {
+    @each $key, $val in $media-queries {
+      // Checks that the media query is a number
+      @if $val != $val + "" {
+        @media (min-width: #{$val}) {
+          &\@#{$key} {
+            @content;
+          }
+        }
+      }
+      @else {
+        @if settings('print-classes') {
+          @media print {
+            &\@print {
+              @content;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-text-values: (
+  left,
+  right
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The position utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-text-align();
+      }
+      @include expect {
+        .util-text-left {
+          text-align: left;
+        }
+
+        @media (min-width: 40rem) {
+          .util-text-left\@sm {
+            text-align: left;
+          }
+        }
+
+        .util-text-right {
+          text-align: right;
+        }
+
+        @media (min-width: 40rem) {
+          .util-text-right\@sm {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import 'true';
+@import "mixin";
+
+$font-families: (
+  'sans': ("Helvetica Nueue", Helvetica, sans-serif),
+  'serif': (Georgia, "Times New Roman", serif),
+  'mono': (Monaco, monospace)
+);
+
+$settings: (
+  'prefix': 'true-test',
+  'system-font-family': true
+);
+
+$true-test: true;
+
+@include describe('The Font Families System') {
+  @include it('outputs font-family classes.') {
+    @include assert {
+      @include output {
+        @include sparkle-font-family($true-test);
+      }
+      
+      @include expect {
+        .true-test-family-sans {
+            font-family: "Helvetica Nueue", Helvetica, sans-serif;
+        }
+        
+        .true-test-family-serif {
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        
+        .true-test-family-mono {
+            font-family: Monaco, monospace;
+        }
+      }
+    }
+  }
+}

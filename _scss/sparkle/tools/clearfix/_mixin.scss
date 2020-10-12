@@ -1,0 +1,18 @@
+/* ---
+title: Clearfix Mixin
+section: Tools
+
+```scss
+.my-class {
+  @include clearfix;
+}
+```
+
+*/
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

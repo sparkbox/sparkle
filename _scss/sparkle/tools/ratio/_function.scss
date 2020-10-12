@@ -1,0 +1,16 @@
+/* ---
+title: Ratio Function
+section: Tools
+
+Creates a ratio percentage value when given a height value and width value.
+
+```scss
+.my-class {
+  prop: ratio(<height>, <width>);
+}
+```
+
+*/
+@function ratio($height,$width) {
+  @return ($height / $width) * 100%;
+}

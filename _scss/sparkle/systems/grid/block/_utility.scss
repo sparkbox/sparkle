@@ -1,0 +1,37 @@
+@import "../function";
+
+@if settings(system-grid) {
+  $count: grid(columns);
+  /* ---
+  title: Grid System
+  section: Systems
+  ---
+  
+  The grid system we are using for page layouts is based on a #{$count} column grid. Grid classes can be nested if needed for more complex layouts.
+  
+  Most grid layouts are going to use either a two, three, or four column layout. The basic grid system includes all of the classes needed to create a simple layout with class names that are spelled out and easy to read.
+  
+  Each `#{settings(prefix)}-grid-cell-` class can have a responsive suffix to adjust the grid column span a different screen sizes. The #{$count} column count of `#{settings(prefix)}-grid-block` remain persistent at all screen sizes.
+  
+  ### Grid Block Class
+  
+  To define a grid, an element must have the `#{settings(prefix)}-grid-block` class. This will apply a `display: grid` along with fallback styles for browsers that do not support CSS Grid.
+  
+  */
+  .#{settings(prefix)}-grid-block {
+    @include clearfix;
+    display: flex;
+    flex-wrap: wrap;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(#{$count}, 1fr);
+
+      // Removes `clearfix` psuedo element from the grid
+      &::after {
+        content: none;
+        display: none;
+      }
+    }
+  }
+}

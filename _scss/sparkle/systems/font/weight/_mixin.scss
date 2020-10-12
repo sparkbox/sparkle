@@ -1,0 +1,44 @@
+@mixin sparkle-font-weight($true-test: null) {
+  @if $true-test == null {
+    /* ---
+    section: Systems
+    ---
+    #### Font Weight
+
+    <table>
+    <thead>
+    <th>Class</th>
+    <th>Function</th>
+    <th>Weight</th>
+    </thead>
+    <tbody>
+    */
+  }
+    @each $key, $value in $font-weight {
+      @if $true-test == null {
+        /* ---
+        section: Systems
+        ---
+        <tr>
+        <td><code>#{settings(prefix)}-weight-#{$key}</code></td>
+        <td><code>weight(#{$key})</code></td>
+        <td><code>#{$key}: #{$value}</td>
+        </tr>
+        */
+      }
+      .#{settings(prefix)}-weight-#{$key} {
+        @include loop-mq {
+          font-weight: $value;
+        }
+      }
+    }
+    @if $true-test == null {
+      /* ---
+      section: Systems
+      ---
+      </tbody>
+      </table>
+      */
+    }
+  }
+  

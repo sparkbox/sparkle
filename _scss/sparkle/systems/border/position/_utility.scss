@@ -1,0 +1,13 @@
+@import "mixins";
+
+@if settings(utility-border-position) {
+    /* ---
+    title: Border System
+    section: Systems
+    ---
+
+    <br/>
+
+    */
+  @include sparkle-border-spacing-loop();
+}

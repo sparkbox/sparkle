@@ -1,0 +1,38 @@
+@if settings('system-color') {
+  /* ---
+title: Color System
+section: Systems
+---
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Color</th>
+<th>Name</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+*/
+
+  @each $key, $val in $colors {
+    /* ---
+section: Systems
+
+<tr>
+<td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
+<td>`#{$val}`</td>
+<td>#{$key}</td>
+<td>`color(#{$key})`</td>
+</tr>
+*/
+  }
+
+  /* ---
+section: Systems
+
+</tbody>
+</table>
+*/
+}

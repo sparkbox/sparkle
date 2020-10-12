@@ -1,0 +1,6 @@
+@import "mixin";
+
+@if settings(system-font-family) {
+  // Load the mixin
+  @include sparkle-font-family;
+}

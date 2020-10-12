@@ -1,0 +1,6 @@
+@import "mixin";
+
+@if settings(system-font-weight) {
+  // Load the mixin
+  @include sparkle-font-weight;
+}

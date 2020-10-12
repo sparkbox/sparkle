@@ -1,0 +1,37 @@
+@import 'true';
+@import 'mixin';
+@import '../../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$border-width: (
+  'hairline': 1px,
+);
+
+$media-queries: (
+  'sm': 40rem,
+);
+
+@include describe('The border width utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-border-width();
+      }
+      @include expect {
+        .util-border-width-hairline {
+          border-width: 1px;
+        }
+        
+        @media (min-width: 40rem) {
+          .util-border-width-hairline\@sm {
+            border-width: 1px;
+          }
+        }
+      }
+    }
+  }
+}

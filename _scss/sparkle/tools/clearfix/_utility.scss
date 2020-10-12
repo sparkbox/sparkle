@@ -1,0 +1,14 @@
+/* ---
+title: Clearfix Utility
+section: Utilities
+
+Prevents an element from collapsing due to margins for floated contents.
+
+```scss
+.#{settings(prefix)}-clearfix
+```
+*/
+
+.#{settings(prefix)}-clearfix {
+  @include clearfix;
+}

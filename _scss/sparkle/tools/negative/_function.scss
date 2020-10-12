@@ -1,0 +1,19 @@
+/* ---
+title: Negative Function
+section: Tools
+
+Turns a positive number into a negative number
+
+```scss
+.test-class {
+  prop: negative(<number>);
+}
+```
+
+*/
+
+@function negative($value) {
+  @if ($value > 0) {
+    @return 0 - $value;
+  }
+}

@@ -1,0 +1,38 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-position-values: (
+  fixed
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The position utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-position();
+      }
+      @include expect {
+        .util-position-fixed {
+          position: fixed;
+        }
+
+        @media (min-width: 40rem) {
+          .util-position-fixed\@sm {
+            position: fixed;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@if settings('utility-z-index') {
+  /* ---
+section: Systems
+title: Z-Index System
+---
+
+<table>
+<thead>
+<tr>
+<th>Property Value</th>
+<th>Class</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+
+*/
+
+  @each $key, $value in $z-index {
+    /* ---
+section: Systems
+---
+
+<tr>
+  <td>#{$value}</td>
+  <td>`.#{settings(prefix)}-z-index-#{$key}`</td>
+  <td>`z-index(#{$key})`</td>
+</tr>
+*/
+    .#{settings(prefix)}-z-index-#{$key} {
+      @include loop-mq {
+        z-index: $value;
+      }
+    }
+  }
+
+  /* ---
+section: Systems
+
+</tbody>
+</table>
+*/
+}

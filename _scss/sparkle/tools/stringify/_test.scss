@@ -1,0 +1,11 @@
+@import 'true';
+@import 'function';
+
+@include describe('The stringify function') {
+  @include it('outputs the value as a string.') {
+    @include assert-equal(
+      stringify(2020),
+      '2020'
+    );
+  }
+}

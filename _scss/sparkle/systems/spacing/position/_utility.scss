@@ -1,0 +1,13 @@
+@import "../mixins";
+@if settings(utility-position-spacing) {
+  /* ---
+  section: Systems
+  ---
+  
+  ### Position Spacing Utility Classes
+
+  The position spacing utility classes should be used in conjunction with the position utility classes. These classes apply spacing system value size to the defined side.
+
+  */
+  @include sparkle-spacing-loop(position);
+}

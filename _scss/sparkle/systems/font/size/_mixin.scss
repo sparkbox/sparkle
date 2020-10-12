@@ -1,0 +1,44 @@
+@mixin sparkle-font-size($true-test: null) {
+  @if $true-test == null {
+    /* ---
+    section: Systems
+    ---
+    #### Font Size
+
+    <table>
+    <thead>
+    <th>Class</th>
+    <th>Function</th>
+    <th>Size</th>
+    </thead>
+    <tbody>
+    */
+  }
+    @each $key, $value in $font-size {
+      @if $true-test == null {
+        /* ---
+        section: Systems
+        ---
+        <tr>
+        <td><code>#{settings(prefix)}-size-#{$key}</code></td>
+        <td><code>size(#{$key})</code></td>
+        <td><code>#{$key}: #{$value}</td>
+        </tr>
+        */
+      }
+      .#{settings(prefix)}-size-#{$key} {
+        @include loop-mq {
+          font-size: $value;
+        }
+      }
+    }
+    @if $true-test == null {
+      /* ---
+      section: Systems
+      ---
+      </tbody>
+      </table>
+      */
+    }
+  }
+  

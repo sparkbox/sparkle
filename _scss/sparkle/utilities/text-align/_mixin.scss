@@ -1,0 +1,9 @@
+@mixin sparkle-text-align {
+  @each $value in $util-text-values {
+    .#{settings(prefix)}-text-#{$value} {
+      @include loop-mq {
+        text-align: $value;
+      }
+    }
+  }
+}

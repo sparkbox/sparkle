@@ -1,0 +1,36 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The visually hidden class') {
+  @include it('outputs the proper visually hidden classes') {
+    @include assert {
+      @include output {
+        @include sparkle-visually-hidden();
+      }
+      @include expect {
+        .util-visually-hidden {
+          position: fixed;
+          clip: rect(0, 0, 0, 0);
+        }
+
+        @media (min-width: 40rem) {
+          .util-visually-hidden\@sm {
+            position: fixed;
+            clip: rect(0, 0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}

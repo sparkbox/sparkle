@@ -1,0 +1,189 @@
+@import 'true';
+
+@import "../mixins";
+
+$settings: (
+  'prefix': 'true-test',
+  'loop-mq': true,
+  'print-classes': true,
+  'system-spacing': true,
+  'utility-margin': true,
+);
+
+$sides: (
+  all: all,
+  bottom: btm,
+  x-axis: vrt,
+  y-axis: hrz
+);
+
+$spacer: (
+  sm: 0.5rem,
+  lg: 1rem
+);
+
+$media-queries: (
+  sm: 30rem,
+  lg: 60rem
+);
+
+@include describe('The Margin Spacing System') {
+  @include it('outputs regular spacing classes.') {
+    @include assert {
+      @include output {
+        @include sparkle-spacing-loop(margin, true);
+      }
+      @include expect {
+        .true-test-margin-all-sm {
+          margin: 0.5rem;
+        }
+
+        .true-test-margin-all-lg {
+          margin: 1rem;
+        }
+
+        .true-test-margin-btm-sm {
+          margin-bottom: 0.5rem;
+        }
+
+        .true-test-margin-btm-lg {
+          margin-bottom: 1rem;
+        }
+
+        .true-test-margin-vrt-sm {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .true-test-margin-vrt-lg {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .true-test-margin-hrz-sm {
+          margin-right: 0.5rem;
+          margin-left: 0.5rem;
+        }
+
+        .true-test-margin-hrz-lg {
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+
+        @media (min-width: 30rem) {
+          .true-test-margin-all-sm\@sm {
+            margin: 0.5rem;
+          }
+
+          .true-test-margin-all-lg\@sm {
+            margin: 1rem;
+          }
+
+          .true-test-margin-btm-sm\@sm {
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-btm-lg\@sm {
+            margin-bottom: 1rem;
+          }
+
+          .true-test-margin-vrt-sm\@sm {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-vrt-lg\@sm {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .true-test-margin-hrz-sm\@sm {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+          }
+
+          .true-test-margin-hrz-lg\@sm {
+            margin-right: 1rem;
+            margin-left: 1rem;
+          }
+        }
+
+        @media (min-width: 60rem) {
+          .true-test-margin-all-sm\@lg {
+            margin: 0.5rem;
+          }
+
+          .true-test-margin-all-lg\@lg {
+            margin: 1rem;
+          }
+
+          .true-test-margin-btm-sm\@lg {
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-btm-lg\@lg {
+            margin-bottom: 1rem;
+          }
+
+          .true-test-margin-vrt-sm\@lg {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-vrt-lg\@lg {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .true-test-margin-hrz-sm\@lg {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+          }
+
+          .true-test-margin-hrz-lg\@lg {
+            margin-right: 1rem;
+            margin-left: 1rem;
+          }
+        }
+
+        @media print {
+          .true-test-margin-all-sm\@print {
+            margin: 0.5rem;
+          }
+
+          .true-test-margin-all-lg\@print {
+            margin: 1rem;
+          }
+
+          .true-test-margin-btm-sm\@print {
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-btm-lg\@print {
+            margin-bottom: 1rem;
+          }
+
+          .true-test-margin-vrt-sm\@print {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-vrt-lg\@print {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .true-test-margin-hrz-sm\@print {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+          }
+
+          .true-test-margin-hrz-lg\@print {
+            margin-right: 1rem;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/* ---
+title: Anti-aliased Mixin
+section: Tools
+
+Adds font smoothing properties.
+
+```scss
+.my-class {
+  @include antialiased;
+}
+```
+
+*/
+
+@mixin antialiased {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}

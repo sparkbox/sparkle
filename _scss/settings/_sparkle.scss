@@ -1,0 +1,88 @@
+$settings: map-merge(
+    $settings,
+    (
+      'prefix': 'util'
+    )
+);
+
+// Media Queries
+$media-queries: (
+  'sm': 40rem,
+  'lg': 80rem
+);
+
+// Sides
+$sides: (
+  'bottom': 'bottom',
+  'top': 'top',
+  'left': 'left',
+  'right': 'right',
+  'all': 'all',
+  'y-axis': 'vertical',
+  'x-axis': 'horizontal'
+);
+
+// Spacing
+$spacer: (
+  'xs': 0.25rem,
+  'sm': 0.75rem,
+  'md': 1.25rem,
+  'lg': 1.5rem,
+  'x1': 2rem,
+  'x2': 4rem,
+  'x3': 6rem
+);
+
+// Color
+$colors: (
+  'main': #ED1E79,
+  'light': #29ABE2,
+  'dark': #0071BC,
+  'text': #222,
+  'gray': #f4f4f4
+);
+
+// Font Family
+$font-families: (
+  'main': (Raleway, Helvetica, sans-serif)
+);
+
+// Font Size
+$font-size: (
+  'sm': 0.875rem,
+  'md': 1.125rem,
+  'lg': 1.5rem
+);
+
+// Font Weight
+$font-weight: (
+  'normal': 450,
+  'bold': 650,
+  'heavy': 850
+);
+
+// Grid Columns
+$grid: (
+  'columns': 16
+);
+
+// Z- Index
+$z-index: (
+  1: 100,
+  2: 200,
+  3: 300,
+  4: 400,
+  5: 500,
+  6: 600,
+  7: 700,
+  8: 800,
+  9: 900,
+  10: 1000
+);
+
+// Border Widths
+$border-width: (
+  'hairline': 1px,
+  'thin': 0.125rem,
+  'thick': 0.25rem
+);

@@ -1,0 +1,3 @@
+@function settings($val) {
+  @return map-get($settings, $val);
+}

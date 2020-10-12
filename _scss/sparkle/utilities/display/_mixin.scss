@@ -1,0 +1,9 @@
+@mixin sparkle-display {
+  @each $value in $util-display-values {
+    .#{settings(prefix)}-display-#{$value} {
+      @include loop-mq {
+        display: $value;
+      }
+    }
+  }
+}
