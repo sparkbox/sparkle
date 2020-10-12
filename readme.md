@@ -77,5 +77,6 @@ From your friends at [Sparkbox](https://seesparkbox.com).
 | Sass Documentation                              |
 |-------------------------------------------------|
 | [File structure](docs.md#file-structure)        |
+| [Sparkle Settings](docs.md#sparkle-settings)    |
 | [Importing](docs.md#importing)                  |
 | [Testing](docs.md#adding-sass-unit-tests)       |
