@@ -1,4 +1,5 @@
 $hue: 330;
+$mdcss-text: #555;
 
 main > section + section {
   margin-top: 4rem;
@@ -6,6 +7,13 @@ main > section + section {
 
 .markdown-body {
   font-family: system-ui, sans-serif;
+
+  p {
+    margin-bottom: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: $mdcss-text;
+  }
 }
 
 .container {
