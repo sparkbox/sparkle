@@ -2,7 +2,7 @@
 title: Print Mixin
 section: Tools
 
-The print mixin provides two functionalities. The first is to hide the element when printed.
+Provides two functionalities. The first is to hide the element when printed.
 
 ```scss
 .my-class {
@@ -10,7 +10,7 @@ The print mixin provides two functionalities. The first is to hide the element w
 }
 ```
 
-The second functionality is to provide custom styles for when printed.
+The second functionality is to provide custom styles when printed.
 
 ```scss
 .my-class {
