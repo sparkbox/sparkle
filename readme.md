@@ -38,7 +38,7 @@ From your friends at [Sparkbox](https://seesparkbox.com).
 
 ## Functions
 
-- Map Getters (A system map retreiver)
+- Map Getters (A system map retriever)
 - Strip-Unit
 - Negative
 - Ratio
@@ -51,7 +51,7 @@ From your friends at [Sparkbox](https://seesparkbox.com).
 - Spacing
     - Padding
     - Margin
-    - Postion
+    - Position
 - Color
     - Foreground
     - Background
