@@ -6,7 +6,8 @@
 From your friends at [Sparkbox](https://seesparkbox.com).
 
 ## Spin Up the Sparkle Styleguide in a Browser
-1. From the root, run `npm run docs` to create the styleguide directory
+1. From the root, run `npm install` to install project dependencies.
+1. Run `npm run docs` to create the styleguide directory
 1. Navigate to the directory `cd styleguide`
 1. Run `python -m SimpleHTTPServer 3000` to spin up the project locally
 1. Navigate to localhost:3000 in your browser
