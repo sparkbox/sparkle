@@ -1,0 +1,43 @@
+@import "true";
+@import "function";
+
+$spacer: (
+  'sm': 0.5rem,
+  'md': 1rem,
+  'lg': 1.5rem
+);
+
+@include describe('The spacing global') {
+  @include it('outputs the correct size for sm') {
+    $test: space('sm');
+    $expect: 0.5rem;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected space global to output correct rem value for small."
+    );
+  }
+
+  @include it('outputs the correct size for md') {
+    $test: space('md');
+    $expect: 1rem;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected space global to output correct rem value for medium."
+    );
+  }
+
+  @include it('outputs the correct size for lg') {
+    $test: space('lg');
+    $expect: 1.5rem;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected space global to output correct rem value for large."
+    );
+  }
+}
