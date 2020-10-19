@@ -1,0 +1,91 @@
+@import "true";
+@import "function";
+
+$sides: (
+  'bottom': 'btm',
+  'top': 'top',
+  'left': 'lft',
+  'right': 'rgt',
+  'all': 'all',
+  'y-axis': 'vrt',
+  'x-axis': 'hrz'
+);
+
+@include describe('The sides global') {
+  @include it('outputs the correct side for top') {
+    $test: side('top');
+    $expect: top;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for top."
+    );
+  }
+
+  @include it('outputs the correct side for bottom') {
+    $test: side('bottom');
+    $expect: btm;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for bottom."
+    );
+  }
+
+  @include it('outputs the correct side for left') {
+    $test: side('left');
+    $expect: lft;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for left."
+    );
+  }
+
+  @include it('outputs the correct side for right') {
+    $test: side('right');
+    $expect: rgt;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for right."
+    );
+  }
+
+  @include it('outputs the correct side for all') {
+    $test: side('all');
+    $expect: all;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for all."
+    );
+  }
+
+  @include it('outputs the correct side for vertical') {
+    $test: side('y-axis');
+    $expect: vrt;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for vertical."
+    );
+  }
+
+  @include it('outputs the correct side for horizontal') {
+    $test: side('x-axis');
+    $expect: hrz;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected side global to output correct side for horizontal."
+    );
+  }
+}
