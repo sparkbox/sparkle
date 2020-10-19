@@ -1,0 +1,43 @@
+@import "true";
+@import "function";
+
+$media-queries: (
+  'sm': 40rem,
+  'md': 60rem,
+  'lg': 80rem
+);
+
+@include describe('The media-query global') {
+  @include it('outputs the correct default value for sm size') {
+    $test: mq('sm');
+    $expect: 40rem; // Default sm rem size
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected media query global to output correct rem value for sm."
+    );
+  }
+
+  @include it('outputs the correct default value for md size') {
+    $test: mq('md');
+    $expect: 60rem; // Default md rem size
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected media query global to output correct rem value for md."
+    );
+  }
+
+  @include it('outputs the correct default value for lg size') {
+    $test: mq('lg');
+    $expect: 80rem; // Default lg rem size
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected media query global to output correct rem value for lg."
+    );
+  }
+}

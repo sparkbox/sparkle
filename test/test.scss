@@ -43,6 +43,8 @@
 @import "../utilities/text-align/test";
 @import "../utilities/visually-hidden/test";
 
+// Globals
+@import "../globals/media-queries/test";
 
 // Report
 @include true.report;
