@@ -1,5 +1,9 @@
 @import "mixin";
 
 @if settings(utility-border-width) {
+  /* ---
+    section: Systems
+    ---
+    */
   @include sparkle-border-width();
 }

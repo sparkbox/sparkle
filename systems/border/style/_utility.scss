@@ -1,0 +1,5 @@
+@import "mixin";
+
+@if settings(utility-border-style) {
+  @include sparkle-border-style();
+}

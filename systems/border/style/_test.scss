@@ -2,33 +2,33 @@
 @import 'mixin';
 @import '../../../tools/loop-mq/mixin';
 
+$border-style: (
+  'solid': solid
+);
+
 $settings: (
   'prefix': 'util',
   'loop-mq': true
-);
-
-$border-width: (
-  'hairline': 1px,
 );
 
 $media-queries: (
   'sm': 40rem,
 );
 
-@include describe('The border width utility mixin') {
+@include describe('The border style utility mixin') {
   @include it('outputs the proper utility classes') {
     @include assert {
       @include output {
-        @include sparkle-border-width(true);
+        @include sparkle-border-style(true);
       }
       @include expect {
-        .util-border-width-hairline {
-          border-width: 1px;
+        .util-border-style-solid {
+          border-style: solid;
         }
         
         @media (min-width: 40rem) {
-          .util-border-width-hairline\@sm {
-            border-width: 1px;
+          .util-border-style-solid\@sm {
+            border-style: solid;
           }
         }
       }

@@ -1,37 +1,37 @@
-@mixin sparkle-border-width($true-test:null) {
+@mixin sparkle-border-style($true-test:null) {
   @if $true-test == null {
     /* ---
     section: Systems
     ---
 
-    ### Border Width
+    ### Border Styles
 
     <table>
     <thead>
     <tr>
     <th>Class Name</th>
     <th>Function</th>
-    <th>Border Width Value</th>
+    <th>Border Style Value</th>
     </tr>
     </thead>
     <tbody>
     */
   }
-  @each $key, $value in $border-width {
+  @each $key, $value in $border-style {
     @if $true-test == null {
       /* ---
       section: Systems
       ---
       <tr>
-      <td><code>#{settings(prefix)}-border-width-#{$key}</code></td>
-      <td><code>border-width(#{$key})</code></td>
+      <td><code>#{settings(prefix)}-border-style-#{$key}</code></td>
+      <td><code>border-style(#{$key})</code></td>
       <td><code>#{$value}</code></td>
       </tr>
       */
     }
-    .#{settings(prefix)}-border-width-#{$key} {
+    .#{settings(prefix)}-border-style-#{$key} {
       @include loop-mq {
-        border-width: $value;
+        border-style: $value;
       }
     }
   }
