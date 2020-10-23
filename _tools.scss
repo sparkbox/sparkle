@@ -5,7 +5,12 @@
 @import "globals/sides/function";
 
 // Systems
+@import "systems/border/position/function";
+@import "systems/border/width/function";
 @import "systems/color/function";
+@import "systems/font/family/function";
+@import "systems/font/size/function";
+@import "systems/font/weight/function";
 @import "systems/grid/function";
 @import "systems/z-index/function";
 
