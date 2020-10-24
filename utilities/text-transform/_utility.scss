@@ -1,8 +1,8 @@
 @import "mixin";
 
-@if settings(utility-text-align) {
+@if settings(utility-text-transform) {
   /* ---
-title: Text-Align Utility
+title: Text Transform Utility
 section: Utilities
 ---
 
@@ -16,14 +16,14 @@ section: Utilities
 */
 
   // NOTE: This @each loop is only for document generation
-  @each $value in $util-text-values {
+  @each $value in $util-text-transform {
     /* ---
 section: Utilities
 ---
 
 <tr>
 <td>`.#{settings(prefix)}-text-#{$value}`</td>
-<td>`text-align: #{$value}`</td>
+<td>`text-transform: #{$value}`</td>
 </tr>
 
 */
@@ -37,5 +37,5 @@ section: Utilities
 */
 
   // Load the mixin
-  @include sparkle-text-align;
+  @include sparkle-text-transform;
 }
