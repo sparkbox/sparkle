@@ -2,39 +2,36 @@
 
 @if settings(utility-text-align) {
   /* ---
-title: Text-Align Utility
-section: Utilities
----
-
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Property</th>
-</thead>
-<tbody>
-*/
+  title: Text-Align Utility
+  section: Utilities
+  ---
+  <table>
+  <thead>
+  <tr>
+  <th>Class Name</th>
+  <th>Property</th>
+  </thead>
+  <tbody>
+  */
 
   // NOTE: This @each loop is only for document generation
   @each $value in $util-text-values {
     /* ---
-section: Utilities
----
-
-<tr>
-<td>`.#{settings(prefix)}-text-#{$value}`</td>
-<td>`text-align: #{$value}`</td>
-</tr>
-
-*/
+    section: Utilities
+    ---
+    <tr>
+    <td>`.#{settings(prefix)}-text-#{$value}`</td>
+    <td>`text-align: #{$value}`</td>
+    </tr>
+    */
   }
 
   /* ---
-section: Utilities
----
-</tbody>
-</table>
-*/
+  section: Utilities
+  ---
+  </tbody>
+  </table>
+  */
 
   // Load the mixin
   @include sparkle-text-align;

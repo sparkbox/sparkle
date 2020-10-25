@@ -19,6 +19,7 @@ section: Systems
   @each $key, $val in $colors {
     /* ---
 section: Systems
+---
 
 <tr>
 <td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
@@ -31,6 +32,7 @@ section: Systems
 
   /* ---
 section: Systems
+---
 
 </tbody>
 </table>
