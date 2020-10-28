@@ -8,39 +8,39 @@ $settings: (
   'loop-mq': true
 );
 
-$util-text-values: (
-  uppercase,
-  lowercase
+$util-text-decoration: (
+  none,
+  underline
 );
 
 $media-queries: (
   'sm': 40rem
 );
 
-@include describe('The position utility mixin') {
+@include describe('The text decoration utility mixin') {
   @include it('outputs the proper utility classes') {
     @include assert {
       @include output {
-        @include sparkle-text-transform();
+        @include sparkle-text-decoration();
       }
       @include expect {
-        .util-text-uppercase {
-          text-transform: uppercase;
+        .util-text-decoration-none {
+          text-decoration: none;
         }
 
         @media (min-width: 40rem) {
-          .util-text-uppercase\@sm {
-            text-transform: uppercase;
+          .util-text-decoration-none\@sm {
+            text-decoration: none;
           }
         }
 
-        .util-text-lowercase {
-          text-transform: lowercase;
+        .util-text-decoration-underline {
+          text-decoration: underline;
         }
 
         @media (min-width: 40rem) {
-          .util-text-lowercase\@sm {
-            text-transform: lowercase;
+          .util-text-decoration-underline\@sm {
+            text-decoration: underline;
           }
         }
       }
