@@ -27,6 +27,7 @@
     .#{settings(prefix)}-gap-#{$key} {
       @include loop-mq {
         grid-gap: $value;
+        gap: $value;
       }
     }
   }
@@ -48,7 +49,8 @@
     */
     .#{settings(prefix)}-gap-row-#{$key} {
       @include loop-mq {
-        grid-gap-rows: $value;
+        grid-row-gap: $value;
+        row-gap: $value;
       }
     }
   }
@@ -70,7 +72,8 @@
     */
     .#{settings(prefix)}-gap-column-#{$key} {
       @include loop-mq {
-        grid-gap-columns: $value;
+        grid-column-gap: $value;
+        column-gap: $value;
       }
     }
   }
