@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "npm run docs",
-    "predocs": "rm -rf ./styleguide/* && touch ./styleguide/docs.md",
+    "predocs": "rm -rf styleguide && mkdir styleguide && touch styleguide/docs.md",
     "docs": "npm run sass",
     "sass": "sass mdcss:styleguide",
     "postsass": "postcss styleguide/docs.css -r",
