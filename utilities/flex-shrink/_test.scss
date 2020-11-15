@@ -1,0 +1,54 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The flex-shrink utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-flex-shrink();
+      }
+      @include expect {
+        .util-flex-shrink-0 {
+          flex-shrink: 0;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-shrink-0\@sm {
+            flex-shrink: 0;
+          }
+        }
+
+        .util-flex-shrink-1 {
+          flex-shrink: 1;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-shrink-1\@sm {
+            flex-shrink: 1;
+          }
+        }
+
+        .util-flex-shrink-2 {
+          flex-shrink: 2;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-shrink-2\@sm {
+            flex-shrink: 2;
+          }
+        }
+      }
+    }
+  }
+}

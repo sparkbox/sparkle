@@ -1,0 +1,49 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-order-values: (
+  -1,
+  1
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The order utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-order();
+      }
+      @include expect {
+        .util-order-minus-1 {
+          order: -1;
+        }
+
+        @media (min-width: 40rem) {
+          .util-order-minus-1\@sm {
+            order: -1;
+          }
+        }
+
+        .util-order-1 {
+          order: 1;
+        }
+
+        @media (min-width: 40rem) {
+          .util-order-1\@sm {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}

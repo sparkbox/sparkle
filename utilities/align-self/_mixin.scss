@@ -1,0 +1,9 @@
+@mixin sparkle-align-self {
+  @each $value in $util-align-self-values {
+    .#{settings(prefix)}-align-self-#{$value} {
+      @include loop-mq {
+        align-self: $value;
+      }
+    }
+  }
+}

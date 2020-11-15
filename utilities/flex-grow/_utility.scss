@@ -1,0 +1,38 @@
+@import "mixin";
+
+@if settings(utility-flex-grow) {
+  /* ---
+  title: Flex Grow Utility
+  section: Utilities
+  ---
+  <table>
+  <thead>
+  <tr>
+  <th>Class Name</th>
+  <th>Property</th>
+  </thead>
+  <tbody>
+  */
+
+  // NOTE: This @for loop is only for document generation
+  @for $value from 0 through 2 {
+    /* ---
+    section: Utilities
+    ---
+    <tr>
+    <td>`.#{settings(prefix)}-flex-grow-#{$value}`</td>
+    <td>`flex-grow: #{$value}`</td>
+    </tr>
+    */
+  }
+
+  /* ---
+  section: Utilities
+  ---
+  </tbody>
+  </table>
+  */
+
+  // Load the mixin
+  @include sparkle-flex-grow;
+}

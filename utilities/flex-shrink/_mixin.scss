@@ -1,0 +1,9 @@
+@mixin sparkle-flex-shrink {
+  @for $value from 0 through 2 {
+    .#{settings(prefix)}-flex-shrink-#{$value} {
+      @include loop-mq {
+        flex-shrink: $value;
+      }
+    }
+  }
+}

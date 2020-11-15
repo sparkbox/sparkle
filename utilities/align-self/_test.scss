@@ -1,0 +1,49 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-align-self-values: (
+  center,
+  stretch
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The align-self utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-align-self();
+      }
+      @include expect {
+        .util-align-self-center {
+          align-self: center;
+        }
+
+        @media (min-width: 40rem) {
+          .util-align-self-center\@sm {
+            align-self: center;
+          }
+        }
+
+        .util-align-self-stretch {
+          align-self: stretch;
+        }
+
+        @media (min-width: 40rem) {
+          .util-align-self-stretch\@sm {
+            align-self: stretch;
+          }
+        }
+      }
+    }
+  }
+}

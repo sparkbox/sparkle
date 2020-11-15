@@ -1,0 +1,15 @@
+@mixin sparkle-order {
+  @each $value in $util-order-values {
+    $suffix: '';
+    @if $value == -1 {
+      $suffix: 'minus-1';
+    } @else {
+      $suffix: stringify($value);
+    }
+    .#{settings(prefix)}-order-#{$suffix} {
+      @include loop-mq {
+        order: $value;
+      }
+    }
+  }
+}

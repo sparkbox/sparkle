@@ -1,0 +1,9 @@
+@mixin sparkle-flex-grow {
+  @for $value from 0 through 2 {
+    .#{settings(prefix)}-flex-grow-#{$value} {
+      @include loop-mq {
+        flex-grow: $value;
+      }
+    }
+  }
+}

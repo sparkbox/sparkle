@@ -1,0 +1,49 @@
+@import 'true';
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-justify-values: (
+  center,
+  stretch
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The justify-content utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-justify-content();
+      }
+      @include expect {
+        .util-justify-content-center {
+          justify-content: center;
+        }
+
+        @media (min-width: 40rem) {
+          .util-justify-content-center\@sm {
+            justify-content: center;
+          }
+        }
+
+        .util-justify-content-stretch {
+          justify-content: stretch;
+        }
+
+        @media (min-width: 40rem) {
+          .util-justify-content-stretch\@sm {
+            justify-content: stretch;
+          }
+        }
+      }
+    }
+  }
+}

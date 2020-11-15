@@ -1,0 +1,38 @@
+@import "mixin";
+
+@if settings(utility-order) {
+  /* ---
+  title: Order Utility
+  section: Utilities
+  ---
+  <table>
+  <thead>
+  <tr>
+  <th>Class Name</th>
+  <th>Property</th>
+  </thead>
+  <tbody>
+  */
+
+  // NOTE: This @each loop is only for document generation
+  @each $value in $util-order-values {
+    /* ---
+    section: Utilities
+    ---
+    <tr>
+    <td>`.#{settings(prefix)}-order-#{$value}`</td>
+    <td>`order: #{$value}`</td>
+    </tr>
+    */
+  }
+
+  /* ---
+  section: Utilities
+  ---
+  </tbody>
+  </table>
+  */
+
+  // Load the mixin
+  @include sparkle-order;
+}
