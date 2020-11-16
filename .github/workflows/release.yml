@@ -1,0 +1,24 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+
+      - name: install & test
+        run: npm cit
+
+      - name: publish
+        run: ./.github/scripts/publish-if-needed.sh
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}

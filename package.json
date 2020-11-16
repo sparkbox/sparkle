@@ -2,7 +2,6 @@
   "name": "@sparkbox/sparkle",
   "version": "1.0.0",
   "description": "✨ Sparkle CSS Framework",
-  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +12,8 @@
     "sass": "sass mdcss:styleguide",
     "postsass": "postcss styleguide/docs.css -r",
     "test": "mocha",
-    "stylelint": "stylelint *.scss **/*.scss **/**/*.scss --color --syntax scss"
+    "stylelint": "stylelint *.scss **/*.scss **/**/*.scss --color --syntax scss",
+    "release": "./.github/scripts/release.sh"
   },
   "repository": {
     "type": "git",
@@ -36,9 +36,24 @@
     "@sparkbox/stylelint-config-sparkbox": "^1.0.3",
     "mdcss": "^1.5.2",
     "mdcss-theme-github": "^2.4.2",
+    "next-standard-version": "^2.1.3",
     "postcss": "^8.1.0",
     "postcss-cli": "^8.0.0",
     "sass": "^1.26.11",
-    "sass-true": "^6.0.0"
-  }
+    "sass-true": "^6.0.0",
+    "standard-version": "^9.0.0"
+  },
+  "files": [
+    "_settings.scss",
+    "_sparkle-defaults.scss",
+    "_sparkle-settings.scss",
+    "_systems.scss",
+    "_tools.scss",
+    "_utilities.scss",
+    "globals",
+    "mdcss",
+    "systems",
+    "tools",
+    "utilities"
+  ]
 }
