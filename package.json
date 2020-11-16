@@ -1,6 +1,6 @@
 {
   "name": "@sparkbox/sparkle",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "✨ Sparkle CSS Framework",
   "main": "index.js",
   "directories": {
