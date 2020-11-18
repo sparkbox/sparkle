@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/sparkbox/sparkle/compare/v1.1.0...v1.2.0) (2020-11-18)
+
+
+### Features
+
+* Add flexbox utility classes ([8f8b380](https://github.com/sparkbox/sparkle/commit/8f8b3800885633c7347f94d5ffd3936e4ebf1c6e))
+
 ## [1.1.0](https://github.com/sparkbox/sparkle/compare/v1.0.0...v1.1.0) (2020-11-16)
 
 
