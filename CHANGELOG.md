@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/sparkbox/sparkle/compare/v1.2.1...v1.3.0) (2020-11-21)
+
+
+### Bug Fixes
+
+* make the docs comments optional ([fe22a55](https://github.com/sparkbox/sparkle/commit/fe22a55024aa0e984bd9c2c80d1687910fa3b3e7))
+* Move tool utilities with other utilities ([2be1151](https://github.com/sparkbox/sparkle/commit/2be115142cbd2470684b10133b59275c941a5e86))
+
 ### [1.2.1](https://github.com/sparkbox/sparkle/compare/v1.2.0...v1.2.1) (2020-11-18)
 
 ## [1.2.0](https://github.com/sparkbox/sparkle/compare/v1.1.0...v1.2.0) (2020-11-18)
