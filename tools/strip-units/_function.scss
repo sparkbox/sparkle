@@ -1,17 +1,18 @@
-/* ---
-title: Strip Units Function
-section: Tools
----
+@if $sparkle-show-docs {
+  /* ---
+  title: Strip Units Function
+  section: Tools
+  ---
+  Removes the unit of number. This is handy for maths in mixins/functions, for example if you need to check to values of two numbers. If one is a `em` value and the other is a `rem` value, you have to strip the units to accomplish the math.
 
-Removes the unit of number. This is handy for maths in mixins/functions, for example if you need to check to values of two numbers. If one is a `em` value and the other is a `rem` value, you have to strip the units to accomplish the math.
-
-**Use**
-```scss
-.my-class {
-  prop: strip-units(<number>);
+  **Use**
+  ```scss
+  .my-class {
+    prop: strip-units(<number>);
+  }
+  ```
+  */
 }
-```
-*/
 
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);

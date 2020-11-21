@@ -23,7 +23,7 @@
   }
 }
 
-@mixin sparkle-spacing-side-loop($type, $mq:null, $true-test:null) {
+@mixin sparkle-spacing-side-loop($type, $mq:null) {
   $type-name: $type;
   @if $mq {
     $mq: '\\@' + $mq;
@@ -33,8 +33,8 @@
   }
   @each $side-key, $side-val in $sides {
     @each $space-key, $space-val in $spacer {
-      @if $true-test == null {
-        @if $mq == null {
+      @if $mq == null {
+        @if $sparkle-show-docs {
           /* ---
           section: Systems
           ---
@@ -54,8 +54,8 @@
   }
 }
 
-@mixin sparkle-spacing-loop($type, $true-test:null) {
-  @if $true-test == null {
+@mixin sparkle-spacing-loop($type) {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
@@ -70,18 +70,19 @@
     <tbody>
     */
   }
-  @include sparkle-spacing-side-loop($type, null, $true-test);
+
+  @include sparkle-spacing-side-loop($type);
   @each $key, $val in $media-queries {
     @media (min-width: #{$val}) {
-      @include sparkle-spacing-side-loop($type, $key, $true-test);
+      @include sparkle-spacing-side-loop($type, $key);
     }
   }
   @if settings('print-classes') {
     @media print {
-      @include sparkle-spacing-side-loop($type, print, $true-test);
+      @include sparkle-spacing-side-loop($type, print);
     }
   }
-  @if $true-test == null {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---

@@ -1,32 +1,34 @@
-/* ---
-title: Ratio Function
-section: Tools
----
+@if $sparkle-show-docs {
+  /* ---
+  title: Ratio Function
+  section: Tools
+  ---
 
-Creates a ratio percentage value when given a height value and width value.
+  Creates a ratio percentage value when given a height value and width value.
 
-**Use**
-```scss
-.my-class {
-  prop: ratio(<height>, <width>);
+  **Use**
+  ```scss
+  .my-class {
+    prop: ratio(<height>, <width>);
+  }
+  ```
+
+  **Use with a prop**
+  ```scss
+  .my-class {
+    width: ratio(200, 400);
+  }
+  ```
+
+  **CSS Output**
+  ```css
+  .my-class {
+    width: 50%;
+  }
+  ```
+  */
 }
-```
 
-**Use with a prop**
-```scss
-.my-class {
-  width: ratio(200, 400);
-}
-```
-
-**CSS Output**
-```css
-.my-class {
-  width: 50%;
-}
-```
-
-*/
 @function ratio($height,$width) {
   @return ($height / $width) * 100%;
 }

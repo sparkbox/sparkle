@@ -1,4 +1,5 @@
 @import 'true';
+$sparkle-show-docs: false;
 
 @import "mixins";
 
@@ -17,7 +18,7 @@ $media-queries: (
   @include it('outputs grid classes.') {
     @include assert {
       @include output {
-        @include sparkle-grid-maker($count: 8, $true-test: true);
+        @include sparkle-grid-maker($count: 8);
       }
       @include expect {
         .true-test-grid-cell-1-8 {
@@ -31,13 +32,13 @@ $media-queries: (
             grid-column: span 1;
           }
         }
-        
+
         .true-test-grid-cell-quarter,
         .true-test-grid-cell-2-8 {
           float: left;
           width: 25%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-quarter,
           .true-test-grid-cell-2-8 {
@@ -45,25 +46,25 @@ $media-queries: (
             grid-column: span 2;
           }
         }
-        
+
         .true-test-grid-cell-3-8 {
           float: left;
           width: 37.5%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-3-8 {
             width: auto;
             grid-column: span 3;
           }
         }
-        
+
         .true-test-grid-cell-half,
         .true-test-grid-cell-4-8 {
           float: left;
           width: 50%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-half,
           .true-test-grid-cell-4-8 {
@@ -71,26 +72,26 @@ $media-queries: (
             grid-column: span 4;
           }
         }
-        
+
         .true-test-grid-cell-5-8 {
           float: left;
           width: 62.5%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-5-8 {
             width: auto;
             grid-column: span 5;
           }
         }
-        
+
         .true-test-grid-cell-three-quarter,
         .true-test-grid-cell-three-quarters,
         .true-test-grid-cell-6-8 {
           float: left;
           width: 75%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-three-quarter,
           .true-test-grid-cell-three-quarters,
@@ -99,25 +100,25 @@ $media-queries: (
             grid-column: span 6;
           }
         }
-        
+
         .true-test-grid-cell-7-8 {
           float: left;
           width: 87.5%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-7-8 {
             width: auto;
             grid-column: span 7;
           }
         }
-        
+
         .true-test-grid-cell-full,
         .true-test-grid-cell-8-8 {
           float: left;
           width: 100%;
         }
-        
+
         @supports (display: grid) {
           .true-test-grid-cell-full,
           .true-test-grid-cell-8-8 {

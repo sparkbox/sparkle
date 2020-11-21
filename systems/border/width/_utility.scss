@@ -1,9 +1,11 @@
 @import "mixin";
 
 @if settings(utility-border-width) {
-  /* ---
-    section: Systems
-    ---
-    */
+  @if $sparkle-show-docs {
+    /* ---
+      section: Systems
+      ---
+      */
+  }
   @include sparkle-border-width();
 }

@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import "mixin";
 
 $font-weight: (
@@ -12,20 +14,18 @@ $settings: (
   'system-font-weight': true
 );
 
-$true-test: true;
-
 @include describe('The Font Weight System') {
   @include it('outputs font-weight classes.') {
     @include assert {
       @include output {
-        @include sparkle-font-weight($true-test);
+        @include sparkle-font-weight;
       }
-      
+
       @include expect {
         .true-test-weight-light {
             font-weight: 200;
         }
-          
+
         .true-test-weight-normal {
           font-weight: 400;
         }

@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import "mixin";
 
 $font-families: (
@@ -12,24 +14,22 @@ $settings: (
   'system-font-family': true
 );
 
-$true-test: true;
-
 @include describe('The Font Families System') {
   @include it('outputs font-family classes.') {
     @include assert {
       @include output {
-        @include sparkle-font-family($true-test);
+        @include sparkle-font-family;
       }
-      
+
       @include expect {
         .true-test-family-sans {
             font-family: "Helvetica Nueue", Helvetica, sans-serif;
         }
-        
+
         .true-test-family-serif {
             font-family: Georgia, "Times New Roman", serif;
         }
-        
+
         .true-test-family-mono {
             font-family: Monaco, monospace;
         }

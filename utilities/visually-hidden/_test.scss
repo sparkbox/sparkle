@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import 'mixin';
 @import '../../tools/settings/function';
 @import '../../tools/loop-mq/mixin';
@@ -16,7 +18,7 @@ $media-queries: (
   @include it('outputs the proper visually hidden classes') {
     @include assert {
       @include output {
-        @include sparkle-visually-hidden();
+        @include sparkle-visually-hidden;
       }
       @include expect {
         .util-visually-hidden {

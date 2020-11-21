@@ -1,14 +1,17 @@
-/* ---
-title: Unbuttonize Utility
-section: Utilities
----
+@if $sparkle-show-docs {
+  /* ---
+  title: Unbuttonize Utility
+  section: Utilities
+  ---
 
-Removes styles added by default to button elements.
+  Removes styles added by default to button elements.
 
-```scss
-.#{settings(prefix)}-unbuttonize
-```
-*/
+  ```scss
+  .#{settings(prefix)}-unbuttonize
+  ```
+  */
+}
+
 .#{settings(prefix)}-unbuttonize {
   @include unbuttonize;
 }

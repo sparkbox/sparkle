@@ -1,14 +1,16 @@
-/* ---
-title: Anti-aliased Utility
-section: Utilities
----
+@if $sparkle-show-docs {
+  /* ---
+  title: Anti-aliased Utility
+  section: Utilities
+  ---
 
-Smooths the font on the level of the pixel.
+  Smooths the font on the level of the pixel.
 
-```scss
-.#{settings(prefix)}-antialiased
-```
-*/
+  ```scss
+  .#{settings(prefix)}-antialiased
+  ```
+  */
+}
 
 .#{settings(prefix)}-antialiased {
   @include antialiased;

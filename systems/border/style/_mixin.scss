@@ -1,5 +1,5 @@
-@mixin sparkle-border-style($true-test:null) {
-  @if $true-test == null {
+@mixin sparkle-border-style {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
@@ -18,7 +18,7 @@
     */
   }
   @each $key, $value in $border-style {
-    @if $true-test == null {
+    @if $sparkle-show-docs {
       /* ---
       section: Systems
       ---
@@ -35,7 +35,7 @@
       }
     }
   }
-  @if $true-test == null {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---

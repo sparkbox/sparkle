@@ -1,37 +1,39 @@
 @import "mixin";
 
 @if settings(utility-align-self) {
-  /* ---
-  title: Align Self Utility
-  section: Utilities
-  ---
-  <table>
-  <thead>
-  <tr>
-  <th>Class Name</th>
-  <th>Property</th>
-  </thead>
-  <tbody>
-  */
+  @if $sparkle-show-docs {
+    /* ---
+    title: Align Self Utility
+    section: Utilities
+    ---
+    <table>
+    <thead>
+    <tr>
+    <th>Class Name</th>
+    <th>Property</th>
+    </thead>
+    <tbody>
+    */
 
-  // NOTE: This @each loop is only for document generation
-  @each $value in $util-align-self-values {
+    // NOTE: This @each loop is only for document generation
+    @each $value in $util-align-self-values {
+      /* ---
+      section: Utilities
+      ---
+      <tr>
+      <td>`.#{settings(prefix)}-align-self-#{$value}`</td>
+      <td>`align-self: #{$value}`</td>
+      </tr>
+      */
+    }
+
     /* ---
     section: Utilities
     ---
-    <tr>
-    <td>`.#{settings(prefix)}-align-self-#{$value}`</td>
-    <td>`align-self: #{$value}`</td>
-    </tr>
+    </tbody>
+    </table>
     */
   }
-
-  /* ---
-  section: Utilities
-  ---
-  </tbody>
-  </table>
-  */
 
   // Load the mixin
   @include sparkle-align-self;

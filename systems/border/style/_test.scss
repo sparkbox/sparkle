@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import 'mixin';
 @import '../../../tools/loop-mq/mixin';
 
@@ -19,13 +21,13 @@ $media-queries: (
   @include it('outputs the proper utility classes') {
     @include assert {
       @include output {
-        @include sparkle-border-style(true);
+        @include sparkle-border-style;
       }
       @include expect {
         .util-border-style-solid {
           border-style: solid;
         }
-        
+
         @media (min-width: 40rem) {
           .util-border-style-solid\@sm {
             border-style: solid;

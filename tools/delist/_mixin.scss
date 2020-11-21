@@ -1,28 +1,28 @@
-/* ---
-title: Delist Mixin
-section: Tools
----
+@if $sparkle-show-docs {
+  /* ---
+  title: Delist Mixin
+  section: Tools
+  ---
 
-Removes default list styles.
+  Removes default list styles.
 
-**Use**
-```scss
-.my-class {
-  @include delist;
+  **Use**
+  ```scss
+  .my-class {
+    @include delist;
+  }
+  ```
+
+  **CSS Output**
+  ```css
+  .my-class {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ```
+  */
 }
-```
-
-**CSS Output**
-```css
-.my-class {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-```
-
-*/
-
 @mixin delist {
   margin: 0;
   padding: 0;

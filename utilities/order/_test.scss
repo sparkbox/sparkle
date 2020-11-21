@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import 'mixin';
 @import '../../tools/settings/function';
 @import '../../tools/loop-mq/mixin';
@@ -21,7 +23,7 @@ $media-queries: (
   @include it('outputs the proper utility classes') {
     @include assert {
       @include output {
-        @include sparkle-order();
+        @include sparkle-order;
       }
       @include expect {
         .util-order-minus-1 {

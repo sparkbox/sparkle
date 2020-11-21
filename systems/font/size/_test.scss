@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import "mixin";
 
 $font-size: (
@@ -13,24 +15,22 @@ $settings: (
   'system-font-size': true
 );
 
-$true-test: true;
-
 @include describe('The Font Size System') {
   @include it('outputs font-size classes.') {
     @include assert {
       @include output {
-        @include sparkle-font-size($true-test);
+        @include sparkle-font-size;
       }
-      
+
       @include expect {
         .true-test-size-sm {
           font-size: 0.875rem;
         }
-          
+
         .true-test-size-md {
           font-size: 1.125rem;
         }
-        
+
         .true-test-size-lg {
           font-size: 1.5rem;
         }
