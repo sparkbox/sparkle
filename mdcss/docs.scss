@@ -35,6 +35,9 @@ $sparkle-show-docs: true;
 }
 
 @import "../tools";
+
+/* |=========== N O   C S S   A B O V E   T H I S   L I N E ===========| */
+
 @import "mdcss";
 
 @if $sparkle-show-docs {

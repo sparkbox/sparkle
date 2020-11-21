@@ -1,6 +1,20 @@
 /* BEGIN: Sparkle Utility Classes */
 
-// Utilities
+// Tool Utilities
+// --------------
+// Tool utility classes have corresponding mixins
+// which output the results of the mixins directly
+// so they can be used as a class as well as a mixin.
+@import "tools/antialiased/utility";
+@import "tools/clearfix/utility";
+@import "tools/delink/utility";
+@import "tools/delist/utility";
+@import "tools/unbuttonize/utility";
+
+// Property Utilities
+// ------------------
+// Property utilities are classes the correspond directly
+// to a CSS property and value combination.
 @import "utilities/display/utility";
 @import "utilities/position/utility";
 @import "utilities/text-align/utility";
