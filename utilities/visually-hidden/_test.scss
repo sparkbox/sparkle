@@ -23,13 +23,33 @@ $media-queries: (
       @include expect {
         .util-visually-hidden {
           position: fixed;
-          clip: rect(0, 0, 0, 0);
+          right: 100%;
+          bottom: 100%;
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: inset(50%);
+
+          &:focus {
+            left: 0;
+            right: auto;
+            top: 0;
+            bottom: auto;
+          }
         }
 
         @media (min-width: 40rem) {
           .util-visually-hidden\@sm {
             position: fixed;
-            clip: rect(0, 0, 0, 0);
+            right: 100%;
+            bottom: 100%;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+
+            &:focus {
+              left: 0;
+              right: auto;
+              top: 0;
+              bottom: auto;
+            }
           }
         }
       }
