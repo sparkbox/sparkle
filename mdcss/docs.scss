@@ -3,6 +3,7 @@
 // turns off and on the comments used to generate
 // the Docs. If this variable is set to false, the
 // docs will not generate.
+@import "../settings";
 $sparkle-show-docs: true;
 
 /* Begin Sparkle Docs */
@@ -22,8 +23,6 @@ $sparkle-show-docs: true;
   In the ITCSS method, settings are declared first and at the top of the Sass document. These contain all variables used throughout the tools and utilities. The settings inform what Tools, Systems, and Utilities are available in the framework. More details about settings setup can be found on the [Sparkle repo](https://github.com/sparkbox/sparkle).
   */
 }
-
-@import "../settings";
 
 @if $sparkle-show-docs {
   /* ---

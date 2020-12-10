@@ -1,3 +1,9 @@
+// Print Documentation Settings
+// Set this to true in user settings
+// to enable docs comment generation
+$sparkle-show-docs: false !default;
+
+// Sparkle User Settings
 $settings: (
   'prefix': 'sparkle',
   'loop-mq': true,
