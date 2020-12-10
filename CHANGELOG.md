@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/sparkbox/sparkle/compare/v1.4.0...v1.4.1) (2020-12-10)
+
+
+### Bug Fixes
+
+* Add default docs variable value ([dd0540c](https://github.com/sparkbox/sparkle/commit/dd0540c31b6f00b55372dd486c2fc7e053fe03ec))
+* Update dependencies ([4045ba2](https://github.com/sparkbox/sparkle/commit/4045ba206714a2cfda0a0d5e2952f95b01442e50))
+
 ## [1.4.0](https://github.com/sparkbox/sparkle/compare/v1.3.0...v1.4.0) (2020-12-10)
 
 ## [1.3.0](https://github.com/sparkbox/sparkle/compare/v1.2.1...v1.3.0) (2020-11-21)
