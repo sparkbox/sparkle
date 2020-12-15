@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/sparkbox/sparkle/compare/v1.4.1...v1.4.2) (2020-12-15)
+
+
+### Bug Fixes
+
+* overwrite clip rule on focus of visually-hidden ([1a86a91](https://github.com/sparkbox/sparkle/commit/1a86a913a34ee2667e797c9fc19cf4041473c2b3))
+
 ### [1.4.1](https://github.com/sparkbox/sparkle/compare/v1.4.0...v1.4.1) (2020-12-10)
 
 
