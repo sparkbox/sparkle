@@ -36,8 +36,21 @@
     .#{settings(prefix)}-border-color-#{$key}\:hover:hover,
     .#{settings(prefix)}-border-color-#{$key}\:active:active,
     .#{settings(prefix)}-border-color-#{$key}\:focus:focus {
-      @include loop-mq {
-        border-color: $val;
+      border-color: $val;
+    }
+    
+    @if settings(loop-mq) {
+      @each $mqkey, $mqval in $media-queries {
+        @if $mqval != $mqval + "" {
+          @media (min-width: #{$mqval}) {
+            .#{settings(prefix)}-border-color-#{$key}\@#{$mqkey},
+            .#{settings(prefix)}-border-color-#{$key}\@#{$mqkey}\:hover:hover,
+            .#{settings(prefix)}-border-color-#{$key}\@#{$mqkey}\:active:active,
+            .#{settings(prefix)}-border-color-#{$key}\@#{$mqkey}\:focus:focus {
+              border-color: $val;
+            }
+          }
+        }
       }
     }
   }

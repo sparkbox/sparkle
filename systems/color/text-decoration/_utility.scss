@@ -38,8 +38,21 @@
     .#{settings(prefix)}-decoration-color-#{$key}\:hover:hover,
     .#{settings(prefix)}-decoration-color-#{$key}\:active:active,
     .#{settings(prefix)}-decoration-color-#{$key}\:focus:focus {
-      @include loop-mq {
-        text-decoration-color: $val;
+      text-decoration-color: $val;
+    }
+    
+    @if settings(loop-mq) {
+      @each $mqkey, $mqval in $media-queries {
+        @if $mqval != $mqval + "" {
+          @media (min-width: #{$mqval}) {
+            .#{settings(prefix)}-decoration-color-#{$key}\@#{$mqkey},
+            .#{settings(prefix)}-decoration-color-#{$key}\@#{$mqkey}\:hover:hover,
+            .#{settings(prefix)}-decoration-color-#{$key}\@#{$mqkey}\:active:active,
+            .#{settings(prefix)}-decoration-color-#{$key}\@#{$mqkey}\:focus:focus {
+              text-decoration-color: $val;
+            }
+          }
+        }
       }
     }
   }

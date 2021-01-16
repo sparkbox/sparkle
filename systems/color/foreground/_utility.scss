@@ -36,8 +36,21 @@
     .#{settings(prefix)}-color-#{$key}\:hover:hover,
     .#{settings(prefix)}-color-#{$key}\:active:active,
     .#{settings(prefix)}-color-#{$key}\:focus:focus {
-      @include loop-mq {
-        color: $val;
+      color: $val;
+    }
+    
+    @if settings(loop-mq) {
+      @each $mqkey, $mqval in $media-queries {
+        @if $mqval != $mqval + "" {
+          @media (min-width: #{$mqval}) {
+            .#{settings(prefix)}-color-#{$key}\@#{$mqkey},
+            .#{settings(prefix)}-color-#{$key}\@#{$mqkey}\:hover:hover,
+            .#{settings(prefix)}-color-#{$key}\@#{$mqkey}\:active:active,
+            .#{settings(prefix)}-color-#{$key}\@#{$mqkey}\:focus:focus {
+              color: $val;
+            }
+          }
+        }
       }
     }
   }

@@ -37,8 +37,21 @@
     .#{settings(prefix)}-outline-#{$key}\:hover:hover,
     .#{settings(prefix)}-outline-#{$key}\:active:active,
     .#{settings(prefix)}-outline-#{$key}\:focus:focus {
-      @include loop-mq {
-        outline-color: $val;
+      outline-color: $val;
+    }
+    
+    @if settings(loop-mq) {
+      @each $mqkey, $mqval in $media-queries {
+        @if $mqval != $mqval + "" {
+          @media (min-width: #{$mqval}) {
+            .#{settings(prefix)}-outline-#{$key}\@#{$mqkey},
+            .#{settings(prefix)}-outline-#{$key}\@#{$mqkey}\:hover:hover,
+            .#{settings(prefix)}-outline-#{$key}\@#{$mqkey}\:active:active,
+            .#{settings(prefix)}-outline-#{$key}\@#{$mqkey}\:focus:focus {
+              outline: $val;
+            }
+          }
+        }
       }
     }
   }
