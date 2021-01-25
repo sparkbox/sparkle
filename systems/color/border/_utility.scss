@@ -1,3 +1,5 @@
+@import '../mixin';
+
 @if settings('utility-border-color') {
   @if $sparkle-show-docs {
     /* ---
@@ -32,11 +34,8 @@
       </tr>
       */
     }
-    .#{settings(prefix)}-border-color-#{$key},
-    .#{settings(prefix)}-border-color-#{$key}\:hover:hover,
-    .#{settings(prefix)}-border-color-#{$key}\:active:active,
-    .#{settings(prefix)}-border-color-#{$key}\:focus:focus {
-      @include loop-mq {
+    .#{settings(prefix)}-border-color-#{$key} {
+      @include sparkle-loop-states {
         border-color: $val;
       }
     }

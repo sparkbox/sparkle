@@ -1,3 +1,5 @@
+@import '../mixin';
+
 @if settings('utility-outline-color') {
   @if $sparkle-show-docs {
     /* ---
@@ -33,11 +35,8 @@
       */
     }
 
-    .#{settings(prefix)}-outline-#{$key},
-    .#{settings(prefix)}-outline-#{$key}\:hover:hover,
-    .#{settings(prefix)}-outline-#{$key}\:active:active,
-    .#{settings(prefix)}-outline-#{$key}\:focus:focus {
-      @include loop-mq {
+    .#{settings(prefix)}-outline-#{$key} {
+      @include sparkle-loop-states {
         outline-color: $val;
       }
     }

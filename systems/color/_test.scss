@@ -1,0 +1,50 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+
+$settings: (
+  'loop-mq': true,
+  'system-color-states': true
+);
+
+$media-queries: (
+  'sm': 40rem,
+);
+
+$colors: (
+  'primary': deeppink,
+);
+
+
+
+@include describe('The color function and state mixin') {
+  @include it('outputs the media-query properties and state classes of the loop.') {
+    @include assert {
+      @include output {
+        .test {
+          @include sparkle-loop-states {
+            color: deeppink;
+          }
+        }
+      }
+      @include expect {
+        .test,
+        .test\:hover:hover,
+        .test\:active:active,
+        .test\:focus:focus {
+          color: deeppink;
+        }
+
+        @media (min-width: 40rem) {
+          .test\@sm,
+          .test\@sm\:hover:hover,
+          .test\@sm\:active:active,
+          .test\@sm\:focus:focus {
+            color: deeppink;
+          }
+        }
+      }
+    }
+  }
+}

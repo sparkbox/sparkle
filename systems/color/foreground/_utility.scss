@@ -1,3 +1,5 @@
+@import '../mixin';
+
 @if settings('utility-foreground-color') {
   @if $sparkle-show-docs {
     /* ---
@@ -32,11 +34,8 @@
       </tr>
       */
     }
-    .#{settings(prefix)}-color-#{$key},
-    .#{settings(prefix)}-color-#{$key}\:hover:hover,
-    .#{settings(prefix)}-color-#{$key}\:active:active,
-    .#{settings(prefix)}-color-#{$key}\:focus:focus {
-      @include loop-mq {
+    .#{settings(prefix)}-color-#{$key} {
+      @include sparkle-loop-states {
         color: $val;
       }
     }
