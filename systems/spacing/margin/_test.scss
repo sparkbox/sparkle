@@ -14,8 +14,8 @@ $settings: (
 $sides: (
   all: all,
   bottom: btm,
-  x-axis: vrt,
-  y-axis: hrz
+  x-axis: hrz,
+  y-axis: vrt
 );
 
 $spacer: (
@@ -51,16 +51,6 @@ $media-queries: (
           margin-bottom: 1rem;
         }
 
-        .true-test-margin-vrt-sm {
-          margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
-        }
-
-        .true-test-margin-vrt-lg {
-          margin-top: 1rem;
-          margin-bottom: 1rem;
-        }
-
         .true-test-margin-hrz-sm {
           margin-right: 0.5rem;
           margin-left: 0.5rem;
@@ -69,6 +59,16 @@ $media-queries: (
         .true-test-margin-hrz-lg {
           margin-right: 1rem;
           margin-left: 1rem;
+        }
+
+        .true-test-margin-vrt-sm {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .true-test-margin-vrt-lg {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
         }
 
         @media (min-width: 30rem) {
@@ -88,16 +88,6 @@ $media-queries: (
             margin-bottom: 1rem;
           }
 
-          .true-test-margin-vrt-sm\@sm {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .true-test-margin-vrt-lg\@sm {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-          }
-
           .true-test-margin-hrz-sm\@sm {
             margin-right: 0.5rem;
             margin-left: 0.5rem;
@@ -106,6 +96,16 @@ $media-queries: (
           .true-test-margin-hrz-lg\@sm {
             margin-right: 1rem;
             margin-left: 1rem;
+          }
+
+          .true-test-margin-vrt-sm\@sm {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-vrt-lg\@sm {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
           }
         }
 
@@ -126,16 +126,6 @@ $media-queries: (
             margin-bottom: 1rem;
           }
 
-          .true-test-margin-vrt-sm\@lg {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .true-test-margin-vrt-lg\@lg {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-          }
-
           .true-test-margin-hrz-sm\@lg {
             margin-right: 0.5rem;
             margin-left: 0.5rem;
@@ -144,6 +134,16 @@ $media-queries: (
           .true-test-margin-hrz-lg\@lg {
             margin-right: 1rem;
             margin-left: 1rem;
+          }
+
+          .true-test-margin-vrt-sm\@lg {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-vrt-lg\@lg {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
           }
         }
 
@@ -164,16 +164,6 @@ $media-queries: (
             margin-bottom: 1rem;
           }
 
-          .true-test-margin-vrt-sm\@print {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .true-test-margin-vrt-lg\@print {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-          }
-
           .true-test-margin-hrz-sm\@print {
             margin-right: 0.5rem;
             margin-left: 0.5rem;
@@ -182,6 +172,16 @@ $media-queries: (
           .true-test-margin-hrz-lg\@print {
             margin-right: 1rem;
             margin-left: 1rem;
+          }
+
+          .true-test-margin-vrt-sm\@print {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .true-test-margin-vrt-lg\@print {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
           }
         }
       }

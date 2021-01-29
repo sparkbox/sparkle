@@ -14,8 +14,8 @@ $settings: (
 $sides: (
   all: all,
   bottom: btm,
-  x-axis: vrt,
-  y-axis: hrz
+  x-axis: hrz,
+  y-axis: vrt
 );
 
 $spacer: (
@@ -51,16 +51,6 @@ $media-queries: (
           padding-bottom: 1rem;
         }
 
-        .true-test-pad-vrt-sm {
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-        }
-
-        .true-test-pad-vrt-lg {
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-        }
-
         .true-test-pad-hrz-sm {
           padding-right: 0.5rem;
           padding-left: 0.5rem;
@@ -69,6 +59,16 @@ $media-queries: (
         .true-test-pad-hrz-lg {
           padding-right: 1rem;
           padding-left: 1rem;
+        }
+
+        .true-test-pad-vrt-sm {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .true-test-pad-vrt-lg {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
         }
 
         @media (min-width: 30rem) {
@@ -88,16 +88,6 @@ $media-queries: (
             padding-bottom: 1rem;
           }
 
-          .true-test-pad-vrt-sm\@sm {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-          }
-
-          .true-test-pad-vrt-lg\@sm {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-          }
-
           .true-test-pad-hrz-sm\@sm {
             padding-right: 0.5rem;
             padding-left: 0.5rem;
@@ -106,6 +96,16 @@ $media-queries: (
           .true-test-pad-hrz-lg\@sm {
             padding-right: 1rem;
             padding-left: 1rem;
+          }
+
+          .true-test-pad-vrt-sm\@sm {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-vrt-lg\@sm {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
         }
 
@@ -126,16 +126,6 @@ $media-queries: (
             padding-bottom: 1rem;
           }
 
-          .true-test-pad-vrt-sm\@lg {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-          }
-
-          .true-test-pad-vrt-lg\@lg {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-          }
-
           .true-test-pad-hrz-sm\@lg {
             padding-right: 0.5rem;
             padding-left: 0.5rem;
@@ -144,6 +134,16 @@ $media-queries: (
           .true-test-pad-hrz-lg\@lg {
             padding-right: 1rem;
             padding-left: 1rem;
+          }
+
+          .true-test-pad-vrt-sm\@lg {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-vrt-lg\@lg {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
         }
 
@@ -164,16 +164,6 @@ $media-queries: (
             padding-bottom: 1rem;
           }
 
-          .true-test-pad-vrt-sm\@print {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-          }
-
-          .true-test-pad-vrt-lg\@print {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-          }
-
           .true-test-pad-hrz-sm\@print {
             padding-right: 0.5rem;
             padding-left: 0.5rem;
@@ -182,6 +172,16 @@ $media-queries: (
           .true-test-pad-hrz-lg\@print {
             padding-right: 1rem;
             padding-left: 1rem;
+          }
+
+          .true-test-pad-vrt-sm\@print {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          .true-test-pad-vrt-lg\@print {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
         }
       }

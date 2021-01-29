@@ -13,11 +13,11 @@
       #{$type}: $space;
     }
   } @else if $side == 'x-axis' {
-    #{$prefix}top: $space;
-    #{$prefix}bottom: $space;
-  } @else if $side == 'y-axis' {
     #{$prefix}right: $space;
     #{$prefix}left: $space;
+  } @else if $side == 'y-axis' {
+    #{$prefix}top: $space;
+    #{$prefix}bottom: $space;
   } @else {
     #{$prefix}#{$side}: $space;
   }
