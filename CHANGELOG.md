@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/sparkbox/sparkle/compare/v1.4.2...v1.4.3) (2021-02-17)
+
+
+### Features
+
+* State class loop mixin ([d34bf20](https://github.com/sparkbox/sparkle/commit/d34bf202b95f57b452b9e9cd65301bf0adb7cd60))
+
 ### [1.4.2](https://github.com/sparkbox/sparkle/compare/v1.4.1...v1.4.2) (2020-12-15)
 
 
