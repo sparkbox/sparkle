@@ -1,0 +1,36 @@
+@mixin sparkle-loop-states {
+  @if settings(system-color-states) {
+    &,
+    &\:hover:hover,
+    &\:active:active,
+    &\:focus:focus {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+
+  @if settings(system-color-states) and settings(loop-mq) {
+    // This is a variation on the loop-mq mixin
+    @each $key, $val in $media-queries {
+      // Checks that the media query is a number
+      @if $val != $val + "" {
+        @media (min-width: #{$val}) {
+          &\@#{$key},
+          &\@#{$key}\:hover:hover,
+          &\@#{$key}\:active:active,
+          &\@#{$key}\:focus:focus {
+            @content;
+          }
+        }
+      }
+    }
+  }
+  @else if settings(loop-mq) {
+    @include loop-mq {
+      @content;
+    }
+  }
+}
+

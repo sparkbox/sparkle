@@ -1,0 +1,16 @@
+.obj-content {
+  @supports (display: grid) {
+    @media (min-width: mq(lg)) {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: minmax(20%, 20rem) auto;
+      
+      &__nav {
+        order: -1;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+    }
+  }
+}

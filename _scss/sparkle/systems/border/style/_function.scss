@@ -1,0 +1,4 @@
+@function border-style($key) {
+    @return map-get($border-style, stringify($key));
+  }
+  

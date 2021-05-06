@@ -1,0 +1,9 @@
+@mixin sparkle-flex-wrap {
+  @each $value in $util-flex-wrap-values {
+    .#{settings(prefix)}-flex-#{$value} {
+      @include loop-mq {
+        flex-wrap: $value;
+      }
+    }
+  }
+}

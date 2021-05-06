@@ -1,0 +1,51 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-flex-wrap-values: (
+  wrap,
+  nowrap
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The flex-wrap utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-flex-wrap;
+      }
+      @include expect {
+        .util-flex-wrap {
+          flex-wrap: wrap;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-wrap\@sm {
+            flex-wrap: wrap;
+          }
+        }
+
+        .util-flex-nowrap {
+          flex-wrap: nowrap;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-nowrap\@sm {
+            flex-wrap: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

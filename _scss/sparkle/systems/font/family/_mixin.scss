@@ -1,5 +1,5 @@
-@mixin sparkle-font-family($true-test: null) {
-  @if $true-test == null {
+@mixin sparkle-font-family {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
@@ -15,7 +15,7 @@
     */
   }
   @each $key, $value in $font-families {
-    @if $true-test == null {
+    @if $sparkle-show-docs {
       /* ---
       section: Systems
       ---
@@ -26,13 +26,14 @@
       </tr>
       */
     }
+
     .#{settings(prefix)}-family-#{$key} {
       @include loop-mq {
         font-family: $value;
       }
     }
   }
-  @if $true-test == null {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---

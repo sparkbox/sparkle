@@ -8,6 +8,23 @@
     <link href="{{ site.url }}/css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    {{ content }}
+    <div class="obj-page">
+      <div class="obj-page__header">
+        {% include site-header.html %}
+      </div>
+      <main class="obj-page__content">
+        <div class="obj-content">
+          <div class="obj-content__content">
+            {% include page-content.html %}
+          </div>
+          <div class="obj-content__nav">
+            {% include site-nav.html %}
+          </div>
+        </div>
+      </main>
+      <div class="obj-page__footer">
+        {% include site-footer.html %}
+      </div>
+    </div>
   </body>
 </html>

@@ -11,16 +11,16 @@
     border-#{$side}: $space;
   }
 }
-  
-@mixin sparkle-border-spacing-side-loop($mq:null, $true-test:null) {
+
+@mixin sparkle-border-spacing-side-loop($mq:null) {
   @if $mq {
     $mq: '\\@' + $mq;
   }
 
   @each $side-key, $side-val in $sides {
     @each $border-key, $border-val in $border-width {
-      @if $true-test == null {
-        @if $mq == null {
+      @if $mq == null {
+        @if $sparkle-show-docs {
           /* ---
           section: Systems
           ---
@@ -40,8 +40,8 @@
   }
 }
 
-@mixin sparkle-border-spacing-loop($true-test:null) {
-  @if $true-test == null {
+@mixin sparkle-border-spacing-loop {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
@@ -56,18 +56,18 @@
     <tbody>
     */
   }
-  @include sparkle-border-spacing-side-loop(null, $true-test);
+  @include sparkle-border-spacing-side-loop(null);
   @each $key, $val in $media-queries {
     @media (min-width: #{$val}) {
-      @include sparkle-border-spacing-side-loop($key, $true-test);
+      @include sparkle-border-spacing-side-loop($key);
     }
   }
   @if settings('print-classes') {
     @media print {
-      @include sparkle-border-spacing-side-loop(print, $true-test);
+      @include sparkle-border-spacing-side-loop(print);
     }
   }
-  @if $true-test == null {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---

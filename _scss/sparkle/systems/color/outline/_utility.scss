@@ -1,51 +1,53 @@
+@import '../mixin';
+
 @if settings('utility-outline-color') {
-/* ---
-section: Systems
----
-
-### Outline Color Utility Classes
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Default Class</th>
-<th>`:hover` Class</th>
-<th>`:focus` Class</th>
-<th>`:active` Class</th>
-</tr>
-</thead>
-<tbody>
-*/
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    ### Outline Color Utility Classes
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th>Default Class</th>
+    <th>`:hover` Class</th>
+    <th>`:focus` Class</th>
+    <th>`:active` Class</th>
+    </tr>
+    </thead>
+    <tbody>
+    */
+  }
 
   @each $key, $val in $colors {
-/* ---
-section: Systems
----
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+      <td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
+      <td>`.#{settings(prefix)}-outline-#{$key}`</td>
+      <td>`.#{settings(prefix)}-outline-#{$key}:hover`</td>
+      <td>`.#{settings(prefix)}-outline-#{$key}:focus`</td>
+      <td>`.#{settings(prefix)}-outline-#{$key}:active`</td>
+      </tr>
+      */
+    }
 
-<tr>
-<td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
-<td>`.#{settings(prefix)}-outline-#{$key}`</td>
-<td>`.#{settings(prefix)}-outline-#{$key}:hover`</td>
-<td>`.#{settings(prefix)}-outline-#{$key}:focus`</td>
-<td>`.#{settings(prefix)}-outline-#{$key}:active`</td>
-</tr>
-*/
-    .#{settings(prefix)}-outline-#{$key},
-    .#{settings(prefix)}-outline-#{$key}\:hover:hover,
-    .#{settings(prefix)}-outline-#{$key}\:active:active,
-    .#{settings(prefix)}-outline-#{$key}\:focus:focus {
-      @include loop-mq {
-        outline: $val;
+    .#{settings(prefix)}-outline-#{$key} {
+      @include sparkle-loop-states {
+        outline-color: $val;
       }
     }
   }
 
-/* ---
-section: Systems
----
-
-</tbody>
-</table>
-*/
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
 }

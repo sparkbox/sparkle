@@ -1,12 +1,14 @@
 @import "../mixins";
 @if settings(utility-padding) {
-  /* ---
-  section: Systems
-  ---
-  
-  ### Padding Utility Classes
-  
-  The padding spacing utility classes apply spacing system value size to the defined side on the inside of the container.
-  */
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+
+    ### Padding Utility Classes
+
+    The padding spacing utility classes apply spacing system value size to the defined side on the inside of the container.
+    */
+  }
   @include sparkle-spacing-loop(padding);
 }

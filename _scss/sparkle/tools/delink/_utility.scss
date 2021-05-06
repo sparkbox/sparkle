@@ -1,13 +1,15 @@
-/* ---
-title: Delink Utility
-section: Utilities
+@if $sparkle-show-docs {
+  /* ---
+  title: Delink Utility
+  section: Utilities
+  ---
+  Removes link styles from and element.
 
-Removes link styles from and element.
-
-```scss
-.#{settings(prefix)}-delink
-```
-*/
+  ```scss
+  .#{settings(prefix)}-delink
+  ```
+  */
+}
 .#{settings(prefix)}-delink {
   @include delink;
 }

@@ -1,83 +1,102 @@
 @mixin sparkle-grid-gap {
-  /* ---
-  section: Systems
-  ---
-  
-  ### Grid Gap Classes
-  
-  <table>
-  <thead>
-    <th>Gap Width</th>
-    <th>Class Name</th>
-  </thead>
-  <tbody>
-  <tr>
-    <th colspan="2">Row and Column Gap</th>
-  </tr>
-  */
-  @each $key, $value in $spacer {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
+
+    ### Grid Gap Classes
+
+    <table>
+    <thead>
+      <th>Gap Width</th>
+      <th>Class Name</th>
+    </thead>
+    <tbody>
     <tr>
-      <td>#{$value}</td>
-      <td>`#{settings(prefix)}-gap-#{$key}`</td>
+      <th colspan="2">Row and Column Gap</th>
     </tr>
     */
+  }
+  @each $key, $value in $spacer {
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+        <td>#{$value}</td>
+        <td>`#{settings(prefix)}-gap-#{$key}`</td>
+      </tr>
+      */
+    }
     .#{settings(prefix)}-gap-#{$key} {
       @include loop-mq {
         grid-gap: $value;
+        gap: $value;
       }
     }
   }
-  /* ---
-  section: Systems
-  ---
-  <tr>
-    <th colspan="2">Row Gap</th>
-  </tr>
-  */
-  @each $key, $value in $spacer {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
     <tr>
-      <td>#{$value}</td>
-      <td>`#{settings(prefix)}-gap-row-#{$key}`</td>
+      <th colspan="2">Row Gap</th>
     </tr>
     */
+  }
+  @each $key, $value in $spacer {
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+        <td>#{$value}</td>
+        <td>`#{settings(prefix)}-gap-row-#{$key}`</td>
+      </tr>
+      */
+    }
     .#{settings(prefix)}-gap-row-#{$key} {
       @include loop-mq {
-        grid-gap-rows: $value;
+        grid-row-gap: $value;
+        row-gap: $value;
       }
     }
   }
-  /* ---
-  section: Systems
-  ---
-  <tr>
-    <th colspan="2">Column Gap</th>
-  </tr>
-  */
-  @each $key, $value in $spacer {
+
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
     <tr>
-      <td>#{$value}</td>
-      <td>`#{settings(prefix)}-gap-column-#{$key}`</td>
+      <th colspan="2">Column Gap</th>
     </tr>
     */
+  }
+
+  @each $key, $value in $spacer {
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+        <td>#{$value}</td>
+        <td>`#{settings(prefix)}-gap-column-#{$key}`</td>
+      </tr>
+      */
+    }
     .#{settings(prefix)}-gap-column-#{$key} {
       @include loop-mq {
-        grid-gap-columns: $value;
+        grid-column-gap: $value;
+        column-gap: $value;
       }
     }
   }
-  /* ---
-  section: Systems
-  ---
-  </tbody>
-  </table>
-  */
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
 }

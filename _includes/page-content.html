@@ -1,0 +1,11 @@
+{% assign title = page.title %}
+{% if page.alt-title %}
+  {% assign title = page.alt-title %}
+{% endif %}
+
+<section>
+  <header>
+    <h2>{{title}}</h2>
+  </header>
+  {{ content }}
+</section>

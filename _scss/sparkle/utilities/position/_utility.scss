@@ -1,40 +1,39 @@
 @import "mixin";
 
 @if settings(utility-position) {
-  /* ---
-title: Position Utility
-section: Utilities
----
-
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Property</th>
-</thead>
-<tbody>
-*/
-
-  // NOTE: This @each loop is only for document generation
-  @each $value in $util-position-values {
+  @if $sparkle-show-docs {
     /* ---
-section: Utilities
----
+    title: Position Utility
+    section: Utilities
+    ---
+    <table>
+    <thead>
+    <tr>
+    <th>Class Name</th>
+    <th>Property</th>
+    </thead>
+    <tbody>
+    */
 
-<tr>
-<td>`.#{settings(prefix)}-position-#{$value}`</td>
-<td>`position: #{$value}`</td>
-</tr>
+    // NOTE: This @each loop is only for document generation
+    @each $value in $util-position-values {
+      /* ---
+      section: Utilities
+      ---
+      <tr>
+      <td>`.#{settings(prefix)}-position-#{$value}`</td>
+      <td>`position: #{$value}`</td>
+      </tr>
+      */
+    }
 
-*/
+    /* ---
+    section: Utilities
+    ---
+    </tbody>
+    </table>
+    */
   }
-
-  /* ---
-section: Utilities
----
-</tbody>
-</table>
-*/
 
   // Load the mixin
   @include sparkle-position;

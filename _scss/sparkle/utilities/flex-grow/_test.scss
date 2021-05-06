@@ -1,0 +1,56 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The flex-grow utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-flex-grow;
+      }
+      @include expect {
+        .util-flex-grow-0 {
+          flex-grow: 0;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-grow-0\@sm {
+            flex-grow: 0;
+          }
+        }
+
+        .util-flex-grow-1 {
+          flex-grow: 1;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-grow-1\@sm {
+            flex-grow: 1;
+          }
+        }
+
+        .util-flex-grow-2 {
+          flex-grow: 2;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-grow-2\@sm {
+            flex-grow: 2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-text-values: (
+  uppercase,
+  lowercase
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The position utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-text-transform;
+      }
+      @include expect {
+        .util-text-uppercase {
+          text-transform: uppercase;
+        }
+
+        @media (min-width: 40rem) {
+          .util-text-uppercase\@sm {
+            text-transform: uppercase;
+          }
+        }
+
+        .util-text-lowercase {
+          text-transform: lowercase;
+        }
+
+        @media (min-width: 40rem) {
+          .util-text-lowercase\@sm {
+            text-transform: lowercase;
+          }
+        }
+      }
+    }
+  }
+}

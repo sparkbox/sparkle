@@ -1,0 +1,41 @@
+.cmp-docs-nav {
+  width: 100%;
+  background-color: color(gray-1);
+  border-right: 1px solid color(gray-2);
+  padding: space(md) 0;
+
+  &__title {
+    font-size: size(md);
+    padding: 0 space(sm);
+    color: color(gray-5);
+    text-shadow: 0 -1px color(white);
+    margin: 0;
+  }
+
+  &__list {
+    @include delist;
+  }
+
+  &__list + &__title {
+    margin-top: 1.5em;
+  }
+  
+  &__link {
+    @include delink
+    color: color(dark);
+    display: block;
+    padding: space(xs) space(sm);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &[aria-current="page"],
+    &[aria-current="page"]:hover {
+      color: color(white);
+      background-color: color(dark);
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}

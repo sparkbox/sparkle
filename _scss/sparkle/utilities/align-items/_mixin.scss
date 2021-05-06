@@ -1,0 +1,9 @@
+@mixin sparkle-align-items {
+  @each $value in $util-align-items-values {
+    .#{settings(prefix)}-align-items-#{$value} {
+      @include loop-mq {
+        align-items: $value;
+      }
+    }
+  }
+}

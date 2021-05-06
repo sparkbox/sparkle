@@ -1,0 +1,9 @@
+{% for item in include.items %}
+  {% assign active = '' %}
+  {% if item.url == page.url %}
+    {% assign active = 'aria-current="page"' %}
+  {% endif %}
+  <li class="cmp-docs-nav__item">
+    <a href="{{item.url}}" class="cmp-docs-nav__link" {{active}}>{{item.title}}</a>
+  </li>
+{% endfor %}

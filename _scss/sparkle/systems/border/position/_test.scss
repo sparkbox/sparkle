@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import 'mixins';
 @import '../../../tools/loop-mq/mixin';
 
@@ -30,65 +32,65 @@ $sides: (
   @include it('outputs the proper utility classes') {
     @include assert {
       @include output {
-        @include sparkle-border-spacing-loop(true);
+        @include sparkle-border-spacing-loop;
       }
       @include expect {
         .util-border-btm-hairline {
           border-bottom: 1px;
         }
-        
+
         .util-border-top-hairline {
           border-top: 1px;
         }
-        
+
         .util-border-lft-hairline {
           border-left: 1px;
         }
-        
+
         .util-border-rgt-hairline {
           border-right: 1px;
         }
-        
+
         .util-border-all-hairline {
           border: 1px;
         }
-        
+
         .util-border-vrt-hairline {
           border-right: 1px;
           border-left: 1px;
         }
-        
+
         .util-border-hrz-hairline {
           border-top: 1px;
           border-bottom: 1px;
         }
-        
+
         @media (min-width: 40rem) {
           .util-border-btm-hairline\@sm {
             border-bottom: 1px;
           }
-        
+
           .util-border-top-hairline\@sm {
             border-top: 1px;
           }
-        
+
           .util-border-lft-hairline\@sm {
             border-left: 1px;
           }
-        
+
           .util-border-rgt-hairline\@sm {
             border-right: 1px;
           }
-        
+
           .util-border-all-hairline\@sm {
             border: 1px;
           }
-        
+
           .util-border-vrt-hairline\@sm {
             border-right: 1px;
             border-left: 1px;
           }
-        
+
           .util-border-hrz-hairline\@sm {
             border-top: 1px;
             border-bottom: 1px;

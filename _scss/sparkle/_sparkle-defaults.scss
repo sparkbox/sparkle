@@ -8,6 +8,7 @@
 @import "globals/spacing/map";
 
 // Systems
+@import "systems/border/style/map";
 @import "systems/border/width/map";
 @import "systems/color/map";
 @import "systems/grid/map";
@@ -21,3 +22,11 @@
 @import "utilities/display/map";
 @import "utilities/position/map";
 @import "utilities/text-align/map";
+@import "utilities/text-decoration/map";
+@import "utilities/text-transform/map";
+@import "utilities/justify-content/map";
+@import "utilities/align-items/map";
+@import "utilities/align-self/map";
+@import "utilities/order/map";
+@import "utilities/flex-direction/map";
+@import "utilities/flex-wrap/map";

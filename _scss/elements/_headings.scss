@@ -1,0 +1,29 @@
+h1:not([class]) {
+  font-size: size(xl);
+  font-weight: 700;
+}
+
+h2:not([class]) {
+  font-size: size(xl);
+  font-weight: 400;
+}
+
+h3:not([class]) {
+  font-size: size(lg);
+  font-weight: 700;
+}
+
+h4:not([class]) {
+  font-size: size(lg);
+  font-weight: 400;
+}
+
+h5:not([class]) {
+  font-size: size(md);
+  font-weight: 700;
+}
+
+h6:not([class]) {
+  font-size: size(xs);
+  font-weight: 700;
+}

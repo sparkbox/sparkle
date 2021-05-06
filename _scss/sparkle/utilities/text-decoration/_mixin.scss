@@ -1,0 +1,9 @@
+@mixin sparkle-text-decoration {
+  @each $value in $util-text-decoration {
+    .#{settings(prefix)}-text-decoration-#{$value} {
+      @include loop-mq {
+        text-decoration: $value;
+      }
+    }
+  }
+}

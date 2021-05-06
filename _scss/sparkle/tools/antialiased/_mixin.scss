@@ -1,18 +1,27 @@
-/* ---
-title: Anti-aliased Mixin
-section: Tools
-
-Adds font smoothing properties.
-
-```scss
-.my-class {
-  @include antialiased;
+@if $sparkle-show-docs {
+  /* ---
+  title: Anti-aliased Mixin
+  section: Tools
+  ---
+  Adds font smoothing properties.
+  **Use**
+  ```scss
+  .my-class {
+    @include antialiased;
+  }
+  ```
+  **CSS Output**
+  ```css
+  .my-class {
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+  ```
+  */
 }
-```
-
-*/
 
 @mixin antialiased {
   -moz-osx-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
 }
+

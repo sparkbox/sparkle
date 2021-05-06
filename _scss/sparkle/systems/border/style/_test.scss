@@ -1,0 +1,39 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../../tools/loop-mq/mixin';
+
+$border-style: (
+  'solid': solid
+);
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$media-queries: (
+  'sm': 40rem,
+);
+
+@include describe('The border style utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-border-style;
+      }
+      @include expect {
+        .util-border-style-solid {
+          border-style: solid;
+        }
+
+        @media (min-width: 40rem) {
+          .util-border-style-solid\@sm {
+            border-style: solid;
+          }
+        }
+      }
+    }
+  }
+}

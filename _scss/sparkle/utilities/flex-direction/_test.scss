@@ -1,0 +1,51 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-flex-direction-values: (
+  row,
+  column
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The flex-direction utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-flex-direction;
+      }
+      @include expect {
+        .util-flex-row {
+          flex-direction: row;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-row\@sm {
+            flex-direction: row;
+          }
+        }
+
+        .util-flex-column {
+          flex-direction: column;
+        }
+
+        @media (min-width: 40rem) {
+          .util-flex-column\@sm {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

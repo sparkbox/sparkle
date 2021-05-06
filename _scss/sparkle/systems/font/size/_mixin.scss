@@ -1,5 +1,5 @@
-@mixin sparkle-font-size($true-test: null) {
-  @if $true-test == null {
+@mixin sparkle-font-size {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
@@ -14,31 +14,31 @@
     <tbody>
     */
   }
-    @each $key, $value in $font-size {
-      @if $true-test == null {
-        /* ---
-        section: Systems
-        ---
-        <tr>
-        <td><code>#{settings(prefix)}-size-#{$key}</code></td>
-        <td><code>size(#{$key})</code></td>
-        <td><code>#{$key}: #{$value}</td>
-        </tr>
-        */
-      }
-      .#{settings(prefix)}-size-#{$key} {
-        @include loop-mq {
-          font-size: $value;
-        }
-      }
-    }
-    @if $true-test == null {
+
+  @each $key, $value in $font-size {
+    @if $sparkle-show-docs {
       /* ---
       section: Systems
       ---
-      </tbody>
-      </table>
+      <tr>
+      <td><code>#{settings(prefix)}-size-#{$key}</code></td>
+      <td><code>size(#{$key})</code></td>
+      <td><code>#{$key}: #{$value}</td>
+      </tr>
       */
     }
+    .#{settings(prefix)}-size-#{$key} {
+      @include loop-mq {
+        font-size: $value;
+      }
+    }
   }
-  
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
+}

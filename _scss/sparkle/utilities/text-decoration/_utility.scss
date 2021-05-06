@@ -1,0 +1,41 @@
+@import "mixin";
+
+@if settings(utility-text-decoration) {
+  @if $sparkle-show-docs {
+    /* ---
+    title: Text Decoration Utility
+    section: Utilities
+    ---
+
+    <table>
+    <thead>
+    <tr>
+    <th>Class Name</th>
+    <th>Property</th>
+    </thead>
+    <tbody>
+    */
+
+    // NOTE: This @each loop is only for document generation
+    @each $value in $util-text-decoration {
+      /* ---
+        section: Utilities
+        ---
+        <tr>
+        <td>`.#{settings(prefix)}-text-decoration-#{$value}`</td>
+        <td>`text-decoration: #{$value}`</td>
+        </tr>
+        */
+    }
+
+    /* ---
+      section: Utilities
+      ---
+      </tbody>
+      </table>
+      */
+  }
+
+  // Load the mixin
+  @include sparkle-text-decoration;
+}

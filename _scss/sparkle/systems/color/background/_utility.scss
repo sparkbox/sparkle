@@ -1,48 +1,54 @@
+@import '../mixin';
+
 @if settings('utility-background-color') {
-/* ---
-section: Systems
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
 
-### Background Color Utility Classes
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Default Class</th>
-<th>`:hover` Class</th>
-<th>`:focus` Class</th>
-<th>`:active` Class</th>
-</tr>
-</thead>
-<tbody>
-*/
+    ### Background Color Utility Classes
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th>Default Class</th>
+    <th>`:hover` Class</th>
+    <th>`:focus` Class</th>
+    <th>`:active` Class</th>
+    </tr>
+    </thead>
+    <tbody>
+    */
+  }
 
   @each $key, $val in $colors {
-/* ---
-section: Systems
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+      <td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
+      <td>`.#{settings(prefix)}-background-color-#{$key}`</td>
+      <td>`.#{settings(prefix)}-background-color-#{$key}:hover`</td>
+      <td>`.#{settings(prefix)}-background-color-#{$key}:focus`</td>
+      <td>`.#{settings(prefix)}-background-color-#{$key}:active`</td>
+      </tr>
+      */
+    }
 
-<tr>
-<td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
-<td>`.#{settings(prefix)}-bgcolor-#{$key}`</td>
-<td>`.#{settings(prefix)}-bgcolor-#{$key}:hover`</td>
-<td>`.#{settings(prefix)}-bgcolor-#{$key}:focus`</td>
-<td>`.#{settings(prefix)}-bgcolor-#{$key}:active`</td>
-</tr>
-*/
-    .#{settings(prefix)}-bgcolor-#{$key},
-    .#{settings(prefix)}-bgcolor-#{$key}\:hover:hover,
-    .#{settings(prefix)}-bgcolor-#{$key}\:active:active,
-    .#{settings(prefix)}-bgcolor-#{$key}\:focus:focus {
-      @include loop-mq {
+    .#{settings(prefix)}-background-color-#{$key} {
+      @include sparkle-loop-states {
         background-color: $val;
       }
     }
   }
 
-/* ---
-section: Systems
-
-</tbody>
-</table>
-*/
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
 }

@@ -39,19 +39,26 @@ $colors: (
   'light': #29ABE2,
   'dark': #0071BC,
   'text': #222,
-  'gray': #f4f4f4
+  'white': #fff,
+  'gray-1': darken(white, 4%),
+  'gray-2': darken(white, 18%),
+  'gray-3': darken(white, 36%),
+  'gray-4': darken(white, 54%),
+  'gray-5': darken(white, 72%)
 );
 
 // Font Family
 $font-families: (
-  'main': (Raleway, Helvetica, sans-serif)
+  'main': (system-ui, sans-serif),
+  'code': ('PT Mono', monospace)
 );
 
 // Font Size
 $font-size: (
   'sm': 0.875rem,
   'md': 1.125rem,
-  'lg': 1.5rem
+  'lg': 1.5rem,
+  'xl': 2rem
 );
 
 // Font Weight

@@ -1,4 +1,6 @@
 @import 'true';
+$sparkle-show-docs: false;
+
 @import 'mixin';
 @import '../../tools/loop-mq/mixin';
 @import '../../tools/settings/function';
@@ -20,7 +22,7 @@ $media-queries: (
   @include it('outputs the proper utility classes') {
     @include assert {
       @include output {
-        @include sparkle-display();
+        @include sparkle-display;
       }
       @include expect {
         .util-display-none {

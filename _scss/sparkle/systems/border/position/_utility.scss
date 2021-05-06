@@ -1,13 +1,14 @@
 @import "mixins";
 
 @if settings(utility-border-position) {
+  @if $sparkle-show-docs {
     /* ---
     title: Border System
     section: Systems
     ---
 
-    <br/>
-
+    ### Border Position and Width 
     */
+  }
   @include sparkle-border-spacing-loop();
 }

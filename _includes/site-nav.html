@@ -1,0 +1,27 @@
+{% assign setup = site.setup | sort: "order" %}
+{% assign systems = site.systems | sort: "order" %}
+{% assign mixins = site.mixins | sort: "order" %}
+{% assign functions = site.functions | sort: "order" %}
+
+<nav class="cmp-docs-nav">
+  <h2 class="util-visually-hidden">Documentation Links</h2>
+  <h3 id="nav-setup" class="cmp-docs-nav__title">Getting Started</h3>
+  <ul aria-labelledby="nav-setup" class="cmp-docs-nav__list">
+    {% include nav-item.html items=setup %}
+  </ul>
+
+  <h3 id="nav-systems" class="cmp-docs-nav__title">Systems</h3>
+  <ul aria-labelledby="nav-systems" class="cmp-docs-nav__list">
+    {% include nav-item.html items=systems %}
+  </ul>
+
+  <h3 id="nav-mixins" class="cmp-docs-nav__title">Mixins</h3>
+  <ul aria-labelledby="nav-mixins" class="cmp-docs-nav__list">
+    {% include nav-item.html items=mixins %}
+  </ul>
+
+  <h3 id="nav-functions" class="cmp-docs-nav__title">Functions</h3>
+  <ul aria-labelledby="nav-functions" class="cmp-docs-nav__list">
+    {% include nav-item.html items=functions %}
+  </ul>
+</nav>

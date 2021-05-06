@@ -1,50 +1,52 @@
-@if settings('utility-border-color') {
-/* ---
-section: Systems
----
-### Border Color Utility Classes
+@import '../mixin';
 
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Default Class</th>
-<th>`:hover` Class</th>
-<th>`:focus` Class</th>
-<th>`:active` Class</th>
-</tr>
-</thead>
-<tbody>
-*/
+@if settings('utility-border-color') {
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    ### Border Color Utility Classes
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th>Default Class</th>
+    <th>`:hover` Class</th>
+    <th>`:focus` Class</th>
+    <th>`:active` Class</th>
+    </tr>
+    </thead>
+    <tbody>
+    */
+  }
 
   @each $key, $val in $colors {
-/* ---
-section: Systems
----
-
-<tr>
-<td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
-<td>`.#{settings(prefix)}-border-color-#{$key}`</td>
-<td>`.#{settings(prefix)}-border-color-#{$key}:hover`</td>
-<td>`.#{settings(prefix)}-border-color-#{$key}:focus`</td>
-<td>`.#{settings(prefix)}-border-color-#{$key}:active`</td>
-</tr>
-*/
-    .#{settings(prefix)}-border-color-#{$key},
-    .#{settings(prefix)}-border-color-#{$key}\:hover:hover,
-    .#{settings(prefix)}-border-color-#{$key}\:active:active,
-    .#{settings(prefix)}-border-color-#{$key}\:focus:focus {
-      @include loop-mq {
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+      <td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
+      <td>`.#{settings(prefix)}-border-color-#{$key}`</td>
+      <td>`.#{settings(prefix)}-border-color-#{$key}:hover`</td>
+      <td>`.#{settings(prefix)}-border-color-#{$key}:focus`</td>
+      <td>`.#{settings(prefix)}-border-color-#{$key}:active`</td>
+      </tr>
+      */
+    }
+    .#{settings(prefix)}-border-color-#{$key} {
+      @include sparkle-loop-states {
         border-color: $val;
       }
     }
   }
 
-/* ---
-section: Systems
----
-
-</tbody>
-</table>
-*/
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
 }

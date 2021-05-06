@@ -1,8 +1,15 @@
+// Print Documentation Settings
+// Set this to true in user settings
+// to enable docs comment generation
+$sparkle-show-docs: false !default;
+
+// Sparkle User Settings
 $settings: (
-  'prefix': 'sparkle',
+  'prefix': 'util',
   'loop-mq': true,
   'print-classes': true,
   'system-color': true,
+  'system-color-states': true,
   'system-grid': true,
   'system-spacing': true,
   'system-font-family': true,
@@ -13,6 +20,7 @@ $settings: (
   'utility-position-spacing': true,
   'utility-background-color': true,
   'utility-border-color': true,
+  'utility-border-style': true,
   'utility-border-width': true,
   'utility-border-position': true,
   'utility-foreground-color': true,
@@ -22,5 +30,15 @@ $settings: (
   'utility-display': true,
   'utility-position': true,
   'utility-text-align': true,
-  'utility-visually-hidden': true
+  'utility-text-decoration': true,
+  'utility-text-transform': true,
+  'utility-visually-hidden': true,
+  'utility-justify-content': true,
+  'utility-align-items': true,
+  'utility-align-self': true,
+  'utility-order': true,
+  'utility-flex-direction': true,
+  'utility-flex-grow': true,
+  'utility-flex-shrink': true,
+  'utility-flex-wrap': true
 ) !default;

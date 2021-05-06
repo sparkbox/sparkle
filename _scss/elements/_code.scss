@@ -1,0 +1,10 @@
+code {
+  font-family: family(code);
+}
+
+pre {
+  padding: space(sm);
+  background-color: color(gray-1);
+  border: 1px solid color(gray-2);
+  border-radius: space(xs);
+}

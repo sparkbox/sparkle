@@ -18,12 +18,21 @@
 @import "generic/normalize"; // Normalize
 
 // Elements
+@import "elements/root";
+@import "elements/body";
+@import "elements/headings";
+@import "elements/code";
+@import "elements/p";
 
 // Object
 @import "object/layout";
+@import "object/page";
+@import "object/content";
 
 // Components
+@import "components/site-header";
 @import "components/logo";
+@import "components/docs-nav";
 
 // Utilities
 @import "sparkle/systems"; // Sparkle System Utility Classes

@@ -1,0 +1,40 @@
+@import "mixin";
+
+@if settings(utility-flex-wrap) {
+  @if $sparkle-show-docs {
+    /* ---
+    title: Flex Wrap Utility
+    section: Utilities
+    ---
+    <table>
+    <thead>
+    <tr>
+    <th>Class Name</th>
+    <th>Property</th>
+    </thead>
+    <tbody>
+    */
+
+    // NOTE: This @each loop is only for document generation
+    @each $value in $util-flex-wrap-values {
+      /* ---
+      section: Utilities
+      ---
+      <tr>
+      <td>`.#{settings(prefix)}-flex-#{$value}`</td>
+      <td>`flex-wrap: #{$value}`</td>
+      </tr>
+      */
+    }
+
+    /* ---
+    section: Utilities
+    ---
+    </tbody>
+    </table>
+    */
+  }
+
+  // Load the mixin
+  @include sparkle-flex-wrap;
+}

@@ -1,4 +1,4 @@
 @function family($key) {
- @return map-get($font-families, $key);
+ @return map-get($font-families, stringify($key));
 }
   

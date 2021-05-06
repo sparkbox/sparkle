@@ -1,0 +1,51 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-text-decoration: (
+  none,
+  underline
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The text decoration utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-text-decoration;
+      }
+      @include expect {
+        .util-text-decoration-none {
+          text-decoration: none;
+        }
+
+        @media (min-width: 40rem) {
+          .util-text-decoration-none\@sm {
+            text-decoration: none;
+          }
+        }
+
+        .util-text-decoration-underline {
+          text-decoration: underline;
+        }
+
+        @media (min-width: 40rem) {
+          .util-text-decoration-underline\@sm {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,19 +1,36 @@
-/* ---
-title: Unbuttonize Mixin
-section: Tools
+@if $sparkle-show-docs {
+  /* ---
+  title: Unbuttonize Mixin
+  section: Tools
+  ---
 
-This removes styles added by default to button elements. For when something should semantically be a button, but isn't buttony in appearance.
+  Removes styles added by default to button elements. For when something should semantically be a button, but isn't buttony in appearance.
 
-```scss
-.my-class {
-  @include unbuttonize;
+  **Use**
+  ```scss
+  .my-class {
+    @include unbuttonize;
+  }
+  ```
+
+  **CSS Output**
+  ```css
+  .my-class {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+  }
+  ```
+  */
 }
-```
-
-*/
 
 @mixin unbuttonize {
-
   background-color: transparent;
   color: inherit;
   border: none;

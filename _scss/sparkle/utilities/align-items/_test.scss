@@ -1,0 +1,51 @@
+@import 'true';
+$sparkle-show-docs: false;
+
+@import 'mixin';
+@import '../../tools/settings/function';
+@import '../../tools/loop-mq/mixin';
+
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true
+);
+
+$util-align-items-values: (
+  center,
+  stretch
+);
+
+$media-queries: (
+  'sm': 40rem
+);
+
+@include describe('The align-items utility mixin') {
+  @include it('outputs the proper utility classes') {
+    @include assert {
+      @include output {
+        @include sparkle-align-items;
+      }
+      @include expect {
+        .util-align-items-center {
+          align-items: center;
+        }
+
+        @media (min-width: 40rem) {
+          .util-align-items-center\@sm {
+            align-items: center;
+          }
+        }
+
+        .util-align-items-stretch {
+          align-items: stretch;
+        }
+
+        @media (min-width: 40rem) {
+          .util-align-items-stretch\@sm {
+            align-items: stretch;
+          }
+        }
+      }
+    }
+  }
+}

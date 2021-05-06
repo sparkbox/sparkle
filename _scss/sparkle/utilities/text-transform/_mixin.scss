@@ -1,0 +1,9 @@
+@mixin sparkle-text-transform {
+  @each $value in $util-text-transform {
+    .#{settings(prefix)}-text-#{$value} {
+      @include loop-mq {
+        text-transform: $value;
+      }
+    }
+  }
+}

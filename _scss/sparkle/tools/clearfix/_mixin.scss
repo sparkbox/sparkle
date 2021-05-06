@@ -1,14 +1,27 @@
-/* ---
-title: Clearfix Mixin
-section: Tools
+@if $sparkle-show-docs {
+  /* ---
+  title: Clearfix Mixin
+  section: Tools
+  ---
 
-```scss
-.my-class {
-  @include clearfix;
+  **Use**
+  ```scss
+  .my-class {
+    @include clearfix;
+  }
+  ```
+
+  **CSS Output**
+  ```css
+  .my-class::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  ```
+
+  */
 }
-```
-
-*/
 @mixin clearfix {
   &::after {
     clear: both;
@@ -16,3 +29,4 @@ section: Tools
     display: table;
   }
 }
+

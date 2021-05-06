@@ -5,7 +5,12 @@
 @import "globals/sides/function";
 
 // Systems
+@import "systems/border/style/function";
+@import "systems/border/width/function";
 @import "systems/color/function";
+@import "systems/font/family/function";
+@import "systems/font/size/function";
+@import "systems/font/weight/function";
 @import "systems/grid/function";
 @import "systems/z-index/function";
 
@@ -25,10 +30,3 @@
 @import "tools/print-mq/mixin";
 @import "tools/unbuttonize/mixin";
 @import "tools/visually-hidden/mixin";
-
-// Utilities
-@import "tools/antialiased/utility";
-@import "tools/clearfix/utility";
-@import "tools/delink/utility";
-@import "tools/delist/utility";
-@import "tools/unbuttonize/utility";

@@ -1,13 +1,15 @@
 @import "../function";
 @import "mixins";
 
-/* ---
-section: Systems
----
-### Grid Cell Classes
+@if $sparkle-show-docs {
+  /* ---
+  section: Systems
+  ---
+  ### Grid Cell Classes
 
-To define a grid, an element must have the `#{settings(prefix)}-grid-block` class. This will apply a `display: grid` along with fallback styles for browsers that do not support CSS Grid.
-*/
+  To define a grid, an element must have the `#{settings(prefix)}-grid-block` class. This will apply a `display: grid` along with fallback styles for browsers that do not support CSS Grid.
+  */
+}
 
 @if settings(system-grid) {
   $count: grid(columns);
@@ -17,47 +19,52 @@ To define a grid, an element must have the `#{settings(prefix)}-grid-block` clas
     @each $key, $val in $media-queries {
       $mq: '\\@' + $key;
       @media (min-width: #{$val}) {
-        @include sparkle-grid-maker($count, $mq, true);
+        @include sparkle-grid-maker($count, $mq);
       }
     }
   }
-  
+
   @if settings('print-classes') {
     $mq: '\\@print';
     @media print {
-      @include sparkle-grid-maker($count, $mq, true);
+      @include sparkle-grid-maker($count, $mq);
     }
   }
 
-  /* ---
-  section: Systems
-  ---
-  
-  <table>
-  <thead>
-  <tr>
-  <th>Column Span</th>
-  <th>Span Class(es)</th>
-  </tr>
-  </thead>
-  <tbody>
-  */
-  $class: settings(prefix) + '-grid-cell';
-  @for $i from 1 through $count {
+  @if $sparkle-show-docs {
     /* ---
     section: Systems
     ---
+    <table>
+    <thead>
     <tr>
-    <td>#{$i}</td>
-    <td>`#{sparkle-grid-class($i, $count, $class, '')}.#{$class}-#{$i}-#{$count}`</td>
+    <th>Column Span</th>
+    <th>Span Class(es)</th>
     </tr>
+    </thead>
+    <tbody>
     */
   }
-  
-  /* ---
-  section: Systems
-  ---
-  </tbody>
-  </table>
-  */
+  $class: settings(prefix) + '-grid-cell';
+  @for $i from 1 through $count {
+    @if $sparkle-show-docs {
+      /* ---
+      section: Systems
+      ---
+      <tr>
+      <td>#{$i}</td>
+      <td>`#{sparkle-grid-class($i, $count, $class, '')}.#{$class}-#{$i}-#{$count}`</td>
+      </tr>
+      */
+    }
+  }
+
+  @if $sparkle-show-docs {
+    /* ---
+    section: Systems
+    ---
+    </tbody>
+    </table>
+    */
+  }
 }
