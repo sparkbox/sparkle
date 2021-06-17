@@ -3,6 +3,7 @@
 // turns off and on the comments used to generate
 // the Docs. If this variable is set to false, the
 // docs will not generate.
+@use "sass:math";
 @import "../settings";
 $sparkle-show-docs: true;
 

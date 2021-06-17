@@ -30,5 +30,5 @@
 }
 
 @function ratio($height,$width) {
-  @return ($height / $width) * 100%;
+  @return math.div($height, $width) * 100%;
 }

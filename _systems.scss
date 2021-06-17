@@ -1,4 +1,6 @@
 // System Utilities
+@use 'sass:math';
+
 // Color System
 @import "systems/color/docs";
 @import "systems/color/foreground/utility";

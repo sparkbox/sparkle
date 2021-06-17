@@ -106,12 +106,12 @@ section[id*="grid-demo-"] + section[id*="grid-demo-"] {
   $color-2: nth($demo-color, 2);
 
   @for $i from 1 through grid(columns) {
-    $mix-1: ($i / grid(columns)) * 100%;
-    $mix-2: 100% - (($i / grid(columns)) * 100%);
+    $mix-1: math.div($i, grid(columns)) * 100%;
+    $mix-2: 100% - (math.div($i, grid(columns)) * 100%);
 
     &:nth-child(#{$i}) {
       $color: $color-1;
-      @if ($i / 2) == ceil($i / 2) {
+      @if math.div($i, 2) == math.ceil(math.div($i, 2)) {
         $color: mix($color-1, darken($color-2, 15%), $mix-1);
       } @else {
         $color: mix(lighten($color-2, 5%), $color-1, $mix-2);

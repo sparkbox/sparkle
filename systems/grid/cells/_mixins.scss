@@ -1,6 +1,6 @@
 @mixin sparkle-column-span($count, $span) {
   float: left;
-  width: ($span / $count) * 100%;
+  width: math.div($span, $count) * 100%;
 
   @supports (display: grid) {
     width: auto;
@@ -13,13 +13,13 @@
   $r: '';
   $end: '';
   $grid-set: '';
-  @for $i from 1 through floor($count/$iteration) {
+  @for $i from 1 through math.floor(math.div($count, $iteration)) {
     @if $count - $iteration > 0 {
-      @if $count/2 < $iteration {
+      @if math.div($count, 2) < $iteration {
         $grid-set: $count - $iteration;
         $end: '<div class="#{$class}-#{$grid-set}-#{$count}"><span>#{$grid-set}-#{$count}</span></div>';
-      } @else if ($iteration * floor($count / $iteration)) < $count {
-        $grid-set: $count - ($iteration * floor($count / $iteration));
+      } @else if ($iteration * math.floor(math.div($count, $iteration))) < $count {
+        $grid-set: $count - ($iteration * math.floor(math.div($count, $iteration)));
         $end: '<div class="#{$class}-#{$grid-set}-#{$count}"><span>#{$grid-set}-#{$count}</span></div>';
       } @else {
         $end: '';
@@ -33,23 +33,23 @@
 @function sparkle-grid-class($iteration, $count, $class, $mq) {
   $val: '';
 
-  @if ($iteration/$count) == (1/4) {
+  @if math.div($iteration, $count) == math.div(1, 4) {
     $val: ".#{$class}-quarter#{$mq}, ";
   }
 
-  @else if ($iteration/$count) == (1/3) {
+  @else if math.div($iteration, $count) == math.div(1, 3) {
     $val: ".#{$class}-third#{$mq}, ";
   }
 
-  @else if ($iteration/$count) == (1/2) {
+  @else if math.div($iteration, $count) == math.div(1, 2) {
     $val: ".#{$class}-half#{$mq}, ";
   }
 
-  @else if ($iteration/$count) == (2/3) {
+  @else if math.div($iteration, $count) == math.div(2, 3) {
     $val: ".#{$class}-two-third#{$mq}, .#{$class}-two-thirds#{$mq}, ";
   }
 
-  @else if ($iteration/$count) == (3/4) {
+  @else if math.div($iteration, $count) == math.div(3, 4) {
     $val: ".#{$class}-three-quarter#{$mq}, .#{$class}-three-quarters#{$mq}, ";
   }
 
