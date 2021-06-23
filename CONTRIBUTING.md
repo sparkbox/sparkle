@@ -50,28 +50,33 @@ After running this command, you'll get a preview of what the next tagged version
 
 After your branch is merged, CI will take care of publishing to the npm registry.
 
-ℹ️ See the [Standard Version][standard cli] documentation for details on how to control versioning behavior.
+ℹ️ See the [Standard Version][standard cli] documentation for details on how to control versioning behavior. If you need to [pass additional arguments][npm script args] to `standard-version`, you can use `--` with the `release` script.
+
+Example:
+```sh
+npm run release -- --prerelease
+```
 
 ### Specifying a release type
 
-Sometimes, you'll want manual control over the next version of the package. In these case, you can use the special `--major`, `--minor`, and `--patch` flags.
+Sometimes, you'll want manual control over the next version of the package. In these cases, you can refer to the [`standard-version`][standard cli] cli option `--release-as`.
 
 Major Release
 
 ```sh
-npm run release -- --major
+npm run release -- --release-as major
 ```
 
 Minor Release
 
 ```sh
-npm run release -- --minor
+npm run release -- --release-as minor
 ```
 
 Patch Release
 
 ```sh
-npm run release -- --patch
+npm run release -- --release-as patch
 ```
 
 [pr]: https://github.com/sparkbox/safe-focus/compare
@@ -79,3 +84,4 @@ npm run release -- --patch
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [Standard Version]: https://github.com/conventional-changelog/standard-version
 [standard cli]: https://github.com/conventional-changelog/standard-version#cli-usage
+[npm script args]: https://docs.npmjs.com/cli/v7/commands/npm-run-script#:~:text=Any%20positional%20arguments,test%20--%20--grep%3D%22pattern%22

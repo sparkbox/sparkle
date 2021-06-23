@@ -34,7 +34,6 @@
     "mdcss": "^1.5.2",
     "mdcss-theme-github": "^2.4.2",
     "mocha": "^8.1.3",
-    "next-standard-version": "^2.1.3",
     "postcss": "^8.1.0",
     "postcss-cli": "^8.0.0",
     "sass": "^1.26.11",
