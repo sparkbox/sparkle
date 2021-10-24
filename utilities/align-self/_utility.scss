@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-align-self-#{$value}`</td>
+      <td>`#{settings(prefix)}-align-self-#{$value}`</td>
       <td>`align-self: #{$value}`</td>
       </tr>
       */

@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-flex-#{$value}`</td>
+      <td>`#{settings(prefix)}-flex-#{$value}`</td>
       <td>`flex-direction: #{$value}`</td>
       </tr>
       */

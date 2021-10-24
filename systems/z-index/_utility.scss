@@ -23,7 +23,7 @@
       ---
       <tr>
         <td>#{$value}</td>
-        <td>`.#{settings(prefix)}-z-index-#{$key}`</td>
+        <td>`#{settings(prefix)}-z-index-#{$key}`</td>
         <td>`z-index(#{$key})`</td>
       </tr>
       */

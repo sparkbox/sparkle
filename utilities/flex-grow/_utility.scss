@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-flex-grow-#{$value}`</td>
+      <td>`#{settings(prefix)}-flex-grow-#{$value}`</td>
       <td>`flex-grow: #{$value}`</td>
       </tr>
       */

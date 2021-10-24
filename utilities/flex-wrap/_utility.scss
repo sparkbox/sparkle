@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-flex-#{$value}`</td>
+      <td>`#{settings(prefix)}-flex-#{$value}`</td>
       <td>`flex-wrap: #{$value}`</td>
       </tr>
       */

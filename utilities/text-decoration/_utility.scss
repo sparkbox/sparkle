@@ -22,7 +22,7 @@
         section: Utilities
         ---
         <tr>
-        <td>`.#{settings(prefix)}-text-decoration-#{$value}`</td>
+        <td>`#{settings(prefix)}-text-decoration-#{$value}`</td>
         <td>`text-decoration: #{$value}`</td>
         </tr>
         */

@@ -23,7 +23,7 @@
       ---
 
       <tr>
-      <td>`.#{settings(prefix)}-text-#{$value}`</td>
+      <td>`#{settings(prefix)}-text-#{$value}`</td>
       <td>`text-transform: #{$value}`</td>
       </tr>
 

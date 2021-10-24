@@ -20,7 +20,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-justify-content-#{$value}`</td>
+      <td>`#{settings(prefix)}-justify-content-#{$value}`</td>
       <td>`justify-content: #{$value}`</td>
       </tr>
       */

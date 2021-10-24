@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-flex-shrink-#{$value}`</td>
+      <td>`#{settings(prefix)}-flex-shrink-#{$value}`</td>
       <td>`flex-shrink: #{$value}`</td>
       </tr>
       */

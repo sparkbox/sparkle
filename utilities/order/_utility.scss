@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-order-#{$value}`</td>
+      <td>`#{settings(prefix)}-order-#{$value}`</td>
       <td>`order: #{$value}`</td>
       </tr>
       */

@@ -28,10 +28,10 @@
       ---
       <tr>
       <td><svg height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 0,18, 18,18 18,0z" fill="#{$val}" /></svg></td>
-      <td>`.#{settings(prefix)}-background-color-#{$key}`</td>
-      <td>`.#{settings(prefix)}-background-color-#{$key}:hover`</td>
-      <td>`.#{settings(prefix)}-background-color-#{$key}:focus`</td>
-      <td>`.#{settings(prefix)}-background-color-#{$key}:active`</td>
+      <td>`#{settings(prefix)}-background-color-#{$key}`</td>
+      <td>`#{settings(prefix)}-background-color-#{$key}:hover`</td>
+      <td>`#{settings(prefix)}-background-color-#{$key}:focus`</td>
+      <td>`#{settings(prefix)}-background-color-#{$key}:active`</td>
       </tr>
       */
     }

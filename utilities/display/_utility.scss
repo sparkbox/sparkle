@@ -23,7 +23,7 @@
       ---
 
       <tr>
-      <td>`.#{settings(prefix)}-display-#{$value}`</td>
+      <td>`#{settings(prefix)}-display-#{$value}`</td>
       <td>`display: #{$value}`</td>
       </tr>
       */

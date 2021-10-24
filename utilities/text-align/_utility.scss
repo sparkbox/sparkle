@@ -21,7 +21,7 @@
       section: Utilities
       ---
       <tr>
-      <td>`.#{settings(prefix)}-text-#{$value}`</td>
+      <td>`#{settings(prefix)}-text-#{$value}`</td>
       <td>`text-align: #{$value}`</td>
       </tr>
       */
