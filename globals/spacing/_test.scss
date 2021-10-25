@@ -4,7 +4,8 @@
 $spacer: (
   'sm': 0.5rem,
   'md': 1rem,
-  'lg': 1.5rem
+  'lg': 1.5rem,
+  'auto': auto
 );
 
 @include describe('The spacing global') {
@@ -38,6 +39,17 @@ $spacer: (
       $test,
       $expect,
       "Expected space global to output correct rem value for large."
+    );
+  }
+
+  @include it('outputs the correct value for auto') {
+    $test: space('auto');
+    $expect: auto;
+
+    @include assert-equal(
+      $test,
+      $expect,
+      "Expected space global to output correct value for large."
     );
   }
 }
