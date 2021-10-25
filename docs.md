@@ -13,7 +13,7 @@ Our source Sass files provide mixins, utiltities, and more. Below you can find d
 
 ## File Structure
 
-Avoid modifying Sparkles’s core files. You will create your own Sass stylesheet that imports Sparkle so you can modify, overwrite, or extend it. Once Sparkle is installed your file structure should look something like this:
+Avoid modifying Sparkle’s core files. You will create your own Sass stylesheet that imports Sparkle so you can modify, overwrite, or extend it. Once Sparkle is installed your file structure should look something like this:
 
 ```
 your-project/
@@ -98,7 +98,7 @@ $settings: map-merge(
 
 ## Importing
 
-In your `custom.scss`, you’ll import Sparkles’s source Sass files above your own files, that way, Sparkle's default settings could be overwritten. 
+In your `custom.scss`, you’ll import Sparkle’s source Sass files above your own files, that way, Sparkle's default settings could be overwritten. 
 
 Here's how to import Sparkle:
 
