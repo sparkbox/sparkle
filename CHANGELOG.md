@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.5](https://github.com/sparkbox/sparkle/compare/v1.4.4...v1.4.5) (2021-11-19)
+
+
+### Bug Fixes
+
+* Correct mixin output of x and y axis properties ([8c32201](https://github.com/sparkbox/sparkle/commit/8c32201ebda1ebabbd5d6f0ad5cb92aff736b926))
+* Update to new Sass math.div function ([618de12](https://github.com/sparkbox/sparkle/commit/618de12e4e44e90fdc1ee2a84bc5a114a82f5ee2))
+
 ### [1.4.4](https://github.com/sparkbox/sparkle/compare/v1.4.3...v1.4.4) (2021-06-17)
 
 ### [1.4.3](https://github.com/sparkbox/sparkle/compare/v1.4.2...v1.4.3) (2021-02-17)
