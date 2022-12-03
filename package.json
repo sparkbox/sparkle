@@ -6,11 +6,6 @@
     "test": "test"
   },
   "scripts": {
-    "start": "npm run docs",
-    "predocs": "rm -rf styleguide && mkdir styleguide && touch styleguide/docs.md",
-    "docs": "npm run sass",
-    "sass": "sass mdcss:styleguide",
-    "postsass": "postcss styleguide/docs.css -r",
     "test": "mocha",
     "stylelint": "stylelint *.scss **/*.scss **/**/*.scss --color --syntax scss",
     "release": "./.github/scripts/release.sh"
@@ -26,16 +21,12 @@
   },
   "homepage": "https://github.com/sparkbox/sparkle#readme",
   "engines": {
-    "node": ">=12.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
   "devDependencies": {
-    "@sparkbox/stylelint-config-sparkbox": "^1.0.3",
-    "mdcss": "^1.5.2",
-    "mdcss-theme-github": "^2.4.2",
-    "mocha": "^8.1.3",
-    "postcss": "^8.3.9",
-    "postcss-cli": "^8.0.0",
+    "@sparkbox/stylelint-config-sparkbox": "^2.0.",
+    "mocha": "^10.1.0",
     "sass": "^1.35.1",
     "sass-true": "^6.0.0",
     "standard-version": "^9.3.1"
@@ -48,7 +39,6 @@
     "_tools.scss",
     "_utilities.scss",
     "globals",
-    "mdcss",
     "systems",
     "tools",
     "utilities"

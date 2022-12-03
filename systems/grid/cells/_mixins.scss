@@ -68,16 +68,6 @@
   $class: settings(prefix) + '-grid-cell';
   @for $i from 1 through $count {
     #{sparkle-grid-class($i, $count, $class, $mq)}.#{$class}-#{$i}-#{$count}#{$mq} {
-      @if $sparkle-show-docs {
-        /* ---
-        section: Systems
-        name: grid-demo-#{$i}
-        ---
-        <div class="sparkle-grid-demo #{settings(prefix)}-grid-block">
-          #{sparkle-grid-demo($i, $count, $class)}
-        </div>
-        */
-      }
       @include sparkle-column-span($count, $i);
     }
   }

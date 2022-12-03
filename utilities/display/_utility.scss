@@ -1,42 +1,5 @@
 @import "mixin";
 
 @if settings(utility-display) {
-  @if $sparkle-show-docs {
-    /* ---
-    title: Display Utility
-    section: Utilities
-    ---
-
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Property</th>
-    </thead>
-    <tbody>
-    */
-
-    // NOTE: This @each loop is only for document generation
-    @each $value in $util-display-values {
-      /* ---
-      section: Utilities
-      ---
-
-      <tr>
-      <td>`.#{settings(prefix)}-display-#{$value}`</td>
-      <td>`display: #{$value}`</td>
-      </tr>
-      */
-    }
-
-    /* ---
-    section: Utilities
-    ---
-    </tbody>
-    </table>
-    */
-  }
-
-  // Load the mixin
   @include sparkle-display;
 }

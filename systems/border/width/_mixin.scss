@@ -1,47 +1,9 @@
 @mixin sparkle-border-width {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-
-    ### Border Width
-
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Function</th>
-    <th>Border Width Value</th>
-    </tr>
-    </thead>
-    <tbody>
-    */
-  }
-
   @each $key, $value in $border-width {
-    @if $sparkle-show-docs {
-      /* ---
-      section: Systems
-      ---
-      <tr>
-      <td><code>#{settings(prefix)}-border-width-#{$key}</code></td>
-      <td><code>border-width(#{$key})</code></td>
-      <td><code>#{$value}</code></td>
-      </tr>
-      */
-    }
     .#{settings(prefix)}-border-width-#{$key} {
       @include loop-mq {
         border-width: $value;
       }
     }
-  }
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }

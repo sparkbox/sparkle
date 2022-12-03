@@ -1,46 +1,9 @@
 @mixin sparkle-font-weight {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    #### Font Weight
-
-    <table>
-    <thead>
-    <th>Class</th>
-    <th>Function</th>
-    <th>Weight</th>
-    </thead>
-    <tbody>
-    */
-  }
-
   @each $key, $value in $font-weight {
-    @if $sparkle-show-docs {
-      /* ---
-      section: Systems
-      ---
-      <tr>
-      <td><code>#{settings(prefix)}-weight-#{$key}</code></td>
-      <td><code>weight(#{$key})</code></td>
-      <td><code>#{$key}: #{$value}</td>
-      </tr>
-      */
-    }
     .#{settings(prefix)}-weight-#{$key} {
       @include loop-mq {
         font-weight: $value;
       }
     }
   }
-
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
-  }
 }
-  

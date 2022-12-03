@@ -1,16 +1,3 @@
-@if $sparkle-show-docs {
-  /* ---
-  title: Delist Utility
-  section: Utilities
-  ---
-  Removes the list styles from ordered and unordered lists.
-
-  ```scss
-  .#{settings(prefix)}-delist
-  ```
-
-  */
-}
 .#{settings(prefix)}-delist {
   @include delist;
 }

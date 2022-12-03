@@ -1,43 +1,5 @@
 @import "mixin";
 
 @if settings(utility-text-transform) {
-  @if $sparkle-show-docs {
-    /* ---
-    title: Text Transform Utility
-    section: Utilities
-    ---
-
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Property</th>
-    </thead>
-    <tbody>
-    */
-
-    // NOTE: This @each loop is only for document generation
-    @each $value in $util-text-transform {
-      /* ---
-      section: Utilities
-      ---
-
-      <tr>
-      <td>`.#{settings(prefix)}-text-#{$value}`</td>
-      <td>`text-transform: #{$value}`</td>
-      </tr>
-
-      */
-    }
-
-    /* ---
-      section: Utilities
-      ---
-      </tbody>
-      </table>
-      */
-  }
-
-  // Load the mixin
   @include sparkle-text-transform;
 }
