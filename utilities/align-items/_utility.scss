@@ -1,40 +1,6 @@
 @import "mixin";
 
 @if settings(utility-align-items) {
-  @if $sparkle-show-docs {
-    /* ---
-    title: Align Items Utility
-    section: Utilities
-    ---
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Property</th>
-    </thead>
-    <tbody>
-    */
-
-    // NOTE: This @each loop is only for document generation
-    @each $value in $util-align-items-values {
-      /* ---
-      section: Utilities
-      ---
-      <tr>
-      <td>`.#{settings(prefix)}-align-items-#{$value}`</td>
-      <td>`align-items: #{$value}`</td>
-      </tr>
-      */
-    }
-
-    /* ---
-    section: Utilities
-    ---
-    </tbody>
-    </table>
-    */
-  }
-
   // Load the mixin
   @include sparkle-align-items;
 }

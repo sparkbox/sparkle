@@ -1,44 +1,9 @@
 @mixin sparkle-font-family {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    #### Font Family
-
-    <table>
-    <thead>
-    <th>Class</th>
-    <th>Function</th>
-    <th>Name</th>
-    </thead>
-    <tbody>
-    */
-  }
   @each $key, $value in $font-families {
-    @if $sparkle-show-docs {
-      /* ---
-      section: Systems
-      ---
-      <tr>
-      <td><code>#{settings(prefix)}-family-#{$key}</code></td>
-        <td><code>family(#{$key})</code></td>
-        <td><code>#{$key}: #{$value}</td>
-      </tr>
-      */
-    }
-
     .#{settings(prefix)}-family-#{$key} {
       @include loop-mq {
         font-family: $value;
       }
     }
-  }
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }

@@ -1,47 +1,9 @@
 @if settings('utility-z-index') {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    title: Z-Index System
-    ---
-    <table>
-    <thead>
-    <tr>
-    <th>Property Value</th>
-    <th>Class</th>
-    <th>Function</th>
-    </tr>
-    </thead>
-    <tbody>
-    */
-  }
-
   @each $key, $value in $z-index {
-    @if $sparkle-show-docs {
-      /* ---
-      section: Systems
-      ---
-      <tr>
-        <td>#{$value}</td>
-        <td>`.#{settings(prefix)}-z-index-#{$key}`</td>
-        <td>`z-index(#{$key})`</td>
-      </tr>
-      */
-    }
-
     .#{settings(prefix)}-z-index-#{$key} {
       @include loop-mq {
         z-index: $value;
       }
     }
-  }
-
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }

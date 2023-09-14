@@ -33,20 +33,6 @@
   }
   @each $side-key, $side-val in $sides {
     @each $space-key, $space-val in $spacer {
-      @if $mq == null {
-        @if $sparkle-show-docs {
-          /* ---
-          section: Systems
-          ---
-          <tr>
-          <td><code>#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}</code></td>
-          <td><code>#{$space-val}</td>
-          <td>#{$side-key}</td>
-          </tr>
-          */
-        }
-      }
-
       .#{settings(prefix)}-#{$type-name}-#{$side-val}-#{$space-key}#{$mq} {
         @include sparkle-spacing-sides($space-val, $side-key, $type);
       }
@@ -55,22 +41,6 @@
 }
 
 @mixin sparkle-spacing-loop($type) {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Spacing Size</th>
-    <th>Sides</th>
-    </tr>
-    </thead>
-    <tbody>
-    */
-  }
-
   @include sparkle-spacing-side-loop($type);
   @each $key, $val in $media-queries {
     @media (min-width: #{$val}) {
@@ -81,13 +51,5 @@
     @media print {
       @include sparkle-spacing-side-loop($type, print);
     }
-  }
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }

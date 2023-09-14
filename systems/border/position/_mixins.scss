@@ -19,20 +19,6 @@
 
   @each $side-key, $side-val in $sides {
     @each $border-key, $border-val in $border-width {
-      @if $mq == null {
-        @if $sparkle-show-docs {
-          /* ---
-          section: Systems
-          ---
-          <tr>
-          <td><code>#{settings(prefix)}-border-#{$side-val}-#{$border-key}</code></td>
-          <td><code>#{$border-val}</td>
-          <td>#{$side-key}</td>
-          </tr>
-          */
-        }
-      }
-
       .#{settings(prefix)}-border-#{$side-val}-#{$border-key}#{$mq} {
         @include sparkle-border-spacing-sides($border-val, $side-key);
       }
@@ -41,21 +27,6 @@
 }
 
 @mixin sparkle-border-spacing-loop {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Spacing Size</th>
-    <th>Sides</th>
-    </tr>
-    </thead>
-    <tbody>
-    */
-  }
   @include sparkle-border-spacing-side-loop(null);
   @each $key, $val in $media-queries {
     @media (min-width: #{$val}) {
@@ -66,13 +37,5 @@
     @media print {
       @include sparkle-border-spacing-side-loop(print);
     }
-  }
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }
