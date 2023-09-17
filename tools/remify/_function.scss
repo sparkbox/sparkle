@@ -1,34 +1,3 @@
-@if $sparkle-show-docs {
-  /* ---
-  title: Remify Function
-  section: Tools
-  ---
-
-  Converts a number to a rem value.
-
-  **Use**
-  ```scss
-  .my-class {
-    prop: remify(<number>);
-  }
-  ```
-
-  **Use with a prop**
-  ```scss
-  .my-class {
-    margin: remify(24);
-  }
-  ```
-
-  **CSS Output**
-  ```css
-  .my-class {
-    margin: 1.5rem;
-  }
-  ```
-  */
-}
-
 @function remify($value) {
   $value: strip-units($value);
   @return math.div($value, 16) * 1rem;

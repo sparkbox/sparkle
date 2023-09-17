@@ -1,44 +1,9 @@
 @mixin sparkle-font-size {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    #### Font Size
-
-    <table>
-    <thead>
-    <th>Class</th>
-    <th>Function</th>
-    <th>Size</th>
-    </thead>
-    <tbody>
-    */
-  }
-
   @each $key, $value in $font-size {
-    @if $sparkle-show-docs {
-      /* ---
-      section: Systems
-      ---
-      <tr>
-      <td><code>#{settings(prefix)}-size-#{$key}</code></td>
-      <td><code>size(#{$key})</code></td>
-      <td><code>#{$key}: #{$value}</td>
-      </tr>
-      */
-    }
     .#{settings(prefix)}-size-#{$key} {
       @include loop-mq {
         font-size: $value;
       }
     }
-  }
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }

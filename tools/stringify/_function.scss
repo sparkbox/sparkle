@@ -1,33 +1,3 @@
-@if $sparkle-show-docs {
-  /* ---
-  title: Stringify Function
-  section: Tools
-  ---
-
-  Converts a number to a string.
-
-  **Use**
-  ```scss
-  .my-class {
-    prop: stringify(<number>);
-  }
-  ```
-
-  **Use with a prop**
-  ```scss
-  .my-class::before {
-    content: stringify(6);
-  }
-  ```
-
-  **CSS Output**
-  ```css
-  .my-class::before {
-    content: '6';
-  }
-  ```
-  */
-}
 
 @function stringify($value) {
   @return $value + '';

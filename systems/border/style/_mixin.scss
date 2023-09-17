@@ -1,46 +1,9 @@
 @mixin sparkle-border-style {
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-
-    ### Border Styles
-
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Function</th>
-    <th>Border Style Value</th>
-    </tr>
-    </thead>
-    <tbody>
-    */
-  }
   @each $key, $value in $border-style {
-    @if $sparkle-show-docs {
-      /* ---
-      section: Systems
-      ---
-      <tr>
-      <td><code>#{settings(prefix)}-border-style-#{$key}</code></td>
-      <td><code>border-style(#{$key})</code></td>
-      <td><code>#{$value}</code></td>
-      </tr>
-      */
-    }
     .#{settings(prefix)}-border-style-#{$key} {
       @include loop-mq {
         border-style: $value;
       }
     }
-  }
-  @if $sparkle-show-docs {
-    /* ---
-    section: Systems
-    ---
-    </tbody>
-    </table>
-    */
   }
 }

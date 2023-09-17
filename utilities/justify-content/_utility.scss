@@ -1,39 +1,6 @@
 @import "mixin";
 
 @if settings(utility-justify-content) {
-  @if $sparkle-show-docs {
-    /* ---
-    title: Justify Content Utility
-    section: Utilities
-    ---
-    <table>
-    <thead>
-    <tr>
-    <th>Class Name</th>
-    <th>Property</th>
-    </thead>
-    <tbody>
-    */
-    // NOTE: This @each loop is only for document generation
-    @each $value in $util-text-values {
-      /* ---
-      section: Utilities
-      ---
-      <tr>
-      <td>`.#{settings(prefix)}-justify-content-#{$value}`</td>
-      <td>`justify-content: #{$value}`</td>
-      </tr>
-      */
-    }
-
-    /* ---
-    section: Utilities
-    ---
-    </tbody>
-    </table>
-    */
-  }
-
   // Load the mixin
   @include sparkle-justify-content;
 }
